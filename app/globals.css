@@ -15,24 +15,20 @@
   --color-glass-border: rgba(164, 132, 215, 0.3);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  body {
+    font-family: var(--font-sans);
+    background-color: #050505;
+    color: white;
+    overflow-x: hidden;
+  }
 
-body {
-  font-family: var(--font-sans);
-  background-color: #050505;
-  color: white;
-  overflow-x: hidden;
-}
-
-::selection {
-  background-color: var(--color-husky-purple);
-  color: white;
+  ::selection {
+    background-color: var(--color-husky-purple);
+    color: white;
+  }
 }
