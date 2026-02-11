@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && rm -rf docs && mv out docs && touch docs/.nojekyll",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
