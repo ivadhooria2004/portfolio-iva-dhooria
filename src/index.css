@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+
+  --color-husky-purple: #4B2E83;
+  --color-husky-purple-light: #7B4FD4;
+  --color-husky-purple-bright: #9B6FE8;
+  --color-husky-gold: #B7A57A;
+  --color-husky-gold-light: #E8D5B5;
+  --color-dark: #050505;
+  --color-dark-glass: rgba(85, 80, 110, 0.4);
+  --color-glass-border: rgba(164, 132, 215, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #050505;
+  color: white;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-husky-purple);
+  color: white;
+}
