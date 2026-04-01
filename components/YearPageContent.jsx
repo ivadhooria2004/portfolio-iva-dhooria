@@ -21,7 +21,7 @@ const fadeUp = {
 function SectionLabel({ children }) {
   return (
     <div className="flex items-center gap-3 mb-10">
-      <div className="h-px w-8 bg-gradient-to-r from-husky-purple to-transparent" />
+      <div className="h-px w-8 bg-gradient-to-r from-husky-purple via-husky-gold/50 to-transparent" />
       <span className="text-xs uppercase tracking-[0.2em] text-white/30 font-display font-semibold">
         {children}
       </span>
@@ -358,7 +358,7 @@ export default function YearPageContent({ year }) {
       {/* ── Year Navigation Footer ── */}
       <section className="relative z-10 pb-24 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-between pt-10 border-t border-white/[0.06]">
+          <div className="flex items-center justify-between pt-10 border-t border-husky-gold/10">
             {data.prevYear ? (
               <Link
                 href={`/${data.prevYear}`}

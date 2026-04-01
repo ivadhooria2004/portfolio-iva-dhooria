@@ -51,14 +51,25 @@ export default function HeroContent() {
       </div>
 
       {/* ── Breathing glow behind headline ── */}
+      {/* Breathing purple glow */}
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none z-0"
+        className="absolute top-[45%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none z-0"
         style={{
           background:
             "radial-gradient(circle, rgba(75, 46, 131, 0.08), transparent 70%)",
         }}
         animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.7, 0.4] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
+      {/* Breathing gold glow */}
+      <motion.div
+        className="absolute top-[55%] left-[55%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none z-0"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(183, 165, 122, 0.06), transparent 70%)",
+        }}
+        animate={{ scale: [1.1, 0.9, 1.1], opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
       {/* ── Badge ── */}
@@ -68,9 +79,9 @@ export default function HeroContent() {
         transition={{ duration: 0.9, delay: 0.3, ease }}
         className="relative mb-8 mt-24 z-10"
       >
-        <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-glass-border bg-dark-glass backdrop-blur-xl">
+        <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-husky-gold/20 bg-dark-glass backdrop-blur-xl">
           <motion.span
-            className="flex items-center justify-center w-6 h-6 rounded-md bg-husky-purple"
+            className="flex items-center justify-center w-6 h-6 rounded-md bg-gradient-to-br from-husky-purple to-husky-gold"
             animate={{ rotate: [0, 0, 360, 360] }}
             transition={{
               duration: 2.5,
@@ -150,7 +161,7 @@ export default function HeroContent() {
         initial={{ scaleX: 0, opacity: 0 }}
         animate={{ scaleX: 1, opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.6, ease }}
-        className="mt-7 w-24 h-px bg-gradient-to-r from-transparent via-husky-purple-bright/40 to-transparent z-10 origin-center"
+        className="mt-7 w-24 h-px bg-gradient-to-r from-husky-purple-bright/40 via-husky-gold/40 to-husky-purple-bright/40 z-10 origin-center"
       />
 
       {/* ── Subtitle ── */}
@@ -192,7 +203,7 @@ export default function HeroContent() {
         >
           <a
             href="mailto:contact@ivadhooria.com"
-            className="block px-7 py-3.5 rounded-xl border border-white/[0.1] bg-white/[0.03] backdrop-blur-sm text-white/80 font-display font-semibold text-sm hover:bg-white/[0.08] hover:text-white transition-all duration-300 hover:scale-105"
+            className="block px-7 py-3.5 rounded-xl border border-husky-gold/20 bg-white/[0.03] backdrop-blur-sm text-husky-gold-light font-display font-semibold text-sm hover:bg-husky-gold/10 hover:text-white hover:border-husky-gold/40 transition-all duration-300 hover:scale-105"
           >
             Get in Touch
           </a>
@@ -207,7 +218,7 @@ export default function HeroContent() {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
       >
         <div className="flex flex-col items-center gap-2">
-          <span className="text-[11px] uppercase tracking-[0.2em] text-white/25 font-display">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-husky-gold/30 font-display">
             Scroll
           </span>
           <motion.div
@@ -217,9 +228,9 @@ export default function HeroContent() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="w-5 h-8 rounded-full border border-white/15 flex items-start justify-center pt-1.5"
+            className="w-5 h-8 rounded-full border border-husky-gold/20 flex items-start justify-center pt-1.5"
           >
-            <div className="w-1 h-1.5 rounded-full bg-white/40" />
+            <div className="w-1 h-1.5 rounded-full bg-husky-gold/50" />
           </motion.div>
         </div>
       </motion.div>

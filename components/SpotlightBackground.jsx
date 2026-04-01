@@ -49,9 +49,9 @@ export default function SpotlightBackground() {
         <div className="w-full h-full bg-husky-purple/20 rounded-full blur-[150px]" />
       </div>
 
-      {/* Static ambient glow - bottom right */}
-      <div className="pointer-events-none fixed bottom-0 right-0 w-[500px] h-[500px] z-0 opacity-20">
-        <div className="w-full h-full bg-husky-purple-light/15 rounded-full blur-[120px]" />
+      {/* Static ambient glow - bottom right (gold) */}
+      <div className="pointer-events-none fixed bottom-0 right-0 w-[500px] h-[500px] z-0 opacity-25">
+        <div className="w-full h-full bg-husky-gold/20 rounded-full blur-[120px]" />
       </div>
     </>
   );
