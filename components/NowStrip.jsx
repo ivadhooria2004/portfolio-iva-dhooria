@@ -3,8 +3,7 @@ import LinkedInIcon from "./LinkedInIcon";
 
 // UPDATE THIS: current status line
 // Edit this one string to change what the home page reports under "Currently".
-const NOW_STATUS =
-  "Currently \u2014 Senior at UW Foster \u00B7 Open to summer 2026 internships in strategy and data";
+const NOW_STATUS = "Currently \u2014 Senior at UW Foster";
 
 export default function NowStrip() {
   return (
@@ -21,12 +20,12 @@ export default function NowStrip() {
           {NOW_STATUS}
         </p>
 
-        {/* Desktop-only: full journey link */}
+        {/* Desktop-only: jump to the timeline section on this page */}
         <Link
-          href="/journey"
+          href="#journey"
           className="hidden md:inline-flex items-center gap-1 text-[13px] text-white/45 hover:text-husky-gold-light transition-colors duration-200 font-display whitespace-nowrap"
         >
-          See the full UW journey &rarr;
+          See the full UW journey &darr;
         </Link>
 
         {/* LinkedIn icon button — always visible */}
