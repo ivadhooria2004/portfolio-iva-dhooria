@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import yearData from "../lib/yearData";
+import PhotoSlot from "./PhotoSlot";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -22,83 +23,10 @@ function SectionLabel({ children }) {
   return (
     <div className="flex items-center gap-3 mb-10">
       <div className="h-px w-8 bg-gradient-to-r from-husky-purple via-husky-gold/50 to-transparent" />
-      <span className="text-xs uppercase tracking-[0.2em] text-white/30 font-display font-semibold">
+      <span className="text-[11px] uppercase tracking-[0.15em] text-white/40 font-display">
         {children}
       </span>
     </div>
-  );
-}
-
-function StatCard({ label, value, index }) {
-  return (
-    <motion.div
-      custom={index + 2}
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      className="text-center px-6 py-5"
-    >
-      <div className="text-2xl sm:text-3xl font-display font-extrabold text-white">
-        {value}
-      </div>
-      <div className="text-xs text-white/40 font-display mt-1 uppercase tracking-wider">
-        {label}
-      </div>
-    </motion.div>
-  );
-}
-
-function QuarterCard({ quarter, index }) {
-  return (
-    <motion.div
-      custom={index}
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6"
-    >
-      <div className="flex items-center justify-between mb-5">
-        <h4 className="font-display font-semibold text-white text-sm">
-          {quarter.name}
-        </h4>
-        <div className="flex items-center gap-2">
-          {quarter.deanslist && (
-            <span className="text-[10px] uppercase tracking-wider text-husky-gold font-display font-semibold px-2.5 py-1 rounded-full border border-husky-gold/30 bg-husky-gold/10">
-              Dean&apos;s List
-            </span>
-          )}
-          {quarter.gpa ? (
-            <span className="text-sm font-display font-bold text-white/80">
-              {quarter.gpa}
-            </span>
-          ) : quarter.label ? (
-            <span className="text-[10px] uppercase tracking-wider text-husky-purple-bright font-display font-semibold px-2.5 py-1 rounded-full border border-husky-purple-bright/30 bg-husky-purple-bright/10">
-              {quarter.label}
-            </span>
-          ) : null}
-        </div>
-      </div>
-      <div className="space-y-2.5">
-        {quarter.courses.map((course) => (
-          <div
-            key={course.code}
-            className="flex items-center justify-between text-sm"
-          >
-            <div className="flex items-center gap-3 min-w-0">
-              <span className="text-white/30 font-mono text-xs w-24 shrink-0">
-                {course.code}
-              </span>
-              <span className="text-white/70 truncate">{course.name}</span>
-            </div>
-            <span className="text-white/30 text-xs shrink-0 ml-3">
-              {course.credits} cr
-            </span>
-          </div>
-        ))}
-      </div>
-    </motion.div>
   );
 }
 
@@ -111,28 +39,31 @@ function ExperienceItem({ experience, index }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative pl-10 pb-10 last:pb-0"
+      className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6"
     >
-      {/* Timeline line */}
-      <div className="absolute left-[13px] top-8 bottom-0 w-px bg-gradient-to-b from-white/10 to-transparent" />
-
-      {/* Timeline dot */}
-      <div className="absolute left-0 top-1 w-7 h-7 rounded-lg bg-husky-purple/20 border border-husky-purple/30 flex items-center justify-center">
-        <Icon size={13} className="text-husky-purple-bright" />
-      </div>
-
-      <div>
-        <h4 className="font-display font-semibold text-white text-sm leading-snug">
-          {experience.role}
-        </h4>
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mt-1">
-          <span className="text-white/50 text-sm">{experience.org}</span>
-          <span className="text-white/20">&middot;</span>
-          <span className="text-white/30 text-xs">{experience.duration}</span>
+      <div className="flex items-start gap-4">
+        <div className="flex-none w-10 h-10 rounded-lg bg-husky-purple/15 border border-husky-purple/25 flex items-center justify-center">
+          <Icon size={16} className="text-husky-purple-bright" />
         </div>
-        <p className="text-white/40 text-sm leading-relaxed mt-2.5">
-          {experience.description}
-        </p>
+        <div className="flex-1 min-w-0">
+          <h4
+            className="font-display text-white text-base leading-snug"
+            style={{ fontWeight: 500 }}
+          >
+            {experience.role}
+          </h4>
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mt-1">
+            <span className="text-white/50 text-sm">{experience.org}</span>
+            <span className="text-white/20">&middot;</span>
+            <span className="text-white/30 text-xs">{experience.duration}</span>
+          </div>
+          <p className="text-white/45 text-[14px] leading-[1.75] mt-3">
+            {experience.description}
+          </p>
+        </div>
+      </div>
+      <div className="mt-4">
+        <PhotoSlot aspectRatio="16/9" />
       </div>
     </motion.div>
   );
@@ -154,10 +85,13 @@ function HighlightCard({ highlight, index, gradient }) {
       >
         <Icon size={18} className="text-white" />
       </div>
-      <h4 className="font-display font-semibold text-white text-sm mb-2">
+      <h4
+        className="font-display text-white text-sm mb-2"
+        style={{ fontWeight: 500 }}
+      >
         {highlight.title}
       </h4>
-      <p className="text-white/40 text-sm leading-relaxed">
+      <p className="text-white/45 text-sm leading-relaxed">
         {highlight.description}
       </p>
     </motion.div>
@@ -191,7 +125,7 @@ export default function YearPageContent({ year }) {
               className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition-colors font-display"
             >
               <ArrowLeft size={14} />
-              Back to Home
+              Back to portfolio
             </Link>
           </motion.div>
 
@@ -203,7 +137,7 @@ export default function YearPageContent({ year }) {
             className="mt-12"
           >
             <span
-              className={`font-display font-extrabold text-7xl sm:text-8xl md:text-9xl bg-gradient-to-br ${data.gradient} bg-clip-text text-transparent opacity-20 leading-none`}
+              className={`font-display font-medium text-7xl sm:text-8xl md:text-9xl bg-gradient-to-br ${data.gradient} bg-clip-text text-transparent opacity-20 leading-none`}
             >
               {data.number}
             </span>
@@ -214,7 +148,8 @@ export default function YearPageContent({ year }) {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tight text-white leading-[1.05] -mt-6 sm:-mt-8"
+            className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight text-white leading-[1.05] -mt-6 sm:-mt-8"
+            style={{ fontWeight: 500 }}
           >
             {data.title}
           </motion.h1>
@@ -238,24 +173,11 @@ export default function YearPageContent({ year }) {
           >
             {data.year}
           </motion.p>
-
-          {/* Stats row */}
-          <motion.div
-            custom={5}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="mt-12 grid grid-cols-2 sm:grid-cols-4 rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm divide-x divide-white/[0.06]"
-          >
-            {data.stats.map((stat, i) => (
-              <StatCard key={stat.label} {...stat} index={i} />
-            ))}
-          </motion.div>
         </div>
       </section>
 
       {/* ── Scene Section ── */}
-      <section className="relative z-10 py-20 px-6">
+      <section className="relative z-10 py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <SectionLabel>{data.scene.number}</SectionLabel>
 
@@ -267,12 +189,14 @@ export default function YearPageContent({ year }) {
             viewport={{ once: true }}
             className="relative rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 sm:p-12 overflow-hidden"
           >
-            {/* Gradient accent on top */}
             <div
               className={`absolute top-0 left-8 right-8 h-px bg-gradient-to-r ${data.gradient} opacity-40`}
             />
 
-            <h3 className="font-display font-bold text-lg text-white/80 mb-6">
+            <h3
+              className="font-display text-lg text-white/80 mb-6"
+              style={{ fontWeight: 500 }}
+            >
               {data.scene.title}
             </h3>
 
@@ -280,32 +204,33 @@ export default function YearPageContent({ year }) {
               &ldquo;{data.scene.quote}&rdquo;
             </blockquote>
 
-            <p className="text-white/40 text-base leading-relaxed max-w-3xl">
+            <p className="text-white/45 text-base leading-[1.75] max-w-3xl">
               {data.scene.body}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* ── Academics Section ── */}
-      <section className="relative z-10 py-20 px-6">
+      {/* ── Photo Gallery Row ── */}
+      <section className="relative z-10 py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <SectionLabel>Coursework</SectionLabel>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {data.academics.quarters.map((quarter, i) => (
-              <QuarterCard key={quarter.name} quarter={quarter} index={i} />
-            ))}
+          <div
+            className="grid grid-cols-1 md:grid-cols-3"
+            style={{ gap: "12px" }}
+          >
+            <PhotoSlot aspectRatio="4/3" />
+            <PhotoSlot aspectRatio="4/3" />
+            <PhotoSlot aspectRatio="4/3" />
           </div>
         </div>
       </section>
 
       {/* ── Experiences Section ── */}
-      <section className="relative z-10 py-20 px-6">
+      <section className="relative z-10 py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <SectionLabel>Experiences & Involvement</SectionLabel>
 
-          <div className="max-w-2xl">
+          <div className="grid gap-5 md:grid-cols-2">
             {data.experiences.map((exp, i) => (
               <ExperienceItem
                 key={exp.role + exp.org}
@@ -318,7 +243,7 @@ export default function YearPageContent({ year }) {
       </section>
 
       {/* ── Highlights Section ── */}
-      <section className="relative z-10 py-20 px-6">
+      <section className="relative z-10 py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <SectionLabel>Highlights</SectionLabel>
 
@@ -336,7 +261,7 @@ export default function YearPageContent({ year }) {
       </section>
 
       {/* ── Reflection Section ── */}
-      <section className="relative z-10 py-24 px-6">
+      <section className="relative z-10 py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             custom={0}
@@ -390,7 +315,7 @@ export default function YearPageContent({ year }) {
                 href="/"
                 className="group flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition-colors font-display"
               >
-                Back to Home
+                Back to portfolio
                 <ChevronRight
                   size={14}
                   className="transition-transform group-hover:translate-x-1"
