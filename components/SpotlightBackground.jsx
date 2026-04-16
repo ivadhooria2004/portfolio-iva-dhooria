@@ -28,19 +28,19 @@ export default function SpotlightBackground() {
     <>
       {/* Main spotlight that follows cursor */}
       <div
-        className="pointer-events-none fixed inset-0 z-10 transition-opacity duration-500"
+        className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-500"
         style={{
           opacity: isVisible ? 1 : 0,
-          background: `radial-gradient(800px circle at ${mousePos.x}px ${mousePos.y}px, rgba(75, 46, 131, 0.12), transparent 40%)`,
+          background: `radial-gradient(800px circle at ${mousePos.x}px ${mousePos.y}px, rgba(75, 46, 131, 0.18), transparent 40%)`,
         }}
       />
 
       {/* Smaller, brighter inner spotlight */}
       <div
-        className="pointer-events-none fixed inset-0 z-10 transition-opacity duration-300"
+        className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
         style={{
           opacity: isVisible ? 1 : 0,
-          background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(123, 79, 212, 0.08), transparent 40%)`,
+          background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(123, 79, 212, 0.12), transparent 40%)`,
         }}
       />
 
