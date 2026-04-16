@@ -34,67 +34,104 @@
   }
 }
 
-/* ── Light mode ──────────────────────────────────────────── */
-
-[data-theme="light"] body {
-  background-color: #F5F1EB;
-  color: #1A1208;
+/* Root-level transition for smooth mode switch */
+:root {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
 }
 
-/* Dark page backgrounds → warm ivory */
+/* ── Light mode — warm parchment palette ─────────────────── */
+/* Page bg: #f0ebe3  Card: #e8e1d6  Border: #c8bfb0         */
+/* Primary text: #2a2420  Muted text: #8a7a68                */
+/* Gold accent: #9a6e20  Purple accent: #5a4fa8              */
+
+[data-theme="light"] {
+  --color-husky-purple-light: #5a4fa8;
+  --color-husky-purple-bright: #5a4fa8;
+  --color-husky-gold: #9a6e20;
+  --color-husky-gold-bright: #8a6218;
+  --color-husky-gold-light: #9a6e20;
+}
+
+[data-theme="light"] body {
+  background-color: #f0ebe3;
+  color: #2a2420;
+}
+
+[data-theme="light"] ::selection {
+  background-color: #5a4fa8;
+  color: white;
+}
+
+/* ── Page backgrounds ── */
 [data-theme="light"] .bg-dark,
 [data-theme="light"] main,
 [data-theme="light"] section {
-  background-color: #F5F1EB !important;
+  background-color: #f0ebe3 !important;
 }
 
-/* White text → charcoal (preserve each opacity level) */
-[data-theme="light"] .text-white        { color: #1A1208 !important; }
-[data-theme="light"] [class~="text-white/80"] { color: rgba(26,18,8,0.80) !important; }
-[data-theme="light"] [class~="text-white/70"] { color: rgba(26,18,8,0.70) !important; }
-[data-theme="light"] [class~="text-white/65"] { color: rgba(26,18,8,0.65) !important; }
-[data-theme="light"] [class~="text-white/60"] { color: rgba(26,18,8,0.60) !important; }
-[data-theme="light"] [class~="text-white/55"] { color: rgba(26,18,8,0.55) !important; }
-[data-theme="light"] [class~="text-white/50"] { color: rgba(26,18,8,0.50) !important; }
-[data-theme="light"] [class~="text-white/45"] { color: rgba(26,18,8,0.45) !important; }
-[data-theme="light"] [class~="text-white/40"] { color: rgba(26,18,8,0.40) !important; }
-[data-theme="light"] [class~="text-white/35"] { color: rgba(26,18,8,0.35) !important; }
-[data-theme="light"] [class~="text-white/30"] { color: rgba(26,18,8,0.30) !important; }
-[data-theme="light"] [class~="text-white/20"] { color: rgba(26,18,8,0.20) !important; }
-[data-theme="light"] [class~="text-white/15"] { color: rgba(26,18,8,0.15) !important; }
+/* ── Text — white → parchment primary / muted ── */
+[data-theme="light"] .text-white        { color: #2a2420 !important; }
+[data-theme="light"] [class~="text-white/80"] { color: rgba(42,36,32,0.88) !important; }
+[data-theme="light"] [class~="text-white/70"] { color: rgba(42,36,32,0.78) !important; }
+[data-theme="light"] [class~="text-white/65"] { color: #6a5e52 !important; }
+[data-theme="light"] [class~="text-white/60"] { color: #7a6e60 !important; }
+[data-theme="light"] [class~="text-white/55"] { color: #8a7a68 !important; }
+[data-theme="light"] [class~="text-white/50"] { color: #8a7a68 !important; }
+[data-theme="light"] [class~="text-white/45"] { color: rgba(138,122,104,0.88) !important; }
+[data-theme="light"] [class~="text-white/40"] { color: rgba(138,122,104,0.78) !important; }
+[data-theme="light"] [class~="text-white/35"] { color: rgba(138,122,104,0.68) !important; }
+[data-theme="light"] [class~="text-white/30"] { color: rgba(138,122,104,0.58) !important; }
+[data-theme="light"] [class~="text-white/20"] { color: rgba(138,122,104,0.42) !important; }
+[data-theme="light"] [class~="text-white/15"] { color: rgba(138,122,104,0.32) !important; }
 
-/* White borders → dark borders */
-[data-theme="light"] [class*="border-white"] { border-color: rgba(26,18,8,0.09) !important; }
+/* ── Borders — white → parchment border ── */
+[data-theme="light"] [class*="border-white"]  { border-color: #c8bfb0 !important; }
+[data-theme="light"] .border-dashed            { border-color: #c8bfb0 !important; }
+[data-theme="light"] [class*="border-husky-gold"] { border-color: rgba(154,110,32,0.35) !important; }
 
-/* Card & glass surfaces: bg-white/[x] → subtle dark tint */
-[data-theme="light"] [class*="bg-white/"] { background-color: rgba(26,18,8,0.04) !important; }
+/* ── Card & surface backgrounds ── */
+[data-theme="light"] [class*="bg-white/"] { background-color: #e8e1d6 !important; }
 
-/* Navbar + backdrop-blur panels */
+/* ── Navbar ── */
 [data-theme="light"] .backdrop-blur-2xl {
-  background-color: rgba(245,241,235,0.88) !important;
-  border-color: rgba(26,18,8,0.07) !important;
+  background-color: #f0ebe3 !important;
+  border-color: transparent !important;
+  border-bottom: 0.5px solid #c8bfb0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
+
 [data-theme="light"] .backdrop-blur-sm {
-  background-color: rgba(26,18,8,0.03) !important;
+  background-color: #e8e1d6 !important;
 }
 
-/* Mobile nav drawer */
-[data-theme="light"] [class*="bg-black"] { background-color: rgba(245,241,235,0.97) !important; }
+/* Navbar gradient glow — suppress in light mode */
+[data-theme="light"] [class*="from-husky-purple/5"] { opacity: 0 !important; }
 
-/* Gradient text clip — keep working on light bg (no change needed, gradients use accent colors) */
+/* ── Mobile nav drawer ── */
+[data-theme="light"] [class*="bg-black"] { background-color: #f0ebe3 !important; }
 
-/* Ambient glow blobs — reduce so they don't muddy the light bg */
-[data-theme="light"] [class*="blur-["]  { opacity: 0.12 !important; }
+/* ── Active nav pill ── */
+[data-theme="light"] [class*="bg-husky-gold/10"] { background-color: rgba(154,110,32,0.10) !important; }
 
-/* Hero video overlay — keep the 55% dark overlay so text stays readable */
-[data-theme="light"] .bg-dark\/55 { background-color: rgba(26,18,8,0.45) !important; }
+/* ── Ambient glow blobs — tone down ── */
+[data-theme="light"] [class*="blur-["]  { opacity: 0.06 !important; }
 
-/* Dashed photo slot border */
-[data-theme="light"] .border-dashed { border-color: rgba(26,18,8,0.14) !important; }
+/* ── Hero video overlay — ~35% in light mode ── */
+[data-theme="light"] .bg-dark\/55 { background-color: rgba(42,36,32,0.35) !important; }
 
-/* Smooth theme transition on key properties */
-body, main, section,
-[class*="text-white"], [class*="bg-white/"],
-[class*="border-white"], .backdrop-blur-2xl, .backdrop-blur-sm {
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+/* ── Gradient text — re-map to darkened accents ── */
+[data-theme="light"] .text-husky-purple-bright { color: #5a4fa8 !important; }
+
+/* ── "bg-dark" as text color (CTA button text) — keep dark ── */
+[data-theme="light"] .text-dark { color: #2a2420 !important; }
+
+/* ── Filter pills (journey page) ── */
+[data-theme="light"] [class*="bg-husky-gold/15"] { background-color: rgba(154,110,32,0.12) !important; }
+[data-theme="light"] [class*="bg-husky-purple/15"] { background-color: rgba(90,79,168,0.12) !important; }
+
+/* ── Smooth transition on all themed elements ── */
+body, main, section, nav,
+.backdrop-blur-2xl, .backdrop-blur-sm {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
 }
