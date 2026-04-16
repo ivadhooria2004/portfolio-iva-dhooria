@@ -33,3 +33,68 @@
     color: white;
   }
 }
+
+/* ── Light mode ──────────────────────────────────────────── */
+
+[data-theme="light"] body {
+  background-color: #F5F1EB;
+  color: #1A1208;
+}
+
+/* Dark page backgrounds → warm ivory */
+[data-theme="light"] .bg-dark,
+[data-theme="light"] main,
+[data-theme="light"] section {
+  background-color: #F5F1EB !important;
+}
+
+/* White text → charcoal (preserve each opacity level) */
+[data-theme="light"] .text-white        { color: #1A1208 !important; }
+[data-theme="light"] [class~="text-white/80"] { color: rgba(26,18,8,0.80) !important; }
+[data-theme="light"] [class~="text-white/70"] { color: rgba(26,18,8,0.70) !important; }
+[data-theme="light"] [class~="text-white/65"] { color: rgba(26,18,8,0.65) !important; }
+[data-theme="light"] [class~="text-white/60"] { color: rgba(26,18,8,0.60) !important; }
+[data-theme="light"] [class~="text-white/55"] { color: rgba(26,18,8,0.55) !important; }
+[data-theme="light"] [class~="text-white/50"] { color: rgba(26,18,8,0.50) !important; }
+[data-theme="light"] [class~="text-white/45"] { color: rgba(26,18,8,0.45) !important; }
+[data-theme="light"] [class~="text-white/40"] { color: rgba(26,18,8,0.40) !important; }
+[data-theme="light"] [class~="text-white/35"] { color: rgba(26,18,8,0.35) !important; }
+[data-theme="light"] [class~="text-white/30"] { color: rgba(26,18,8,0.30) !important; }
+[data-theme="light"] [class~="text-white/20"] { color: rgba(26,18,8,0.20) !important; }
+[data-theme="light"] [class~="text-white/15"] { color: rgba(26,18,8,0.15) !important; }
+
+/* White borders → dark borders */
+[data-theme="light"] [class*="border-white"] { border-color: rgba(26,18,8,0.09) !important; }
+
+/* Card & glass surfaces: bg-white/[x] → subtle dark tint */
+[data-theme="light"] [class*="bg-white/"] { background-color: rgba(26,18,8,0.04) !important; }
+
+/* Navbar + backdrop-blur panels */
+[data-theme="light"] .backdrop-blur-2xl {
+  background-color: rgba(245,241,235,0.88) !important;
+  border-color: rgba(26,18,8,0.07) !important;
+}
+[data-theme="light"] .backdrop-blur-sm {
+  background-color: rgba(26,18,8,0.03) !important;
+}
+
+/* Mobile nav drawer */
+[data-theme="light"] [class*="bg-black"] { background-color: rgba(245,241,235,0.97) !important; }
+
+/* Gradient text clip — keep working on light bg (no change needed, gradients use accent colors) */
+
+/* Ambient glow blobs — reduce so they don't muddy the light bg */
+[data-theme="light"] [class*="blur-["]  { opacity: 0.12 !important; }
+
+/* Hero video overlay — keep the 55% dark overlay so text stays readable */
+[data-theme="light"] .bg-dark\/55 { background-color: rgba(26,18,8,0.45) !important; }
+
+/* Dashed photo slot border */
+[data-theme="light"] .border-dashed { border-color: rgba(26,18,8,0.14) !important; }
+
+/* Smooth theme transition on key properties */
+body, main, section,
+[class*="text-white"], [class*="bg-white/"],
+[class*="border-white"], .backdrop-blur-2xl, .backdrop-blur-sm {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
