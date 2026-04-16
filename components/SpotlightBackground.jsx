@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 export default function SpotlightBackground() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
+  const [isLight, setIsLight] = useState(false);
 
   const handleMouseMove = useCallback((e) => {
     setMousePos({ x: e.clientX, y: e.clientY });
@@ -16,13 +17,25 @@ export default function SpotlightBackground() {
   }, []);
 
   useEffect(() => {
+    const checkTheme = () =>
+      setIsLight(document.documentElement.getAttribute("data-theme") === "light");
+
+    checkTheme();
+
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
     window.addEventListener("mousemove", handleMouseMove);
     document.body.addEventListener("mouseleave", handleMouseLeave);
     return () => {
+      observer.disconnect();
       window.removeEventListener("mousemove", handleMouseMove);
       document.body.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, [handleMouseMove, handleMouseLeave]);
+
+  const outerColor = isLight ? "rgba(154, 110, 32, 0.14)" : "rgba(75, 46, 131, 0.18)";
+  const innerColor = isLight ? "rgba(154, 110, 32, 0.10)" : "rgba(123, 79, 212, 0.12)";
 
   return (
     <>
@@ -31,7 +44,7 @@ export default function SpotlightBackground() {
         className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-500"
         style={{
           opacity: isVisible ? 1 : 0,
-          background: `radial-gradient(800px circle at ${mousePos.x}px ${mousePos.y}px, rgba(75, 46, 131, 0.18), transparent 40%)`,
+          background: `radial-gradient(800px circle at ${mousePos.x}px ${mousePos.y}px, ${outerColor}, transparent 40%)`,
         }}
       />
 
@@ -40,7 +53,7 @@ export default function SpotlightBackground() {
         className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
         style={{
           opacity: isVisible ? 1 : 0,
-          background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(123, 79, 212, 0.12), transparent 40%)`,
+          background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, ${innerColor}, transparent 40%)`,
         }}
       />
 
