@@ -8,7 +8,7 @@ const ease = [0.25, 0.4, 0.25, 1];
 
 export default function HeroContent() {
   return (
-    <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-6 text-center">
+    <div id="hero" className="relative z-20 flex flex-col items-center justify-center min-h-screen px-6 text-center">
       {/* Darker readability overlay (~55%) on top of the video */}
       <div className="absolute inset-0 bg-dark/55 pointer-events-none z-0" />
 

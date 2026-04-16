@@ -50,6 +50,7 @@
   --color-husky-gold: #9a6e20;
   --color-husky-gold-bright: #8a6218;
   --color-husky-gold-light: #9a6e20;
+  --color-dark: #f2ebe0;
 }
 
 [data-theme="light"] body {
@@ -117,14 +118,22 @@
 /* ── Ambient glow blobs — tone down ── */
 [data-theme="light"] [class*="blur-["]  { opacity: 0.06 !important; }
 
-/* ── Hero video overlay — ~35% in light mode ── */
-[data-theme="light"] .bg-dark\/55 { background-color: rgba(42,36,32,0.35) !important; }
+/* ── Hero — light mode ── */
+/* Video overlay: warm cream tint at ~40% so video shows through */
+[data-theme="light"] .bg-dark\/55 { background-color: rgba(242,235,224,0.4) !important; }
+/* Hero subtext (text-white/60 inside hero) — darker than muted */
+[data-theme="light"] #hero [class~="text-white/60"] { color: #5a5040 !important; }
+/* Hero eyebrow (text-white/55 inside hero) */
+[data-theme="light"] #hero [class~="text-white/55"] { color: #8a7a68 !important; }
+/* CTA secondary: gold border + gold text on transparent bg */
+[data-theme="light"] #hero [class*="border-husky-gold"] { border-color: #9a6e20 !important; }
+[data-theme="light"] #hero [class*="text-husky-gold-light"] { color: #9a6e20 !important; }
 
 /* ── Gradient text — re-map to darkened accents ── */
 [data-theme="light"] .text-husky-purple-bright { color: #5a4fa8 !important; }
 
-/* ── "bg-dark" as text color (CTA button text) — keep dark ── */
-[data-theme="light"] .text-dark { color: #2a2420 !important; }
+/* ── Gold CTA button text — cream on dark-gold bg ── */
+[data-theme="light"] .text-dark { color: #f2ebe0 !important; }
 
 /* ── Filter pills (journey page) ── */
 [data-theme="light"] [class*="bg-husky-gold/15"] { background-color: rgba(154,110,32,0.12) !important; }
