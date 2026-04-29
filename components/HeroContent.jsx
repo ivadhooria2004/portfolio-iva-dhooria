@@ -12,18 +12,6 @@ export default function HeroContent() {
       {/* Darker readability overlay (~55%) on top of the video */}
       <div className="absolute inset-0 bg-dark/55 pointer-events-none z-0" />
 
-      {/* ── Eyebrow: UW Interdisciplinary Honors ── */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0, ease }}
-        className="relative mt-24 mb-8 z-10"
-      >
-        <div className="text-[11px] uppercase tracking-[0.2em] text-white/55 font-display">
-          University of Washington Interdisciplinary Honors
-        </div>
-      </motion.div>
-
       {/* ── Tagline: Decoding Markets. Designing Futures. ── */}
       <motion.h1
         initial={{ opacity: 0, y: 14 }}
@@ -57,15 +45,15 @@ export default function HeroContent() {
       />
 
       {/* ── Subtext ── */}
-      <motion.p
+      <motion.div
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease }}
         className="relative mt-5 max-w-2xl text-base sm:text-lg text-white/60 leading-relaxed font-light z-10"
       >
-        UW Foster School of Business &mdash; Finance &amp; Information Systems.
-        Building at the intersection of strategy, data, and decision-making.
-      </motion.p>
+        <p>UW Foster School of Business &amp; Interdisciplinary Honors</p>
+        <p className="mt-1">Majors &mdash; Finance and Information Systems, Minors &mdash; Data Science and Informatics</p>
+      </motion.div>
 
       {/* ── CTAs ── */}
       <motion.div
