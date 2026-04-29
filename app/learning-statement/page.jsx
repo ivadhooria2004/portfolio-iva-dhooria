@@ -2,25 +2,69 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import PageShell, { PageHeader } from "../../components/PageShell";
 
-export const metadata = { title: "Learning Statement | Iva Dhooria" };
+export const metadata = { title: "Honors Journey | Iva Dhooria" };
+
+const honCourses = [
+  {
+    code: "HON 100",
+    name: null,
+    note: "My first interaction with the honors community",
+  },
+  {
+    code: "HON 211",
+    name: "Disenchantment of the West",
+    note: "The hardest but also most rewarding honors class",
+  },
+  {
+    code: "HON 231",
+    name: "Improving Population Health through Social Entrepreneurship",
+    note: "Three-hour once-a-week lecture, but so worth it",
+  },
+  {
+    code: "HON 345",
+    name: "Oral History",
+    note: "The interview was truly a unique experience",
+  },
+  {
+    code: "HON 394",
+    name: "Lovework",
+    note: "The best professor and the sound therapy was amazing",
+  },
+  {
+    code: "HON 496",
+    name: null,
+    note: "The culmination of honors and my time at UW",
+  },
+];
+
+const adHocExperiences = [
+  {
+    project: "Sustained Attention Research Project (INFO 300)",
+    note: "Unique idea, and it surprisingly came together",
+  },
+  {
+    project: "GLITS 252 — Playlist and Poems",
+    note: "Felt the love for literature and poem writing again",
+  },
+];
 
 const artifacts = [
   {
     number: "01",
     title: "Sustained attention in time-pressured case competitions",
-    context: "INFO 300 \u2014 independent honors research, Winter 2025",
+    context: "INFO 300 — independent honors research, Winter 2025",
     href: "/learning-statement/info-300-research",
   },
   {
     number: "02",
-    title: "CaseIT 2024 \u2014 IT integration strategy for Pacific Coastal Airlines",
-    context: "Simon Fraser University \u2014 Winter 2024",
+    title: "CaseIT 2024 — IT integration strategy for Pacific Coastal Airlines",
+    context: "Simon Fraser University — Winter 2024",
     href: "/learning-statement/caseit-2024",
   },
   {
     number: "03",
-    title: "Equitable Futures \u2014 writing the King County Metro case",
-    context: "UW Undergraduate Women in Business \u2014 Winter 2025",
+    title: "Equitable Futures — writing the King County Metro case",
+    context: "UW Undergraduate Women in Business — Winter 2025",
     href: "/learning-statement/equitable-futures",
   },
 ];
@@ -51,52 +95,123 @@ function ArtifactCard({ artifact }) {
   );
 }
 
-export default function LearningStatementPage() {
+export default function HonorsJourneyPage() {
   return (
     <PageShell>
       <PageHeader
-        eyebrow={"UW Interdisciplinary Honors \u2014 2022\u20132026"}
-        title="Learning Statement"
+        eyebrow={"UW Interdisciplinary Honors — 2022–2026"}
+        title="Honors Journey"
       />
 
-      {/* Essay prose area */}
-      <article
-        className="mx-auto"
-        style={{ maxWidth: "680px" }}
-      >
-        <div
-          className="text-white/65"
-          style={{ fontSize: "17px", lineHeight: 1.8 }}
-        >
-          <p className="mb-5">
-            Placeholder essay body &mdash; the final 600&ndash;900 word Learning
-            Statement will live here. It will trace four years of
-            interdisciplinary learning through the lens of the three artifacts
-            below, and explain how the pieces fit together.
-          </p>
-          <p className="mb-5">
-            The prose layout uses a comfortable reading measure (680px),
-            generous line-height (1.8), and a 17px body size to keep long-form
-            writing easy on the eye.
-          </p>
-          <p>
-            Additional paragraphs will be added as the essay is drafted and
-            revised.
-          </p>
+      {/* ── Section 1: Learning Statement ── */}
+      <section className="mb-20">
+        <div className="text-[11px] uppercase tracking-[0.15em] text-white/40 font-display mb-6">
+          Learning Statement
         </div>
-      </article>
+        <article className="mx-auto" style={{ maxWidth: "680px" }}>
+          <div
+            className="text-white/65 rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-8"
+            style={{ fontSize: "17px", lineHeight: 1.8 }}
+          >
+            {/* PLACEHOLDER: Insert learning statement text here */}
+            <p className="text-white/30 text-center text-sm font-display">
+              Learning statement text will go here.
+            </p>
+          </div>
+        </article>
+      </section>
 
-      {/* Artifacts */}
-      <div className="mt-20">
+      {/* ── Section 2: HON Courses ── */}
+      <section className="mb-20">
+        <div className="text-[11px] uppercase tracking-[0.15em] text-white/40 font-display mb-4">
+          Honors Coursework
+        </div>
+        <h2
+          className="font-display text-2xl sm:text-3xl tracking-tight text-white leading-[1.1] mb-10"
+          style={{ fontWeight: 500 }}
+        >
+          HON Classes
+        </h2>
+        <div className="space-y-0">
+          {honCourses.map((course) => (
+            <div
+              key={course.code}
+              className="group border-b border-white/[0.06] py-5 first:border-t first:border-white/[0.06]"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
+                <span className="text-[13px] font-display text-husky-gold-light/70 tracking-wide shrink-0 w-24">
+                  {course.code}
+                </span>
+                <span className="text-white/80 font-display text-[15px]">
+                  {course.name || "—"}
+                </span>
+              </div>
+              <p className="mt-1.5 sm:ml-28 text-[14px] text-white/40 italic leading-relaxed">
+                {course.note}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Section 3: HON Ad-Hoc ── */}
+      <section className="mb-20">
+        <h2
+          className="font-display text-2xl sm:text-3xl tracking-tight text-white leading-[1.1] mb-10"
+          style={{ fontWeight: 500 }}
+        >
+          Ad-Hoc Honors Experiences
+        </h2>
+        <div className="space-y-0">
+          {adHocExperiences.map((item) => (
+            <div
+              key={item.project}
+              className="group border-b border-white/[0.06] py-5 first:border-t first:border-white/[0.06]"
+            >
+              <span className="text-white/80 font-display text-[15px]">
+                {item.project}
+              </span>
+              <p className="mt-1.5 text-[14px] text-white/40 italic leading-relaxed">
+                {item.note}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Section 4: Experiential Learning ── */}
+      <section className="mb-20">
+        <div className="text-[11px] uppercase tracking-[0.15em] text-white/40 font-display mb-6">
+          Experiential Learning
+        </div>
+        <div className="grid gap-5 md:grid-cols-2">
+          {/* PLACEHOLDER: Experiential Learning Activity 1 */}
+          <div className="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-8 min-h-[200px] flex items-center justify-center">
+            <span className="text-[11px] uppercase tracking-[0.15em] text-white/30 font-display text-center">
+              Experiential Learning Activity 1
+            </span>
+          </div>
+          {/* PLACEHOLDER: Experiential Learning Activity 2 */}
+          <div className="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-8 min-h-[200px] flex items-center justify-center">
+            <span className="text-[11px] uppercase tracking-[0.15em] text-white/30 font-display text-center">
+              Experiential Learning Activity 2
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 5: Artifacts ── */}
+      <section>
         <div className="text-[11px] uppercase tracking-[0.15em] text-white/40 font-display mb-6">
           Artifacts
         </div>
+        {/* PLACEHOLDER: Link artifacts here */}
         <div className="grid gap-5 md:grid-cols-3">
           {artifacts.map((artifact) => (
             <ArtifactCard key={artifact.number} artifact={artifact} />
           ))}
         </div>
-      </div>
+      </section>
     </PageShell>
   );
 }

@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Work", path: "/work" },
   { label: "Research & Writing", path: "/research" },
   { label: "Case Competitions", path: "/case-competitions" },
-  { label: "Learning Statement", path: "/learning-statement" },
+  { label: "Honors Journey", path: "/learning-statement" },
   { label: "About", path: "/about" },
 ];
 

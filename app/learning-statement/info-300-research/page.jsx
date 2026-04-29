@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import PageShell from "../../../components/PageShell";
 
 export const metadata = {
-  title: "Artifact 01 | Learning Statement | Iva Dhooria",
+  title: "Artifact 01 | Honors Journey | Iva Dhooria",
 };
 
 function Section({ label, children }) {
@@ -25,7 +25,7 @@ export default function InfoResearchArtifactPage() {
         className="inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors font-display mb-10"
       >
         <ArrowLeft size={14} />
-        Back to Learning Statement
+        Back to Honors Journey
       </Link>
 
       <div className="text-[11px] uppercase tracking-[0.15em] text-white/40 font-display mb-3">
