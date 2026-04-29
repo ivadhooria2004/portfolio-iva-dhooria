@@ -1,6 +1,6 @@
 import PageShell, { PageHeader } from "../../components/PageShell";
 
-export const metadata = { title: "Research & Writing | Iva Dhooria" };
+export const metadata = { title: "Projects | Iva Dhooria" };
 
 const completed = [
   {
@@ -60,7 +60,7 @@ export default function ResearchPage() {
   return (
     <PageShell>
       <PageHeader
-        title="Research & Writing"
+        title="Projects"
         subtitle={
           "Independent research, case writing, and written work \u2014 the intellectual layer beneath the r\u00E9sum\u00E9."
         }

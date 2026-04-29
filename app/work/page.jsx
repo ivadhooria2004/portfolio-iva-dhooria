@@ -1,6 +1,6 @@
 import PageShell, { PageHeader } from "../../components/PageShell";
 
-export const metadata = { title: "Work & Projects | Iva Dhooria" };
+export const metadata = { title: "Work | Iva Dhooria" };
 
 const workEntries = [
   {
@@ -60,7 +60,7 @@ export default function WorkPage() {
   return (
     <PageShell>
       <PageHeader
-        title="Work & Projects"
+        title="Work"
         subtitle={
           "Selected professional experience \u2014 each entry is a short case study of the problem, the approach, and the outcome."
         }
