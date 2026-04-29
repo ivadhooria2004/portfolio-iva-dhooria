@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import PageShell from "../../../components/PageShell";
 
 export const metadata = {
-  title: "Artifact 02 | Honors Journey | Iva Dhooria",
+  title: "Artifact 03 | Honors Journey | Iva Dhooria",
 };
 
 function Section({ label, children }) {
@@ -17,11 +17,11 @@ function Section({ label, children }) {
   );
 }
 
-export default function CaseItArtifactPage() {
+export default function EquitableFuturesArtifactPage() {
   return (
     <PageShell>
       <Link
-        href="/learning-statement"
+        href="/honors-portfolio"
         className="inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors font-display mb-10"
       >
         <ArrowLeft size={14} />
@@ -29,10 +29,10 @@ export default function CaseItArtifactPage() {
       </Link>
 
       <div className="text-[11px] uppercase tracking-[0.15em] text-white/40 font-display mb-3">
-        Artifact 02
+        Artifact 03
       </div>
       <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] mb-12">
-        CaseIT 2024 &mdash; IT integration strategy for Pacific Coastal Airlines
+        Equitable Futures &mdash; writing the King County Metro case
       </h1>
 
       <div className="mx-auto" style={{ maxWidth: "680px" }}>
@@ -47,15 +47,15 @@ export default function CaseItArtifactPage() {
         <Section label="Context">
           <p>
             Placeholder &mdash; a 2-sentence situational description of the
-            CaseIT competition and the team deliverable.
+            Equitable Futures case writing project.
           </p>
         </Section>
 
         <Section label="Annotation">
           <p>
-            Placeholder &mdash; a 200&ndash;300 word reflection on what this
-            artifact taught me about cross-functional problem-solving, late
-            nights, and how to synthesize technical strategy under pressure.
+            Placeholder &mdash; a 200&ndash;300 word reflection on stepping
+            from competitor to case writer, and what it taught me about framing
+            a problem for other teams to solve.
           </p>
         </Section>
 
@@ -63,18 +63,18 @@ export default function CaseItArtifactPage() {
           <ul className="list-none space-y-2">
             <li>
               <Link
-                href="/case-competitions"
+                href="/research"
                 className="text-husky-gold-light hover:text-white transition-colors"
               >
-                &rarr; Case Competitions
+                &rarr; Research & Writing
               </Link>
             </li>
             <li>
               <Link
-                href="/work"
+                href="/case-competitions"
                 className="text-husky-gold-light hover:text-white transition-colors"
               >
-                &rarr; Work & Projects
+                &rarr; Case Competitions
               </Link>
             </li>
           </ul>

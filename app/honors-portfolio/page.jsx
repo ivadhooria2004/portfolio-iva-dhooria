@@ -53,19 +53,19 @@ const artifacts = [
     number: "01",
     title: "Sustained attention in time-pressured case competitions",
     context: "INFO 300 — independent honors research, Winter 2025",
-    href: "/learning-statement/info-300-research",
+    href: "/honors-portfolio/info-300-research",
   },
   {
     number: "02",
     title: "CaseIT 2024 — IT integration strategy for Pacific Coastal Airlines",
     context: "Simon Fraser University — Winter 2024",
-    href: "/learning-statement/caseit-2024",
+    href: "/honors-portfolio/caseit-2024",
   },
   {
     number: "03",
     title: "Equitable Futures — writing the King County Metro case",
     context: "UW Undergraduate Women in Business — Winter 2025",
-    href: "/learning-statement/equitable-futures",
+    href: "/honors-portfolio/equitable-futures",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function HonorsJourneyPage() {
           className="font-display text-2xl sm:text-3xl tracking-tight text-white leading-[1.1] mb-10"
           style={{ fontWeight: 500 }}
         >
-          HON Classes
+          Honors Classes
         </h2>
         <div className="space-y-0">
           {honCourses.map((course) => (

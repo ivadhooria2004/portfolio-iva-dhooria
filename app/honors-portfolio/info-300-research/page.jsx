@@ -21,7 +21,7 @@ export default function InfoResearchArtifactPage() {
   return (
     <PageShell>
       <Link
-        href="/learning-statement"
+        href="/honors-portfolio"
         className="inline-flex items-center gap-2 text-[13px] text-white/40 hover:text-white/70 transition-colors font-display mb-10"
       >
         <ArrowLeft size={14} />
