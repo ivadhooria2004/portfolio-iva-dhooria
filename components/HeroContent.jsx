@@ -52,7 +52,8 @@ export default function HeroContent() {
         className="relative mt-5 max-w-2xl text-base sm:text-lg text-white/60 leading-relaxed font-light z-10"
       >
         <p>UW Foster School of Business &amp; Interdisciplinary Honors</p>
-        <p className="mt-1">Majors &mdash; Finance and Information Systems, Minors &mdash; Data Science and Informatics</p>
+        <p className="mt-1">Majors &mdash; Finance and Information Systems</p>
+        <p className="mt-1">Minors &mdash; Data Science and Informatics</p>
         <p className="mt-3">Building at the intersection of strategy, data, and decision-making.</p>
       </motion.div>
 
