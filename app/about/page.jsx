@@ -42,7 +42,7 @@ export default function AboutPage() {
       <div className="grid gap-10 md:grid-cols-[2fr_3fr] md:gap-12">
         {/* Left: photo slot */}
         <div>
-          <PhotoSlot aspectRatio="3/4" />
+          <PhotoSlot src="/iva-about.jpg" alt="Iva Dhooria" aspectRatio="3/4" caption="" />
         </div>
 
         {/* Right: bio + actions */}
