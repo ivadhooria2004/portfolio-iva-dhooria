@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
@@ -9,30 +15,222 @@
   --color-husky-purple-light: #7B4FD4;
   --color-husky-purple-bright: #9B6FE8;
   --color-husky-gold: #B7A57A;
+  --color-husky-gold-bright: #D4C06A;
   --color-husky-gold-light: #E8D5B5;
   --color-dark: #050505;
   --color-dark-glass: rgba(85, 80, 110, 0.4);
   --color-glass-border: rgba(164, 132, 215, 0.3);
+
+  /* Design system */
+  --color-primary: #4A3278;
+  --color-primary-light: #7357B5;
+  --color-primary-muted: #F5F2FB;
+  --color-accent: #A07830;
+  --color-accent-light: #C49A45;
+  --color-accent-muted: #FAF8F3;
+  --color-text: #1A1A2A;
+  --color-text-muted: #68607E;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050505;
+    color: white;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: white;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+:root {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
 }
 
-body {
-  font-family: var(--font-sans);
-  background-color: #050505;
+body, main, section, nav,
+.backdrop-blur-2xl, .backdrop-blur-sm {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+
+/* ── LIGHT MODE ────────────────────────────────────────── */
+
+[data-theme="light"] body {
+  background-color: #FFFFFF;
+  color: #1A1A2A;
+}
+
+[data-theme="light"] ::selection {
+  background-color: #4A3278;
   color: white;
-  overflow-x: hidden;
 }
 
-::selection {
-  background-color: var(--color-husky-purple);
-  color: white;
+[data-theme="light"] .bg-dark,
+[data-theme="light"] main,
+[data-theme="light"] section {
+  background-color: #FFFFFF !important;
+}
+
+/* Text */
+[data-theme="light"] .text-white        { color: #1A1A2A !important; }
+[data-theme="light"] [class~="text-white/80"] { color: rgba(26,26,42,0.88) !important; }
+[data-theme="light"] [class~="text-white/70"] { color: rgba(26,26,42,0.78) !important; }
+[data-theme="light"] [class~="text-white/65"] { color: #68607E !important; }
+[data-theme="light"] [class~="text-white/60"] { color: #68607E !important; }
+[data-theme="light"] [class~="text-white/55"] { color: #68607E !important; }
+[data-theme="light"] [class~="text-white/50"] { color: #68607E !important; }
+[data-theme="light"] [class~="text-white/45"] { color: rgba(104,96,126,0.88) !important; }
+[data-theme="light"] [class~="text-white/40"] { color: rgba(104,96,126,0.78) !important; }
+[data-theme="light"] [class~="text-white/35"] { color: rgba(104,96,126,0.68) !important; }
+[data-theme="light"] [class~="text-white/30"] { color: rgba(104,96,126,0.58) !important; }
+[data-theme="light"] [class~="text-white/20"] { color: rgba(104,96,126,0.42) !important; }
+[data-theme="light"] [class~="text-white/15"] { color: rgba(104,96,126,0.32) !important; }
+
+/* Borders */
+[data-theme="light"] [class*="border-white"]  { border-color: #E0DAF0 !important; }
+[data-theme="light"] .border-dashed            { border-color: #E0DAF0 !important; }
+[data-theme="light"] [class*="border-husky-gold"] { border-color: #A07830 !important; }
+
+/* Surfaces */
+[data-theme="light"] [class*="bg-white/"] { background-color: #FFFFFF !important; }
+
+/* Navbar */
+[data-theme="light"] .backdrop-blur-2xl {
+  background-color: #FFFFFF !important;
+  border-color: transparent !important;
+  border-bottom: 0.5px solid #E0DAF0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+[data-theme="light"] .backdrop-blur-sm {
+  background-color: #F5F2FB !important;
+}
+[data-theme="light"] [class*="from-husky-purple/5"] { opacity: 0 !important; }
+[data-theme="light"] [class*="bg-black"] { background-color: #FFFFFF !important; }
+[data-theme="light"] [class*="bg-husky-gold/10"] { background-color: rgba(160,120,48,0.10) !important; }
+[data-theme="light"] [class*="blur-["] { opacity: 0.06 !important; }
+
+/* Hero overrides — keep hero text white since hero has dark bg */
+[data-theme="light"] #hero [class~="text-white/60"] { color: rgba(255,255,255,0.85) !important; }
+[data-theme="light"] #hero [class~="text-white/55"] { color: rgba(255,255,255,0.85) !important; }
+[data-theme="light"] #hero [class*="border-husky-gold"] { border-color: rgba(255,255,255,0.5) !important; }
+[data-theme="light"] #hero [class*="text-husky-gold-light"] { color: #FFFFFF !important; }
+
+/* Gradient text */
+[data-theme="light"] .text-husky-purple-bright { color: #4A3278 !important; }
+[data-theme="light"] .text-dark { color: #1A1A2A !important; }
+
+/* Filter pills */
+[data-theme="light"] [class*="bg-husky-gold/15"] { background-color: rgba(160,120,48,0.12) !important; }
+[data-theme="light"] [class*="bg-husky-purple/15"] { background-color: rgba(74,50,120,0.10) !important; }
+
+/* ── DARK MODE ─────────────────────────────────────────── */
+/*
+  Page bg:    #17142A  (very dark purple-navy)
+  Surface:    #221D38  (card / panel bg)
+  Surface alt:#1D1932  (subtle alternate)
+  Headings:   #EDE8FF  (soft lavender-white)
+  Body text:  #C5BDDF  (readable lavender)
+  Muted text: #9890B5  (dimmer lavender)
+  Accent gold:#C9A84C  (unchanged — reads great on dark)
+  Border:     #2E2848
+*/
+
+[data-theme="dark"] {
+  --color-primary: #7357B5;
+  --color-primary-light: #9B7FD4;
+  --color-primary-muted: #221D38;
+  --color-accent: #C9A84C;
+  --color-accent-light: #D4B86A;
+  --color-accent-muted: #1F1C2E;
+  --color-text: #EDE8FF;
+  --color-text-muted: #9890B5;
+}
+
+/* Page and section backgrounds — NO !important on section so cards can override */
+[data-theme="dark"] body { background-color: #17142A; }
+[data-theme="dark"] main { background-color: #17142A !important; }
+
+/* Sections — alternate subtly, DO NOT flatten everything */
+[data-theme="dark"] section[style*="background-color: '#FFFFFF'"],
+[data-theme="dark"] section[style*="backgroundColor: '#FFFFFF'"] {
+  background-color: #17142A !important;
+}
+[data-theme="dark"] section[style*="background-color: '#F5F2FB'"],
+[data-theme="dark"] section[style*="backgroundColor: '#F5F2FB'"],
+[data-theme="dark"] section[style*="background-color: '#F2EEF9'"],
+[data-theme="dark"] section[style*="backgroundColor: '#F2EEF9'"] {
+  background-color: #1D1932 !important;
+}
+[data-theme="dark"] section[style*="background-color: '#FAF8F3'"],
+[data-theme="dark"] section[style*="backgroundColor: '#FAF8F3'"],
+[data-theme="dark"] section[style*="background-color: '#FAF6ED'"],
+[data-theme="dark"] section[style*="backgroundColor: '#FAF6ED'"] {
+  background-color: #1F1C2E !important;
+}
+
+/* Cards */
+[data-theme="dark"] [class*="bg-white"]:not(#hero *) {
+  background-color: #221D38 !important;
+}
+
+/* Text */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  color: #EDE8FF !important;
+}
+[data-theme="dark"] p { color: #C5BDDF !important; }
+[data-theme="dark"] [class~="italic"] { color: #9890B5 !important; }
+
+/* Navbar */
+[data-theme="dark"] .backdrop-blur-2xl {
+  background-color: rgba(23,20,42,0.85) !important;
+  border-bottom: 0.5px solid #2E2848 !important;
+}
+
+/* Shadows */
+[data-theme="dark"] [class*="shadow-sm"],
+[data-theme="dark"] [class*="shadow-md"],
+[data-theme="dark"] [class*="shadow-lg"] {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.35) !important;
+}
+
+/* Borders */
+[data-theme="dark"] [class*="border-white"] { border-color: #2E2848 !important; }
+[data-theme="dark"] .border-dashed { border-color: #2E2848 !important; }
+
+/* Honors course card */
+[data-theme="dark"] .honors-course-card {
+  background-color: #221D38 !important;
+  border-color: #C9A84C !important;
+}
+[data-theme="dark"] .honors-course-card h3 { color: #EDE8FF !important; }
+[data-theme="dark"] .honors-course-card p { color: #C5BDDF !important; }
+[data-theme="dark"] .honors-course-watermark {
+  opacity: 0.09 !important;
+  color: #9890B5 !important;
+}
+
+/* Ad-hoc card */
+[data-theme="dark"] .adhoc-honors-card {
+  background-color: #221D38 !important;
+  border-color: #C9A84C !important;
+}
+[data-theme="dark"] .adhoc-honors-card h3 { color: #EDE8FF !important; }
+[data-theme="dark"] .adhoc-honors-card p { color: #C5BDDF !important; }
+[data-theme="dark"] .adhoc-honors-card [class*="bg-\[#"] {
+  background-color: #C9A84C !important;
+  color: #17142A !important;
+}
+[data-theme="dark"] .adhoc-honors-card span:not([class*="bg-"]) { color: #9890B5 !important; }
+[data-theme="dark"] .adhoc-honors-card .inline-flex { color: #C9A84C !important; }
+
+/* Artifact card */
+[data-theme="dark"] .group.block.rounded-2xl.bg-white {
+  background-color: #221D38 !important;
 }

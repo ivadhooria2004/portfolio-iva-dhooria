@@ -1,123 +1,141 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.15 * i,
-      duration: 0.8,
-      ease: [0.25, 0.4, 0.25, 1],
-    },
-  }),
-};
+const ease = [0.25, 0.4, 0.25, 1];
 
 export default function HeroContent() {
   return (
-    <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-6 text-center">
-      {/* Badge */}
-      <motion.div
-        custom={0}
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        className="mb-8 mt-24"
-      >
-        <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-glass-border bg-dark-glass backdrop-blur-xl">
-          <span className="flex items-center justify-center w-6 h-6 rounded-md bg-husky-purple">
-            <Sparkles size={13} className="text-white" />
-          </span>
-          <span className="text-sm font-medium text-white/80 font-display tracking-wide">
-            University of Washington Interdisciplinary Honors
-          </span>
-        </div>
-      </motion.div>
+    <div id="hero" className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center overflow-hidden" style={{
+      background: 'linear-gradient(150deg, #0E0B1A 0%, #1C1535 30%, #2E1F5E 60%, #3D2875 85%, #251A45 100%)',
+      backgroundSize: '200% 200%',
+      animation: 'gradientShift 16s ease infinite'
+    }}>
 
-      {/* Main Headline */}
+      {/* ── Decorative blurred circle 1 ── */}
+      <div style={{
+        position: 'absolute',
+        top: '-100px',
+        right: '-100px',
+        width: '500px',
+        height: '500px',
+        background: 'radial-gradient(circle, rgba(160,120,48,0.12) 0%, transparent 70%)',
+        borderRadius: '50%',
+        filter: 'blur(40px)',
+        pointerEvents: 'none'
+      }} />
+
+      {/* ── Decorative blurred circle 2 ── */}
+      <div style={{
+        position: 'absolute',
+        bottom: '-80px',
+        left: '-80px',
+        width: '400px',
+        height: '400px',
+        background: 'radial-gradient(circle, rgba(74,50,120,0.35) 0%, transparent 70%)',
+        borderRadius: '50%',
+        filter: 'blur(60px)',
+        pointerEvents: 'none'
+      }} />
+
+      {/* ── Tagline: Decoding Markets. Designing Futures. ── */}
       <motion.h1
-        custom={1}
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        className="max-w-5xl"
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 0.15, ease }}
+        className="relative max-w-5xl z-10 font-display text-white leading-[1.02] tracking-[-0.02em] text-5xl sm:text-6xl md:text-7xl lg:text-[88px]"
+        style={{ fontWeight: 500, textShadow: '0 2px 30px rgba(0,0,0,0.3)', color: '#FFFFFF' }}
       >
-        <span className="block font-display font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.95] tracking-[-0.03em] text-white">
+        <span className="block">
           Decoding{" "}
-          <span className="font-serif italic font-normal text-husky-purple-bright">
+          <span className="font-serif italic font-normal" style={{ color: '#9B7FD4' }}>
             Markets
           </span>
           .
         </span>
-        <span className="block font-display font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.95] tracking-[-0.03em] text-white mt-2">
+        <span className="block mt-2">
           Designing{" "}
-          <span className="font-serif italic font-normal bg-gradient-to-r from-husky-gold-light to-husky-gold bg-clip-text text-transparent">
+          <span className="font-serif italic font-normal bg-gradient-to-r from-[#C49A45] to-[#A07830] bg-clip-text text-transparent">
             Futures
           </span>
           .
         </span>
       </motion.h1>
 
-      {/* Subtitle */}
-      <motion.p
-        custom={2}
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        className="mt-7 max-w-2xl text-base sm:text-lg text-white/50 leading-relaxed font-light"
-      >
-        Finance major. Data Science &amp; Informatics minor. Building at the
-        intersection of markets, models, and meaning.
-      </motion.p>
-
-      {/* CTA Buttons */}
+      {/* ── Decorative accent line ── */}
       <motion.div
-        custom={3}
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        className="mt-10 flex flex-col sm:flex-row items-center gap-4"
+        initial={{ scaleX: 0, opacity: 0 }}
+        animate={{ scaleX: 1, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.3, ease }}
+        className="relative mt-7 w-24 h-px z-10 origin-center"
+        style={{ background: 'linear-gradient(90deg, #A07830, #C49A45, #A07830)' }}
+      />
+
+      {/* ── Subtext ── */}
+      <motion.div
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3, ease }}
+        className="relative mt-5 max-w-2xl text-base sm:text-lg leading-relaxed font-light z-10"
+        style={{ color: 'rgba(255,255,255,0.85)', textShadow: '0 2px 30px rgba(0,0,0,0.3)' }}
+      >
+        <p>UW Foster School of Business &amp; Interdisciplinary Honors</p>
+        <p className="mt-1">Majors &mdash; Finance and Information Systems</p>
+        <p className="mt-1">Minors &mdash; Data Science and Informatics</p>
+        <p className="mt-3">Building at the intersection of strategy, data, and decision-making.</p>
+      </motion.div>
+
+      {/* ── CTAs ── */}
+      <motion.div
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.45, ease }}
+        className="relative mt-10 flex flex-col sm:flex-row items-center gap-4 z-10"
       >
         <Link
-          href="/freshman"
-          className="group flex items-center gap-2 px-7 py-3.5 rounded-xl bg-husky-purple text-white font-display font-semibold text-sm hover:bg-husky-purple-light transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(75,46,131,0.4)]"
+          href="/work"
+          className="group flex items-center gap-2 px-7 py-3.5 rounded-xl font-display text-sm transition-all duration-200"
+          style={{ backgroundColor: '#4A3278', color: '#FFFFFF', fontWeight: 600 }}
         >
-          Explore My Journey
+          View my work
           <ArrowRight
             size={16}
-            className="transition-transform duration-300 group-hover:translate-x-1"
+            className="transition-transform duration-200 group-hover:translate-x-1"
           />
         </Link>
+
         <a
-          href="mailto:contact@ivadhooria.com"
-          className="px-7 py-3.5 rounded-xl border border-white/[0.1] bg-white/[0.03] backdrop-blur-sm text-white/80 font-display font-semibold text-sm hover:bg-white/[0.08] hover:text-white transition-all duration-300 hover:scale-105"
+          href="mailto:ivadhooria2004@gmail.com"
+          className="px-7 py-3.5 rounded-xl font-display text-sm transition-all duration-200"
+          style={{ border: '2px solid rgba(255,255,255,0.6)', backgroundColor: 'transparent', color: '#FFFFFF' }}
         >
-          Get in Touch
+          Get in touch
         </a>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* ── Scroll indicator ── */}
       <motion.div
-        custom={5}
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.9 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
       >
         <div className="flex flex-col items-center gap-2">
-          <span className="text-[11px] uppercase tracking-[0.2em] text-white/25 font-display">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-husky-gold/40 font-display">
             Scroll
           </span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            className="w-5 h-8 rounded-full border border-white/15 flex items-start justify-center pt-1.5"
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="w-5 h-8 rounded-full border border-husky-gold/20 flex items-start justify-center pt-1.5"
           >
-            <div className="w-1 h-1.5 rounded-full bg-white/40" />
+            <div className="w-1 h-1.5 rounded-full bg-husky-gold/50" />
           </motion.div>
         </div>
       </motion.div>
