@@ -310,3 +310,14 @@ body, main, section, nav,
   background-color: #7357B5 !important;
   color: #FFFFFF !important;
 }
+
+/* Artifact watermark styling */
+.artifact-theme-watermark {
+  color: #4A3278 !important;
+  opacity: 0.08 !important;
+}
+
+[data-theme="dark"] .artifact-theme-watermark {
+  color: #9B7FD4 !important;
+  opacity: 0.25 !important;
+}
