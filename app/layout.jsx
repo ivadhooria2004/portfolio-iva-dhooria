@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
       <body>
         <SpotlightBackground />
         <Navbar />
+        <ThemeToggleFloat />
         {children}
       </body>
     </html>
