@@ -70,15 +70,19 @@ export default function Navbar() {
           })}
           <button
             onClick={() => {
-              const current = document.documentElement.getAttribute('data-theme');
-              const next = current === 'dark' ? 'light' : 'dark';
+              const next = theme === 'dark' ? 'light' : 'dark';
               document.documentElement.setAttribute('data-theme', next);
               localStorage.setItem('theme', next);
+              setTheme(next);
             }}
             aria-label="Toggle theme"
-            className="ml-3 px-3 py-2 rounded-lg text-sm font-display transition-all duration-200 border border-white/20 hover:border-white/40 text-white/70 hover:text-white"
+            className={`ml-3 px-3 py-2 rounded-lg text-sm font-display transition-all duration-200 border ${
+              theme === 'dark'
+                ? 'border-white/20 hover:border-white/40 text-white/70 hover:text-white'
+                : 'border-[#4A3278]/30 hover:border-[#4A3278]/60 text-[#4A3278]/70 hover:text-[#4A3278]'
+            }`}
           >
-            ☀
+            {theme === 'dark' ? '☀' : '☾'}
           </button>
         </div>
 
