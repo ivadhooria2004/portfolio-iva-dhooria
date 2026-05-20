@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Work", path: "/work" },
