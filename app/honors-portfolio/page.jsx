@@ -219,7 +219,7 @@ const artifacts = [
     themeKey: "authenticity",
     year: 2024,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/caseit-2024.jpg",
   },
   {
     id: "lakeside-speaker",
