@@ -369,27 +369,29 @@ function ArtifactPanel({ artifact, onClose }) {
             Reflection
           </div>
 
-          {artifact.reflection ? (
-            <p
-              style={{
-                fontSize: "15px",
-                lineHeight: 1.8,
-                color: "#1A1A2A",
-              }}
-            >
-              {artifact.reflection}
-            </p>
-          ) : (
-            <p
-              style={{
-                fontSize: "14px",
-                fontStyle: "italic",
-                color: "#9890B5",
-              }}
-            >
-              Reflection coming soon.
-            </p>
-          )}
+          <div style={{ borderLeft: `3px solid ${config.color}`, paddingLeft: "1rem" }}>
+            {artifact.reflection ? (
+              <p
+                style={{
+                  fontSize: "16px",
+                  lineHeight: 1.85,
+                  color: "#1A1A2A",
+                }}
+              >
+                {artifact.reflection}
+              </p>
+            ) : (
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontStyle: "italic",
+                  color: "#9890B5",
+                }}
+              >
+                Reflection coming soon.
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </>
