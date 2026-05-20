@@ -128,6 +128,25 @@ body, main, section, nav,
 [data-theme="light"] [class*="bg-husky-gold/15"] { background-color: rgba(201,168,76,0.12) !important; }
 [data-theme="light"] [class*="bg-husky-purple/15"] { background-color: rgba(74,50,120,0.10) !important; }
 
+/* ── ROUNDED CARDS IN DARK MODE ────────────────────────────── */
+
+[data-theme="dark"] .rounded-2xl {
+  background-color: #2A2448;
+}
+[data-theme="dark"] .rounded-2xl.bg-white,
+[data-theme="dark"] .rounded-2xl[class*="bg-white"] {
+  background-color: #2A2448 !important;
+  color: #EDE8FF !important;
+}
+[data-theme="dark"] .rounded-2xl h3 { color: #EDE8FF !important; }
+[data-theme="dark"] .rounded-2xl p { color: #C5BDDF !important; }
+
+/* Fix artifact card watermark in dark mode */
+[data-theme="dark"] .rounded-2xl .text-\[\#F2EEF9\] {
+  color: #9890B5 !important;
+  opacity: 0.12 !important;
+}
+
 /* ── DARK MODE ─────────────────────────────────────────── */
 /*
   Page bg:    #17142A  (very dark purple-navy)
