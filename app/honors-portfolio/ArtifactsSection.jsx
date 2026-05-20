@@ -321,7 +321,7 @@ function ArtifactPanel({ artifact, onClose }) {
           <div
             style={{
               width: '100%',
-              height: '260px',
+              height: '300px',
               marginBottom: '1.5rem',
               borderRadius: '1rem',
               overflow: 'hidden',
