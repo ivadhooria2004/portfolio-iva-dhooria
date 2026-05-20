@@ -118,7 +118,7 @@ const artifacts = [
     themeKey: "exploration",
     year: 2025,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/first-c2-event.jpg",
   },
   {
     id: "writing-not-competing",
