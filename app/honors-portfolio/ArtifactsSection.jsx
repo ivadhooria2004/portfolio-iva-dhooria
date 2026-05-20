@@ -190,7 +190,7 @@ function ArtifactsByTheme({ artifacts, onSelectArtifact }) {
   );
 }
 
-function ArtifactsByYear({ artifacts, expandedId, onToggle }) {
+function ArtifactsByYear({ artifacts, onSelectArtifact }) {
   const sortedArtifacts = [...artifacts].sort((a, b) => a.year - b.year);
 
   return (
@@ -208,8 +208,7 @@ function ArtifactsByYear({ artifacts, expandedId, onToggle }) {
             </span>
             <ArtifactTile
               artifact={artifact}
-              expanded={expandedId === artifact.id}
-              onToggle={() => onToggle(artifact.id)}
+              onSelect={onSelectArtifact}
             />
           </div>
         );
