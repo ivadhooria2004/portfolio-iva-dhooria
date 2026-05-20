@@ -321,3 +321,9 @@ body, main, section, nav,
   color: #9B7FD4 !important;
   opacity: 0.25 !important;
 }
+
+/* Artifact photo placeholder dark mode */
+[data-theme="dark"] .artifact-photo-placeholder {
+  background-color: #1E1A30 !important;
+  border-color: #3A3250 !important;
+}
