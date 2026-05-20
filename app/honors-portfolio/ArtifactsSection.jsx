@@ -61,10 +61,15 @@ function ArtifactTile({ artifact, expanded, onToggle }) {
     >
       {/* Photo area */}
       <div
-        className="w-full overflow-hidden"
         style={{
-          height: "160px",
-          borderRadius: "1rem 1rem 0 0",
+          width: '100%',
+          height: '180px',
+          borderRadius: '1rem 1rem 0 0',
+          overflow: 'hidden',
+          backgroundColor: '#F5F2FB',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }}
       >
         {artifact.photo ? (
@@ -72,9 +77,12 @@ function ArtifactTile({ artifact, expanded, onToggle }) {
             src={artifact.photo}
             alt={artifact.title}
             style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              objectPosition: 'center',
+              display: 'block',
+              padding: '8px'
             }}
           />
         ) : (
