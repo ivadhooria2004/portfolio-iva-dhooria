@@ -147,24 +147,37 @@ function ArtifactTile({ artifact }) {
 function ThemeNavCard({ themeKey }) {
   const config = themeConfig[themeKey];
 
+  const cardStyles = {
+    exploration: { bg: "#F5F2FB", darkBg: "#2A2040", border: "#4A3278" },
+    curiosity: { bg: "#FAF8F3", darkBg: "#2A2218", border: "#C9A84C" },
+    authenticity: { bg: "#EEE8FA", darkBg: "#1E1A30", border: "#7357B5" },
+  };
+
+  const style = cardStyles[themeKey];
+
   return (
     <Link href={config.path}>
       <div
-        className="rounded-2xl p-6 cursor-pointer transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+        className="rounded-r-2xl p-6 cursor-pointer transition-all duration-200 hover:-translate-y-0.5"
         style={{
-          backgroundColor: config.lightBg,
-          border: `1px solid ${config.color}33`,
-          borderColor: `${config.color}33`,
+          backgroundColor: style.bg,
+          borderLeft: `4px solid ${style.border}`,
+          boxShadow: "0 0 0 0 rgba(0, 0, 0, 0.15)",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.15)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.boxShadow = "0 0 0 0 rgba(0, 0, 0, 0.15)";
         }}
       >
-        <div className="text-4xl font-bold opacity-15 mb-2" style={{ color: config.color }}>
-          {config.number}
-        </div>
-        <h3 className="font-display font-bold text-lg mb-2" style={{ color: config.color }}>
+        <h3 className="font-display font-bold text-lg mb-2" style={{ color: style.border }}>
           {config.label}
         </h3>
-        <p className="text-sm text-gray-600 mb-4">{config.description}</p>
-        <div style={{ color: config.color }}>→</div>
+        <p className="text-sm mb-4" style={{ color: "#68607E" }}>
+          {config.description}
+        </p>
+        <div style={{ color: style.border }}>→</div>
       </div>
     </Link>
   );
