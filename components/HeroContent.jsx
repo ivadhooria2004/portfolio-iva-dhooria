@@ -109,7 +109,7 @@ export default function HeroContent() {
         <a
           href="mailto:ivadhooria2004@gmail.com"
           className="px-7 py-3.5 rounded-xl font-display text-sm transition-all duration-200"
-          style={{ border: '2px solid rgba(255,255,255,0.6)', backgroundColor: 'transparent', color: '#FFFFFF' }}
+          style={{ border: '2px solid rgba(255,255,255,0.7)', backgroundColor: 'transparent', color: '#FFFFFF', fontWeight: 500 }}
         >
           Get in touch
         </a>
