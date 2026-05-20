@@ -32,28 +32,105 @@ const themeConfig = {
 function ArtifactTile({ artifact, expanded, onToggle }) {
   const config = themeConfig[artifact.themeKey];
 
+  const getDarkModeColors = () => {
+    switch (artifact.themeKey) {
+      case "exploration":
+        return { badge: "#4A3278", badgeText: "#FFFFFF" };
+      case "curiosity":
+        return { badge: "#C9A84C", badgeText: "#17142A" };
+      case "authenticity":
+        return { badge: "#7357B5", badgeText: "#FFFFFF" };
+      default:
+        return { badge: config.color, badgeText: "#FFFFFF" };
+    }
+  };
+
+  const darkColors = getDarkModeColors();
+
   return (
     <div
       className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
       style={{
         borderTop: `3px solid ${config.color}`,
         backgroundColor: "white",
+        "--dark-bg": "#2A2448",
+        "--dark-title": "#EDE8FF",
+        "--dark-date": "#9890B5",
+        "--dark-shadow": "0 2px 8px rgba(0,0,0,0.4)",
       }}
     >
+      {/* Photo area */}
+      <div
+        className="w-full overflow-hidden"
+        style={{
+          height: "160px",
+          borderRadius: "1rem 1rem 0 0",
+        }}
+      >
+        {artifact.photo ? (
+          <img
+            src={artifact.photo}
+            alt={artifact.title}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        ) : (
+          <div
+            className="w-full h-full flex items-center justify-center border-b-2 border-dashed"
+            style={{
+              backgroundColor: "#F5F2FB",
+              borderColor: "#D4D2DF",
+            }}
+            data-theme-dark={{
+              backgroundColor: "#1E1A30",
+              borderColor: "#3A3250",
+            }}
+          >
+            <span
+              className="text-sm italic"
+              style={{
+                color: "#9890B5",
+              }}
+            >
+              [ Add photo ]
+            </span>
+          </div>
+        )}
+      </div>
+
+      {/* Card content */}
       <div className="p-6">
         {/* Theme badge */}
         <span
           className="text-[10px] uppercase tracking-[0.08em] font-display text-white rounded-full px-2.5 py-1 inline-block mb-3"
-          style={{ backgroundColor: config.color }}
+          style={{
+            backgroundColor: config.color,
+            color: darkColors.badgeText,
+          }}
         >
           {config.label.split(" ").slice(0, 2).join(" ")}
         </span>
 
         {/* Title and date */}
-        <h3 className="font-display font-bold text-lg text-[#4A3278] mb-1 leading-snug">
+        <h3
+          className="font-display font-bold text-lg mb-1 leading-snug"
+          style={{
+            color: "#4A3278",
+          }}
+        >
           {artifact.title}
         </h3>
-        <p className="text-sm text-[#68607E] font-display mb-4">{artifact.date}</p>
+        <p
+          className="text-sm font-display mb-4"
+          style={{
+            color: "#68607E",
+          }}
+        >
+          {artifact.date}
+        </p>
 
         {/* Reflection link or placeholder */}
         {!expanded && (
@@ -69,21 +146,20 @@ function ArtifactTile({ artifact, expanded, onToggle }) {
 
       {/* Expanded content */}
       {expanded && (
-        <div className="border-t border-[#E0DAF0] px-6 py-6 bg-[#F5F2FB]">
-          {/* Photo placeholder */}
-          <div
-            className="rounded-lg border-2 border-dashed flex items-center justify-center mb-6"
+        <div
+          className="border-t px-6 py-6"
+          style={{
+            backgroundColor: "#F5F2FB",
+            borderColor: "#E0DAF0",
+          }}
+        >
+          {/* Reflection placeholder */}
+          <p
+            className="text-sm italic mb-6"
             style={{
-              borderColor: "#D4D2DF",
-              backgroundColor: "#F5F2FB",
-              height: "200px",
+              color: "#9890B5",
             }}
           >
-            <span className="text-[#9890B5]">[ Add photo ]</span>
-          </div>
-
-          {/* Reflection placeholder */}
-          <p className="text-sm italic text-[#9890B5] mb-6">
             Reflection coming soon — check back soon.
           </p>
 
