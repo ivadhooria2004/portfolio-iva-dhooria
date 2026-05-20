@@ -194,11 +194,10 @@ function ArtifactsByTheme({ artifacts, expandedId, onToggle }) {
           <div key={themeKey}>
             {/* Watermark number */}
             <div
-              className="relative mb-6"
+              className="artifact-theme-watermark relative mb-6"
               style={{
                 fontSize: "120px",
                 fontWeight: "bold",
-                opacity: 0.06,
                 color: config.color,
                 lineHeight: 0.8,
                 height: "80px",
