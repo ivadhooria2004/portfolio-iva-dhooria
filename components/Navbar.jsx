@@ -128,15 +128,19 @@ export default function Navbar() {
               })}
               <button
                 onClick={() => {
-                  const current = document.documentElement.getAttribute('data-theme');
-                  const next = current === 'dark' ? 'light' : 'dark';
+                  const next = theme === 'dark' ? 'light' : 'dark';
                   document.documentElement.setAttribute('data-theme', next);
                   localStorage.setItem('theme', next);
+                  setTheme(next);
                 }}
                 aria-label="Toggle theme"
-                className="w-full text-left px-4 py-3 rounded-lg text-base transition-all duration-200 border border-white/20 hover:border-white/40 text-white/60 hover:text-white"
+                className={`w-full text-left px-4 py-3 rounded-lg text-base transition-all duration-200 border ${
+                  theme === 'dark'
+                    ? 'border-white/20 hover:border-white/40 text-white/60 hover:text-white'
+                    : 'border-[#4A3278]/30 hover:border-[#4A3278]/60 text-[#4A3278]/60 hover:text-[#4A3278]'
+                }`}
               >
-                Toggle theme ☀
+                Toggle theme {theme === 'dark' ? '☀' : '☾'}
               </button>
             </div>
           </motion.div>
