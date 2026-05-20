@@ -114,6 +114,10 @@ body, main, section, nav,
 [data-theme="light"] [class*="bg-husky-gold/10"] { background-color: rgba(201,168,76,0.10) !important; }
 [data-theme="light"] [class*="blur-["] { opacity: 0.06 !important; }
 
+/* Text colors for light mode — husky gold elements */
+[data-theme="light"] .text-husky-gold-light { color: #A07830 !important; }
+[data-theme="light"] [class*="text-husky-gold"] { color: #A07830 !important; }
+
 /* Hero overrides — keep hero text white since hero has dark bg */
 [data-theme="light"] #hero [class~="text-white/60"] { color: rgba(255,255,255,0.85) !important; }
 [data-theme="light"] #hero [class~="text-white/55"] { color: rgba(255,255,255,0.85) !important; }
