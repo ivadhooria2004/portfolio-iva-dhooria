@@ -96,7 +96,7 @@ const artifacts = [
 
 function HonorsCourseCard({ course }) {
   return (
-    <div className="honors-course-card relative rounded-2xl bg-white shadow-sm border-l-4 border-[#A07830] overflow-hidden group hover:shadow-md transition-shadow duration-200" style={{ minHeight: '140px', padding: '1.5rem 1.5rem 1rem 1.5rem' }}>
+    <div className="honors-course-card relative rounded-2xl bg-white shadow-sm border-l-4 border-[#C9A84C] overflow-hidden group hover:shadow-md transition-shadow duration-200" style={{ minHeight: '140px', padding: '1.5rem 1.5rem 1rem 1.5rem' }}>
       {/* Watermark background */}
       <div className="honors-course-watermark absolute select-none pointer-events-none" style={{ bottom: '-8px', right: '8px', fontSize: 'clamp(3.5rem, 7vw, 5rem)', opacity: 0.07, color: '#4A3278', lineHeight: 1 }}>
         {course.code.split(" ")[1]}
@@ -153,7 +153,7 @@ function AdHocHonorsCard({ experience }) {
   return (
     <Link
       href={experience.href}
-      className="adhoc-honors-card group block rounded-2xl overflow-hidden bg-white border-l-4 border-[#A07830] p-6 hover:shadow-lg transition-all duration-200"
+      className="adhoc-honors-card group block rounded-2xl overflow-hidden bg-white border-l-4 border-[#C9A84C] p-6 hover:shadow-lg transition-all duration-200"
     >
       <div className="flex items-baseline justify-between gap-2 mb-3">
         <span className="text-[11px] uppercase tracking-[0.08em] font-display text-white bg-[#A07830] rounded-full px-2.5 py-1 backdrop-blur-sm">
@@ -187,7 +187,7 @@ function ArtifactCard({ artifact }) {
   return (
     <Link
       href={artifact.href}
-      className="group block rounded-2xl bg-white border-t-4 border-[#A07830] p-6 shadow-sm hover:shadow-md transition-shadow duration-200 relative overflow-hidden"
+      className="group block rounded-2xl bg-white border-t-4 border-[#C9A84C] p-6 shadow-sm hover:shadow-md transition-shadow duration-200 relative overflow-hidden"
     >
       {/* Watermark */}
       <div className="absolute top-0 right-0 text-[80px] font-display font-bold text-[#4A3278] -translate-y-1/4 translate-x-1/4 opacity-[0.06] select-none pointer-events-none">
