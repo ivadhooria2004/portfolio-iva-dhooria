@@ -77,18 +77,18 @@ body, main, section, nav,
 
 /* Text */
 [data-theme="light"] .text-white        { color: #1A1A2A !important; }
-[data-theme="light"] [class~="text-white/80"] { color: rgba(26,26,42,0.88) !important; }
-[data-theme="light"] [class~="text-white/70"] { color: rgba(26,26,42,0.78) !important; }
-[data-theme="light"] [class~="text-white/65"] { color: #68607E !important; }
-[data-theme="light"] [class~="text-white/60"] { color: #68607E !important; }
+[data-theme="light"] [class~="text-white/80"] { color: #2A2647 !important; }
+[data-theme="light"] [class~="text-white/70"] { color: #3D385C !important; }
+[data-theme="light"] [class~="text-white/65"] { color: #4A4270 !important; }
+[data-theme="light"] [class~="text-white/60"] { color: #57508C !important; }
 [data-theme="light"] [class~="text-white/55"] { color: #68607E !important; }
-[data-theme="light"] [class~="text-white/50"] { color: #68607E !important; }
-[data-theme="light"] [class~="text-white/45"] { color: rgba(104,96,126,0.88) !important; }
-[data-theme="light"] [class~="text-white/40"] { color: rgba(104,96,126,0.78) !important; }
-[data-theme="light"] [class~="text-white/35"] { color: rgba(104,96,126,0.68) !important; }
-[data-theme="light"] [class~="text-white/30"] { color: rgba(104,96,126,0.58) !important; }
-[data-theme="light"] [class~="text-white/20"] { color: rgba(104,96,126,0.42) !important; }
-[data-theme="light"] [class~="text-white/15"] { color: rgba(104,96,126,0.32) !important; }
+[data-theme="light"] [class~="text-white/50"] { color: #76709C !important; }
+[data-theme="light"] [class~="text-white/45"] { color: #8B859A !important; }
+[data-theme="light"] [class~="text-white/40"] { color: #9E99AD !important; }
+[data-theme="light"] [class~="text-white/35"] { color: #ACABBE !important; }
+[data-theme="light"] [class~="text-white/30"] { color: #BFBCCF !important; }
+[data-theme="light"] [class~="text-white/20"] { color: #D4D2DF !important; }
+[data-theme="light"] [class~="text-white/15"] { color: #E0DFEA !important; }
 
 /* Borders */
 [data-theme="light"] [class*="border-white"]  { border-color: #E0DAF0 !important; }
