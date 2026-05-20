@@ -46,19 +46,11 @@ export default function RelearningAuthenticityPage() {
 
         {/* Title */}
         <h1
-          className="font-display text-4xl font-bold mb-4"
+          className="font-display text-4xl font-bold mb-6"
           style={{ color: themeConfig.color }}
         >
           Relearning Authenticity
         </h1>
-
-        {/* Description */}
-        <p
-          className="text-lg font-display mb-6"
-          style={{ color: "#68607E" }}
-        >
-          Coming back to myself.
-        </p>
 
         {/* Divider */}
         <div style={{ height: "2px", backgroundColor: themeConfig.color, width: "60px" }} />
