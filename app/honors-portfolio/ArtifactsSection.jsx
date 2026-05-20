@@ -223,12 +223,18 @@ function ArtifactsByYear({ artifacts, onSelectArtifact }) {
 function ArtifactPanel({ artifact, onClose }) {
   const config = themeConfig[artifact.themeKey];
   const [isOpen, setIsOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
   useEffect(() => {
     setIsOpen(true);
     document.body.style.overflow = "hidden";
+
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -237,7 +243,9 @@ function ArtifactPanel({ artifact, onClose }) {
     setTimeout(onClose, 300);
   };
 
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const isMobile = windowWidth < 768;
+  const isTablet = windowWidth >= 768 && windowWidth < 1024;
+  const panelWidth = isMobile ? "100vw" : isTablet ? "480px" : "560px";
 
   return (
     <>
