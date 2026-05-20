@@ -208,7 +208,7 @@ const artifacts = [
     themeKey: "authenticity",
     year: 2023,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/shrm.jpg",
   },
   {
     id: "caseit-2024",
