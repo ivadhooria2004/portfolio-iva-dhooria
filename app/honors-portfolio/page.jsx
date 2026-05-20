@@ -141,7 +141,7 @@ const artifacts = [
     themeKey: "curiosity",
     year: 2023,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/always-loved-dancing.jpg",
   },
   {
     id: "deep-conversations",
