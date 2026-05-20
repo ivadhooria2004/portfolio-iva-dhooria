@@ -45,6 +45,9 @@ function ArtifactTile({ artifact, onSelect }) {
       style={{
         borderTop: `3px solid ${config.color}`,
         backgroundColor: "white",
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
       }}
     >
       {/* Photo area */}
