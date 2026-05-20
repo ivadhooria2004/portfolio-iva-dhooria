@@ -156,7 +156,7 @@ function AdHocHonorsCard({ experience }) {
       className="adhoc-honors-card group block rounded-2xl overflow-hidden bg-white border-l-4 border-[#C9A84C] p-6 hover:shadow-lg transition-all duration-200"
     >
       <div className="flex items-baseline justify-between gap-2 mb-3">
-        <span className="text-[11px] uppercase tracking-[0.08em] font-display text-white bg-[#A07830] rounded-full px-2.5 py-1 backdrop-blur-sm">
+        <span className="text-[11px] uppercase tracking-[0.08em] font-display text-white bg-[#C9A84C] rounded-full px-2.5 py-1 backdrop-blur-sm">
           {experience.badge}
         </span>
         <span className="text-[12px] text-[#68607E] font-display whitespace-nowrap">
