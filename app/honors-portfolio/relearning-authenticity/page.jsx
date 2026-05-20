@@ -57,7 +57,7 @@ export default function RelearningAuthenticityPage() {
           className="text-lg font-display mb-6"
           style={{ color: "#68607E" }}
         >
-          Six moments of coming back to myself.
+          Coming back to myself.
         </p>
 
         {/* Divider */}
