@@ -217,13 +217,177 @@ function ArtifactsByYear({ artifacts, onSelectArtifact }) {
   );
 }
 
+function ArtifactPanel({ artifact, onClose }) {
+  const config = themeConfig[artifact.themeKey];
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(true);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setTimeout(onClose, 300);
+  };
+
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
+  return (
+    <>
+      {/* Overlay */}
+      <div
+        className="artifact-overlay fixed inset-0 z-40"
+        style={{
+          backgroundColor: "rgba(0, 0, 0, 0.4)",
+          backdropFilter: "blur(4px)",
+          opacity: isOpen ? 1 : 0,
+        }}
+        onClick={handleClose}
+      />
+
+      {/* Panel */}
+      <div
+        className="artifact-panel fixed z-50 overflow-y-auto"
+        style={{
+          top: 0,
+          right: 0,
+          height: '100vh',
+          width: isMobile ? '100vw' : '420px',
+          backgroundColor: "#FFFFFF",
+          boxShadow: "-4px 0 30px rgba(0, 0, 0, 0.2)",
+          transform: isMobile
+            ? `translateY(${isOpen ? 0 : 100}%)`
+            : `translateX(${isOpen ? 0 : 100}%)`,
+          borderRadius: isMobile ? "1.5rem 1.5rem 0 0" : "0",
+          bottom: isMobile ? 0 : "auto",
+        }}
+      >
+        {/* Close button */}
+        <button
+          onClick={handleClose}
+          className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors z-10"
+          style={{ fontSize: "20px", color: "#1A1A2A" }}
+        >
+          ×
+        </button>
+
+        {/* Panel content */}
+        <div style={{ padding: "2rem", paddingRight: "3rem", paddingBottom: "2.5rem" }}>
+          {/* Theme badge */}
+          <div className="mb-6">
+            <span
+              className="text-[11px] uppercase tracking-[0.08em] font-display rounded-full px-3 py-1.5 inline-block"
+              style={{
+                backgroundColor: config.badgeColor,
+                color: config.badgeText,
+              }}
+            >
+              {config.label.split(" ").slice(0, 2).join(" ")}
+            </span>
+          </div>
+
+          {/* Title */}
+          <h2
+            className="font-display font-bold text-2xl mb-2 leading-tight"
+            style={{ color: config.color }}
+          >
+            {artifact.title}
+          </h2>
+
+          {/* Date and period */}
+          <p
+            className="text-sm font-display mb-8"
+            style={{ color: "#68607E" }}
+          >
+            {artifact.date} • {artifact.period}
+          </p>
+
+          {/* Photo area */}
+          <div
+            style={{
+              width: '100%',
+              height: '260px',
+              marginBottom: '1.5rem',
+              borderRadius: '1rem',
+              overflow: 'hidden',
+              backgroundColor: '#F5F2FB',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {artifact.photo ? (
+              <img
+                src={artifact.photo}
+                alt={artifact.title}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  objectPosition: 'center',
+                  padding: '8px',
+                }}
+              />
+            ) : (
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '100%',
+                  height: '100%',
+                  border: '2px dashed #D4D2DF',
+                }}
+              >
+                <span style={{ color: "#9890B5", fontSize: "14px", fontStyle: "italic" }}>
+                  [ Add photo ]
+                </span>
+              </div>
+            )}
+          </div>
+
+          {/* Divider */}
+          <div style={{ height: "1px", backgroundColor: "#E0DAF0", marginBottom: "1.5rem" }} />
+
+          {/* Reflection section */}
+          <div className="text-[11px] uppercase tracking-[0.08em] font-display mb-4" style={{ color: config.color }}>
+            Reflection
+          </div>
+
+          {artifact.reflection ? (
+            <p
+              style={{
+                fontSize: "15px",
+                lineHeight: 1.8,
+                color: "#1A1A2A",
+              }}
+            >
+              {artifact.reflection}
+            </p>
+          ) : (
+            <p
+              style={{
+                fontSize: "14px",
+                fontStyle: "italic",
+                color: "#9890B5",
+              }}
+            >
+              Reflection coming soon.
+            </p>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
 export default function ArtifactsSection({ artifacts }) {
   const [sortBy, setSortBy] = useState("theme");
-  const [expandedId, setExpandedId] = useState(null);
-
-  const toggleExpanded = (id) => {
-    setExpandedId(expandedId === id ? null : id);
-  };
+  const [selectedArtifact, setSelectedArtifact] = useState(null);
 
   return (
     <div>
@@ -255,9 +419,14 @@ export default function ArtifactsSection({ artifacts }) {
 
       {/* Artifacts view */}
       {sortBy === "theme" ? (
-        <ArtifactsByTheme artifacts={artifacts} expandedId={expandedId} onToggle={toggleExpanded} />
+        <ArtifactsByTheme artifacts={artifacts} onSelectArtifact={setSelectedArtifact} />
       ) : (
-        <ArtifactsByYear artifacts={artifacts} expandedId={expandedId} onToggle={toggleExpanded} />
+        <ArtifactsByYear artifacts={artifacts} onSelectArtifact={setSelectedArtifact} />
+      )}
+
+      {/* Side panel */}
+      {selectedArtifact && (
+        <ArtifactPanel artifact={selectedArtifact} onClose={() => setSelectedArtifact(null)} />
       )}
     </div>
   );
