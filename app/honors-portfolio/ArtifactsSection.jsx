@@ -1,143 +1,176 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Link from "next/link";
+import { artifacts } from "./artifactsData";
 
 const themeConfig = {
   exploration: {
     label: "Intentional Exploration",
+    description: "Five moments of stepping into the unknown.",
     color: "#4A3278",
     lightBg: "#F5F2FB",
     darkBg: "#221D38",
-    accent: "#7357B5",
     badgeColor: "#4A3278",
     badgeText: "#FFFFFF",
     number: "01",
+    path: "/honors-portfolio/intentional-exploration",
   },
   curiosity: {
     label: "Consistent Curiosity",
+    description: "Five moments of following what lit me up.",
     color: "#C9A84C",
     lightBg: "#FAF8F3",
     darkBg: "#2A2218",
-    accent: "#D4B86A",
     badgeColor: "#C9A84C",
     badgeText: "#17142A",
     number: "02",
+    path: "/honors-portfolio/consistent-curiosity",
   },
   authenticity: {
     label: "Relearning Authenticity",
+    description: "Six moments of coming back to myself.",
     color: "#7357B5",
     lightBg: "#EEE8FA",
     darkBg: "#1E1A30",
-    accent: "#9B7FD4",
     badgeColor: "#7357B5",
     badgeText: "#FFFFFF",
     number: "03",
+    path: "/honors-portfolio/relearning-authenticity",
   },
 };
 
-function ArtifactTile({ artifact, onSelect }) {
+function ArtifactTile({ artifact }) {
   const config = themeConfig[artifact.themeKey];
+  const linkPath = `${config.path}#${artifact.id}`;
 
   return (
-    <div
-      onClick={() => onSelect(artifact)}
-      className="rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200 hover:scale-[1.02] cursor-pointer"
-      style={{
-        borderTop: `3px solid ${config.color}`,
-        backgroundColor: "white",
-        display: "flex",
-        flexDirection: "column",
-        height: "100%",
-      }}
-    >
-      {/* Photo area */}
+    <Link href={linkPath}>
       <div
+        className="rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200 hover:scale-[1.02] cursor-pointer"
         style={{
-          width: '100%',
-          height: '180px',
-          borderRadius: '1rem 1rem 0 0',
-          overflow: 'hidden',
-          backgroundColor: '#F5F2FB',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
+          borderTop: `3px solid ${config.color}`,
+          backgroundColor: "white",
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
         }}
       >
-        {artifact.photo ? (
-          <img
-            src={artifact.photo}
-            alt={artifact.title}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'contain',
-              objectPosition: 'center',
-              display: 'block',
-              padding: '8px'
-            }}
-          />
-        ) : (
-          <div
-            className="artifact-photo-placeholder w-full h-full flex items-center justify-center border-b-2 border-dashed"
-            style={{
-              backgroundColor: "#F5F2FB",
-              borderColor: "#D4D2DF",
-              height: '180px',
-            }}
-          >
-            <span
-              className="text-sm italic"
+        {/* Photo area */}
+        <div
+          style={{
+            width: '100%',
+            height: '180px',
+            borderRadius: '1rem 1rem 0 0',
+            overflow: 'hidden',
+            backgroundColor: '#F5F2FB',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          {artifact.photo ? (
+            <img
+              src={artifact.photo}
+              alt={artifact.title}
               style={{
-                color: "#9890B5",
+                width: '100%',
+                height: '100%',
+                objectFit: 'contain',
+                objectPosition: 'center',
+                display: 'block',
+                padding: '8px'
+              }}
+            />
+          ) : (
+            <div
+              className="artifact-photo-placeholder w-full h-full flex items-center justify-center border-b-2 border-dashed"
+              style={{
+                backgroundColor: "#F5F2FB",
+                borderColor: "#D4D2DF",
+                height: '180px',
               }}
             >
-              [ Add photo ]
-            </span>
+              <span
+                className="text-sm italic"
+                style={{
+                  color: "#9890B5",
+                }}
+              >
+                [ Add photo ]
+              </span>
+            </div>
+          )}
+        </div>
+
+        {/* Card content */}
+        <div className="p-6" style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
+          {/* Theme badge */}
+          <span
+            className={`text-[10px] uppercase tracking-[0.08em] font-display text-white rounded-full px-2.5 py-1 inline-block mb-3 artifact-badge-${artifact.themeKey}`}
+            style={{
+              backgroundColor: config.badgeColor,
+              color: config.badgeText,
+            }}
+          >
+            {config.label.split(" ").slice(0, 2).join(" ")}
+          </span>
+
+          {/* Title and date */}
+          <h3
+            className="font-display font-bold text-lg mb-1 leading-snug"
+            style={{
+              color: "#4A3278",
+            }}
+          >
+            {artifact.title}
+          </h3>
+          <p
+            className="text-sm font-display mb-4"
+            style={{
+              color: "#68607E",
+            }}
+          >
+            {artifact.date}
+          </p>
+
+          {/* Visual cue */}
+          <div className="text-sm font-display mt-auto" style={{ color: config.color }}>
+            View details →
           </div>
-        )}
-      </div>
-
-      {/* Card content */}
-      <div className="p-6" style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
-        {/* Theme badge */}
-        <span
-          className={`text-[10px] uppercase tracking-[0.08em] font-display text-white rounded-full px-2.5 py-1 inline-block mb-3 artifact-badge-${artifact.themeKey}`}
-          style={{
-            backgroundColor: config.badgeColor,
-            color: config.badgeText,
-          }}
-        >
-          {config.label.split(" ").slice(0, 2).join(" ")}
-        </span>
-
-        {/* Title and date */}
-        <h3
-          className="font-display font-bold text-lg mb-1 leading-snug"
-          style={{
-            color: "#4A3278",
-          }}
-        >
-          {artifact.title}
-        </h3>
-        <p
-          className="text-sm font-display mb-4"
-          style={{
-            color: "#68607E",
-          }}
-        >
-          {artifact.date}
-        </p>
-
-        {/* Visual cue */}
-        <div className="text-sm font-display mt-4" style={{ color: config.accent }}>
-          View details →
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
-function ArtifactsByTheme({ artifacts, onSelectArtifact }) {
+function ThemeNavCard({ themeKey }) {
+  const config = themeConfig[themeKey];
+
+  return (
+    <Link href={config.path}>
+      <div
+        className="rounded-2xl p-6 cursor-pointer transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+        style={{
+          backgroundColor: config.lightBg,
+          border: `1px solid ${config.color}33`,
+          borderColor: `${config.color}33`,
+        }}
+      >
+        <div className="text-4xl font-bold opacity-15 mb-2" style={{ color: config.color }}>
+          {config.number}
+        </div>
+        <h3 className="font-display font-bold text-lg mb-2" style={{ color: config.color }}>
+          {config.label}
+        </h3>
+        <p className="text-sm text-gray-600 mb-4">{config.description}</p>
+        <div style={{ color: config.color }}>→</div>
+      </div>
+    </Link>
+  );
+}
+
+function ArtifactsByTheme({ artifacts }) {
   const themes = ["exploration", "curiosity", "authenticity"];
 
   return (
@@ -179,11 +212,7 @@ function ArtifactsByTheme({ artifacts, onSelectArtifact }) {
             {/* Artifact grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{ alignItems: "stretch" }}>
               {themeArtifacts.map((artifact) => (
-                <ArtifactTile
-                  key={artifact.id}
-                  artifact={artifact}
-                  onSelect={onSelectArtifact}
-                />
+                <ArtifactTile key={artifact.id} artifact={artifact} />
               ))}
             </div>
           </div>
@@ -193,7 +222,7 @@ function ArtifactsByTheme({ artifacts, onSelectArtifact }) {
   );
 }
 
-function ArtifactsByYear({ artifacts, onSelectArtifact }) {
+function ArtifactsByYear({ artifacts }) {
   const sortedArtifacts = [...artifacts].sort((a, b) => a.year - b.year);
 
   return (
@@ -209,10 +238,7 @@ function ArtifactsByYear({ artifacts, onSelectArtifact }) {
             >
               {artifact.year}
             </span>
-            <ArtifactTile
-              artifact={artifact}
-              onSelect={onSelectArtifact}
-            />
+            <ArtifactTile artifact={artifact} />
           </div>
         );
       })}
@@ -220,190 +246,18 @@ function ArtifactsByYear({ artifacts, onSelectArtifact }) {
   );
 }
 
-function ArtifactPanel({ artifact, onClose }) {
-  const config = themeConfig[artifact.themeKey];
-  const [isOpen, setIsOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
-
-  useEffect(() => {
-    setIsOpen(true);
-    document.body.style.overflow = "hidden";
-
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleClose = () => {
-    setIsOpen(false);
-    setTimeout(onClose, 300);
-  };
-
-  const isMobile = windowWidth < 768;
-  const isTablet = windowWidth >= 768 && windowWidth < 1024;
-  const panelWidth = isMobile ? "100vw" : isTablet ? "480px" : "560px";
-
-  return (
-    <>
-      {/* Overlay */}
-      <div
-        className="artifact-overlay fixed inset-0 z-40"
-        style={{
-          backgroundColor: "rgba(0, 0, 0, 0.4)",
-          backdropFilter: "blur(4px)",
-          opacity: isOpen ? 1 : 0,
-        }}
-        onClick={handleClose}
-      />
-
-      {/* Panel */}
-      <div
-        className="artifact-panel fixed z-50 overflow-y-auto"
-        style={{
-          top: 0,
-          right: 0,
-          height: '100vh',
-          width: panelWidth,
-          backgroundColor: "#FFFFFF",
-          boxShadow: "-4px 0 30px rgba(0, 0, 0, 0.2)",
-          transform: isMobile
-            ? `translateY(${isOpen ? 0 : 100}%)`
-            : `translateX(${isOpen ? 0 : 100}%)`,
-          borderRadius: isMobile ? "1.5rem 1.5rem 0 0" : "0",
-          bottom: isMobile ? 0 : "auto",
-        }}
-      >
-        {/* Close button */}
-        <button
-          onClick={handleClose}
-          className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors z-10"
-          style={{ fontSize: "20px", color: "#1A1A2A" }}
-        >
-          ×
-        </button>
-
-        {/* Panel content */}
-        <div style={{ padding: "2rem", paddingBottom: "2.5rem" }}>
-          {/* Theme badge */}
-          <div className="mb-6">
-            <span
-              className="text-[11px] uppercase tracking-[0.08em] font-display rounded-full px-3 py-1.5 inline-block"
-              style={{
-                backgroundColor: config.badgeColor,
-                color: config.badgeText,
-              }}
-            >
-              {config.label.split(" ").slice(0, 2).join(" ")}
-            </span>
-          </div>
-
-          {/* Title */}
-          <h2
-            className="font-display font-bold mb-2 leading-tight"
-            style={{ fontSize: "24px", color: config.color }}
-          >
-            {artifact.title}
-          </h2>
-
-          {/* Date and period */}
-          <p
-            className="text-sm font-display mb-8"
-            style={{ color: "#68607E" }}
-          >
-            {artifact.date} • {artifact.period}
-          </p>
-
-          {/* Photo area */}
-          <div
-            style={{
-              width: '100%',
-              height: '300px',
-              marginBottom: '1.5rem',
-              borderRadius: '1rem',
-              overflow: 'hidden',
-              backgroundColor: '#F5F2FB',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            {artifact.photo ? (
-              <img
-                src={artifact.photo}
-                alt={artifact.title}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                  objectPosition: 'center',
-                  padding: '8px',
-                }}
-              />
-            ) : (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '100%',
-                  height: '100%',
-                  border: '2px dashed #D4D2DF',
-                }}
-              >
-                <span style={{ color: "#9890B5", fontSize: "14px", fontStyle: "italic" }}>
-                  [ Add photo ]
-                </span>
-              </div>
-            )}
-          </div>
-
-          {/* Divider */}
-          <div style={{ height: "1px", backgroundColor: "#E0DAF0", marginBottom: "1.5rem" }} />
-
-          {/* Reflection section */}
-          <div className="text-[11px] uppercase tracking-[0.08em] font-display mb-4" style={{ color: config.color }}>
-            Reflection
-          </div>
-
-          <div style={{ borderLeft: `3px solid ${config.color}`, paddingLeft: "1rem" }}>
-            {artifact.reflection ? (
-              <p
-                style={{
-                  fontSize: "16px",
-                  lineHeight: 1.85,
-                  color: "#1A1A2A",
-                }}
-              >
-                {artifact.reflection}
-              </p>
-            ) : (
-              <p
-                style={{
-                  fontSize: "14px",
-                  fontStyle: "italic",
-                  color: "#9890B5",
-                }}
-              >
-                Reflection coming soon.
-              </p>
-            )}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-export default function ArtifactsSection({ artifacts }) {
+export default function ArtifactsSection() {
   const [sortBy, setSortBy] = useState("theme");
-  const [selectedArtifact, setSelectedArtifact] = useState(null);
 
   return (
     <div>
+      {/* Theme navigation cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+        <ThemeNavCard themeKey="exploration" />
+        <ThemeNavCard themeKey="curiosity" />
+        <ThemeNavCard themeKey="authenticity" />
+      </div>
+
       {/* Sort controls */}
       <div className="flex gap-3 mb-12">
         <button
@@ -432,14 +286,9 @@ export default function ArtifactsSection({ artifacts }) {
 
       {/* Artifacts view */}
       {sortBy === "theme" ? (
-        <ArtifactsByTheme artifacts={artifacts} onSelectArtifact={setSelectedArtifact} />
+        <ArtifactsByTheme artifacts={artifacts} />
       ) : (
-        <ArtifactsByYear artifacts={artifacts} onSelectArtifact={setSelectedArtifact} />
-      )}
-
-      {/* Side panel */}
-      {selectedArtifact && (
-        <ArtifactPanel artifact={selectedArtifact} onClose={() => setSelectedArtifact(null)} />
+        <ArtifactsByYear artifacts={artifacts} />
       )}
     </div>
   );
