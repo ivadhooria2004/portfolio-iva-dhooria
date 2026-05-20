@@ -150,21 +150,18 @@ function ThemeNavCard({ themeKey }) {
       bg: "#3D2875",
       border: "#7357B5",
       titleColor: "#EDE8FF",
-      descColor: "#C5BDDF",
       arrowColor: "#9B7FD4",
     },
     curiosity: {
       bg: "#3D3210",
       border: "#C9A84C",
       titleColor: "#FFF8E1",
-      descColor: "#E8D5A3",
       arrowColor: "#C9A84C",
     },
     authenticity: {
       bg: "#2D1F5E",
       border: "#9B7FD4",
       titleColor: "#EDE8FF",
-      descColor: "#C5BDDF",
       arrowColor: "#B8A0E8",
     },
   };
