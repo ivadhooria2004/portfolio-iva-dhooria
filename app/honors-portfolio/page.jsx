@@ -241,7 +241,7 @@ const artifacts = [
     themeKey: "authenticity",
     year: 2025,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/first-solo-trip.jpg",
   },
   {
     id: "husky-100",
