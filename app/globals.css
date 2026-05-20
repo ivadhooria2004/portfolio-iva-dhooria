@@ -125,7 +125,7 @@ body, main, section, nav,
 [data-theme="light"] .text-dark { color: #1A1A2A !important; }
 
 /* Filter pills */
-[data-theme="light"] [class*="bg-husky-gold/15"] { background-color: rgba(160,120,48,0.12) !important; }
+[data-theme="light"] [class*="bg-husky-gold/15"] { background-color: rgba(201,168,76,0.12) !important; }
 [data-theme="light"] [class*="bg-husky-purple/15"] { background-color: rgba(74,50,120,0.10) !important; }
 
 /* ── DARK MODE ─────────────────────────────────────────── */
