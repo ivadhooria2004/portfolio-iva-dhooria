@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import PageShell, { PageHeader } from "../../components/PageShell";
+import ArtifactsSection from "./ArtifactsSection";
 
 export const metadata = { title: "Honors Journey | Iva Dhooria" };
 
