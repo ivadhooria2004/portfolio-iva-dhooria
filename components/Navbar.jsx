@@ -108,6 +108,10 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              <div className="mt-2 pt-2 border-t border-white/[0.1] flex items-center justify-between px-4 py-3">
+                <span className="text-sm text-white/60">Theme</span>
+                <ThemeToggle />
+              </div>
             </div>
           </motion.div>
         )}
