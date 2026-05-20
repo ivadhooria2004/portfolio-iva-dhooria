@@ -46,19 +46,11 @@ export default function IntentionalExplorationPage() {
 
         {/* Title */}
         <h1
-          className="font-display text-4xl font-bold mb-4"
+          className="font-display text-4xl font-bold mb-6"
           style={{ color: themeConfig.color }}
         >
           Intentional Exploration
         </h1>
-
-        {/* Description */}
-        <p
-          className="text-lg font-display mb-6"
-          style={{ color: "#68607E" }}
-        >
-          Stepping into the unknown.
-        </p>
 
         {/* Divider */}
         <div style={{ height: "2px", backgroundColor: themeConfig.color, width: "60px" }} />
