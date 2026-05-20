@@ -204,7 +204,7 @@ body, main, section, nav,
 
 /* Honors course card */
 [data-theme="dark"] .honors-course-card {
-  background-color: #221D38 !important;
+  background-color: #2A2448 !important;
   border-color: #C9A84C !important;
 }
 [data-theme="dark"] .honors-course-card h3 { color: #EDE8FF !important; }
