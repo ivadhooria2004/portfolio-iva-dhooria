@@ -57,7 +57,7 @@ export default function ConsistentCuriosityPage() {
           className="text-lg font-display mb-6"
           style={{ color: "#68607E" }}
         >
-          Five moments of following what lit me up.
+          Following what lit me up.
         </p>
 
         {/* Divider */}
