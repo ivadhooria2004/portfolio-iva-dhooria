@@ -124,6 +124,10 @@ body, main, section, nav,
 }
 [data-theme="light"] #hero h1 { color: #FFFFFF !important; }
 [data-theme="light"] #hero p { color: rgba(255,255,255,0.85) !important; }
+[data-theme="light"] #hero a,
+[data-theme="light"] #hero button:not([aria-label="Toggle theme"]) {
+  color: #FFFFFF !important;
+}
 [data-theme="light"] #hero [class~="text-white/60"] { color: rgba(255,255,255,0.85) !important; }
 [data-theme="light"] #hero [class~="text-white/55"] { color: rgba(255,255,255,0.85) !important; }
 [data-theme="light"] #hero [class*="border-husky-gold"] { border-color: rgba(255,255,255,0.5) !important; }
