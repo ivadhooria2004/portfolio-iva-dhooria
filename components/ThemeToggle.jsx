@@ -60,12 +60,10 @@ export default function ThemeToggle() {
         fontWeight: 600,
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.background = theme === "dark" ? "rgba(212,184,106,0.15)" : "rgba(74,50,120,0.1)";
-        e.currentTarget.style.borderColor = theme === "dark" ? "rgba(212,184,106,0.6)" : "rgba(74,50,120,0.4)";
+        e.currentTarget.style.background = theme === "dark" ? "rgba(201,168,76,0.35)" : "rgba(74,50,120,0.15)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.background = theme === "dark" ? "rgba(212,184,106,0.1)" : "rgba(74,50,120,0.05)";
-        e.currentTarget.style.borderColor = theme === "dark" ? "rgba(212,184,106,0.4)" : "rgba(74,50,120,0.2)";
+        e.currentTarget.style.background = theme === "dark" ? "rgba(201,168,76,0.25)" : "rgba(74,50,120,0.1)";
       }}
     >
       {theme === "dark" ? <MoonIcon /> : <SunIcon />}
