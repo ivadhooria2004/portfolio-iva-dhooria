@@ -129,7 +129,7 @@ const artifacts = [
     themeKey: "exploration",
     year: 2025,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/lifes-philosophy.jpg",
   },
   // THEME 2: Consistent Curiosity
   {
