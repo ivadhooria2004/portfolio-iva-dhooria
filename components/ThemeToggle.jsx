@@ -45,21 +45,31 @@ export default function ThemeToggle() {
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
       style={{
         flexShrink: 0,
-        background: "none",
-        border: "none",
-        padding: 0,
-        color: theme === "dark" ? "rgba(255,255,255,0.5)" : "rgba(74,50,120,0.7)",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "8px",
+        padding: "6px 12px",
+        borderRadius: "20px",
+        border: theme === "dark" ? "1px solid rgba(212,184,106,0.4)" : "1px solid rgba(74,50,120,0.2)",
+        background: theme === "dark" ? "rgba(212,184,106,0.1)" : "rgba(74,50,120,0.05)",
+        color: theme === "dark" ? "#D4B86A" : "#4A3278",
         cursor: "pointer",
-        transition: "color 200ms ease",
+        transition: "all 200ms ease",
+        fontSize: "12px",
+        fontWeight: 500,
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.color = theme === "dark" ? "#D4B86A" : "#4A3278";
+        e.currentTarget.style.background = theme === "dark" ? "rgba(212,184,106,0.15)" : "rgba(74,50,120,0.1)";
+        e.currentTarget.style.borderColor = theme === "dark" ? "rgba(212,184,106,0.6)" : "rgba(74,50,120,0.4)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.color = theme === "dark" ? "rgba(255,255,255,0.5)" : "rgba(74,50,120,0.7)";
+        e.currentTarget.style.background = theme === "dark" ? "rgba(212,184,106,0.1)" : "rgba(74,50,120,0.05)";
+        e.currentTarget.style.borderColor = theme === "dark" ? "rgba(212,184,106,0.4)" : "rgba(74,50,120,0.2)";
       }}
     >
       {theme === "dark" ? <MoonIcon /> : <SunIcon />}
+      <span>{theme === "dark" ? "Light" : "Dark"}</span>
     </button>
   );
 }
