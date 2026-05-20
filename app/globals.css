@@ -264,3 +264,49 @@ body, main, section, nav,
   color: #9890B5 !important;
   opacity: 0.12 !important;
 }
+
+/* ── ARTIFACT TILES DARK MODE ──────────────────────────────── */
+
+[data-theme="dark"] [class*="rounded-2xl"][class*="overflow-hidden"][class*="shadow-sm"] {
+  background-color: #2A2448 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+}
+
+[data-theme="dark"] [class*="rounded-2xl"][class*="overflow-hidden"] h3 {
+  color: #EDE8FF !important;
+}
+
+[data-theme="dark"] [class*="rounded-2xl"][class*="overflow-hidden"] p {
+  color: #9890B5 !important;
+}
+
+/* Photo placeholder in dark mode */
+[data-theme="dark"] .artifact-photo-placeholder {
+  background-color: #1E1A30 !important;
+  border-color: #3A3250 !important;
+}
+
+[data-theme="dark"] .artifact-photo-placeholder span {
+  color: #9890B5 !important;
+}
+
+/* Theme badges and colors */
+[data-theme="dark"] [class*="text-[10px"][class*="uppercase"][class*="tracking"] {
+  opacity: 1 !important;
+}
+
+/* Artifact theme badge text color overrides */
+[data-theme="dark"] .artifact-badge-exploration {
+  background-color: #4A3278 !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .artifact-badge-curiosity {
+  background-color: #C9A84C !important;
+  color: #17142A !important;
+}
+
+[data-theme="dark"] .artifact-badge-authenticity {
+  background-color: #7357B5 !important;
+  color: #FFFFFF !important;
+}
