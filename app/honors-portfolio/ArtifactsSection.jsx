@@ -175,7 +175,6 @@ function ThemeNavCard({ themeKey }) {
   const colors = cardColorMap[themeKey];
   const baseStyle = {
     backgroundColor: colors.bg,
-    borderLeft: `4px solid ${colors.border}`,
     boxShadow: isHovered ? "0 6px 20px rgba(0, 0, 0, 0.25)" : "0 0 0 0 rgba(0, 0, 0, 0.15)",
     transform: isHovered ? "translateY(-2px)" : "translateY(0)",
     transition: "all 0.2s ease",
@@ -189,13 +188,10 @@ function ThemeNavCard({ themeKey }) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <h3 className="font-display font-bold text-lg mb-2" style={{ color: colors.titleColor }}>
+        <h3 className="font-display font-bold text-lg" style={{ color: colors.titleColor }}>
           {config.label}
         </h3>
-        <p className="text-sm mb-4" style={{ color: colors.descColor }}>
-          {config.description}
-        </p>
-        <div style={{ color: colors.arrowColor }}>→</div>
+        <div style={{ color: colors.arrowColor, marginTop: "1rem" }}>→</div>
       </div>
     </Link>
   );
