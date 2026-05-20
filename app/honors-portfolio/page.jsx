@@ -345,37 +345,6 @@ function AdHocHonorsCard({ experience }) {
   );
 }
 
-function ArtifactCard({ artifact }) {
-  return (
-    <Link
-      href={artifact.href}
-      className="group block rounded-2xl bg-white border-t-4 border-[#C9A84C] p-6 shadow-sm hover:shadow-md transition-shadow duration-200 relative overflow-hidden"
-    >
-      {/* Watermark */}
-      <div className="absolute top-0 right-0 text-[80px] font-display font-bold text-[#4A3278] -translate-y-1/4 translate-x-1/4 opacity-[0.06] select-none pointer-events-none">
-        {artifact.number}
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10">
-        <h3 className="font-display font-bold text-lg text-[#4A3278] leading-snug">
-          {artifact.title}
-        </h3>
-        <p className="mt-2 text-[13px] text-[#68607E] font-display">
-          {artifact.context}
-        </p>
-        <div className="mt-5 inline-flex items-center gap-1.5 text-[13px] text-[#C9A84C] font-display hover:underline">
-          Read the annotation
-          <ArrowRight
-            size={14}
-            className="transition-transform duration-200 group-hover:translate-x-1"
-          />
-        </div>
-      </div>
-    </Link>
-  );
-}
-
 export default function HonorsJourneyPage() {
   return (
     <PageShell>
