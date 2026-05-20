@@ -202,7 +202,7 @@ function ArtifactCard({ artifact }) {
         <p className="mt-2 text-[13px] text-[#68607E] font-display">
           {artifact.context}
         </p>
-        <div className="mt-5 inline-flex items-center gap-1.5 text-[13px] text-[#A07830] font-display hover:underline">
+        <div className="mt-5 inline-flex items-center gap-1.5 text-[13px] text-[#C9A84C] font-display hover:underline">
           Read the annotation
           <ArrowRight
             size={14}
@@ -225,7 +225,7 @@ export default function HonorsJourneyPage() {
       {/* ── Section 1: Learning Statement ── */}
       <section className="mb-20 py-12 px-6 rounded-3xl" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-3xl mx-auto">
-          <div className="text-[11px] uppercase tracking-[0.12em] text-[#A07830] font-display mb-6">
+          <div className="text-[11px] uppercase tracking-[0.12em] text-[#C9A84C] font-display mb-6">
             Learning Statement
           </div>
           <article style={{ maxWidth: "680px", margin: "0 auto" }}>
@@ -247,7 +247,7 @@ export default function HonorsJourneyPage() {
       {/* ── Section 2: HON Courses ── */}
       <section className="mb-20 py-12 px-6" style={{ backgroundColor: '#F5F2FB' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-[11px] uppercase tracking-[0.12em] text-[#A07830] font-display mb-6">
+          <div className="text-[11px] uppercase tracking-[0.12em] text-[#C9A84C] font-display mb-6">
             Honors Coursework
           </div>
           <h2
@@ -267,7 +267,7 @@ export default function HonorsJourneyPage() {
       {/* ── Section 3: Experiential Learning ── */}
       <section className="mb-20 py-12 px-6" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-[11px] uppercase tracking-[0.12em] text-[#A07830] font-display mb-6">
+          <div className="text-[11px] uppercase tracking-[0.12em] text-[#C9A84C] font-display mb-6">
             Experiential Learning Activities
           </div>
           <h2
@@ -287,7 +287,7 @@ export default function HonorsJourneyPage() {
       {/* ── Section 4: Ad-Hoc Honors ── */}
       <section className="mb-20 py-12 px-6" style={{ backgroundColor: '#F5F2FB' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-[11px] uppercase tracking-[0.12em] text-[#A07830] font-display mb-6">
+          <div className="text-[11px] uppercase tracking-[0.12em] text-[#C9A84C] font-display mb-6">
             Ad-Hoc Honors
           </div>
           <h2
@@ -307,7 +307,7 @@ export default function HonorsJourneyPage() {
       {/* ── Section 5: Artifacts ── */}
       <section className="py-12 px-6" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-[11px] uppercase tracking-[0.12em] text-[#A07830] font-display mb-6">
+          <div className="text-[11px] uppercase tracking-[0.12em] text-[#C9A84C] font-display mb-6">
             Artifacts
           </div>
           <div className="grid gap-5 md:grid-cols-3">
