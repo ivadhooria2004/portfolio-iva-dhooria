@@ -7,7 +7,7 @@ import { artifacts } from "./artifactsData";
 const themeConfig = {
   exploration: {
     label: "Intentional Exploration",
-    description: "Five moments of stepping into the unknown.",
+    description: "Stepping into the unknown.",
     color: "#4A3278",
     lightBg: "#F5F2FB",
     darkBg: "#221D38",
@@ -18,7 +18,7 @@ const themeConfig = {
   },
   curiosity: {
     label: "Consistent Curiosity",
-    description: "Five moments of following what lit me up.",
+    description: "Following what lit me up.",
     color: "#C9A84C",
     lightBg: "#FAF8F3",
     darkBg: "#2A2218",
@@ -29,7 +29,7 @@ const themeConfig = {
   },
   authenticity: {
     label: "Relearning Authenticity",
-    description: "Six moments of coming back to myself.",
+    description: "Coming back to myself.",
     color: "#7357B5",
     lightBg: "#EEE8FA",
     darkBg: "#1E1A30",
