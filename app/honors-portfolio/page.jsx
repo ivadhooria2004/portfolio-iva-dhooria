@@ -438,14 +438,16 @@ export default function HonorsJourneyPage() {
       {/* ── Section 5: Artifacts ── */}
       <section className="py-12 px-6" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-[11px] uppercase tracking-[0.12em] text-[#C9A84C] font-display mb-6">
+          <div className="text-[11px] uppercase tracking-[0.12em] text-[#C9A84C] font-display mb-2">
             Artifacts
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {artifacts.map((artifact) => (
-              <ArtifactCard key={artifact.number} artifact={artifact} />
-            ))}
-          </div>
+          <h2 className="font-display text-2xl sm:text-3xl tracking-tight text-[#4A3278] leading-[1.1] mb-3" style={{ fontWeight: 600 }}>
+            Moments That Shaped Me
+          </h2>
+          <p className="text-sm text-[#68607E] font-display mb-10 max-w-2xl">
+            Sixteen moments across four years, organized by the themes that define my UW journey.
+          </p>
+          <ArtifactsSection artifacts={artifacts} />
         </div>
       </section>
     </PageShell>
