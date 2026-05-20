@@ -336,3 +336,21 @@ body, main, section, nav,
 .artifact-overlay {
   transition: opacity 300ms ease;
 }
+
+/* Artifact panel dark mode */
+[data-theme="dark"] .artifact-panel {
+  background-color: #221D38 !important;
+  color: #EDE8FF !important;
+}
+
+[data-theme="dark"] .artifact-panel h2 {
+  color: #EDE8FF !important;
+}
+
+[data-theme="dark"] .artifact-panel p {
+  color: #C5BDDF !important;
+}
+
+[data-theme="dark"] .artifact-panel button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
