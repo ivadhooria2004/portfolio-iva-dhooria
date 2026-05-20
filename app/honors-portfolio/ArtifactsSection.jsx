@@ -267,7 +267,7 @@ function ArtifactPanel({ artifact, onClose }) {
           top: 0,
           right: 0,
           height: '100vh',
-          width: isMobile ? '100vw' : '420px',
+          width: panelWidth,
           backgroundColor: "#FFFFFF",
           boxShadow: "-4px 0 30px rgba(0, 0, 0, 0.2)",
           transform: isMobile
