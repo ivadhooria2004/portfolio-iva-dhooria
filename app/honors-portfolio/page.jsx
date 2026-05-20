@@ -96,7 +96,7 @@ const artifacts = [
     themeKey: "exploration",
     year: 2024,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/startup-world.jpg",
   },
   {
     id: "bmcc",
