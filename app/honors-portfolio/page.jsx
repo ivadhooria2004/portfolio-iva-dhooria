@@ -174,7 +174,7 @@ const artifacts = [
     themeKey: "curiosity",
     year: 2025,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/being-a-ta.jpg",
   },
   {
     id: "passion-in-project",
