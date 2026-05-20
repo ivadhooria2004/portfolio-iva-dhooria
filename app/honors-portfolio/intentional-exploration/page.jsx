@@ -57,7 +57,7 @@ export default function IntentionalExplorationPage() {
           className="text-lg font-display mb-6"
           style={{ color: "#68607E" }}
         >
-          Five moments of stepping into the unknown.
+          Stepping into the unknown.
         </p>
 
         {/* Divider */}
