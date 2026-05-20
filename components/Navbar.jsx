@@ -63,11 +63,9 @@ export default function Navbar() {
               </Link>
             );
           })}
-        </div>
-
-        {/* Desktop: theme toggle */}
-        <div className="hidden md:flex items-center">
-          <ThemeToggle />
+          <div className="ml-2 pl-2 border-l border-white/[0.1]">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile: theme toggle + hamburger */}
