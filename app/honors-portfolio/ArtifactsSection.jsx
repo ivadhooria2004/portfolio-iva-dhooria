@@ -146,38 +146,56 @@ function ArtifactTile({ artifact }) {
 
 function ThemeNavCard({ themeKey }) {
   const config = themeConfig[themeKey];
+  const [isHovered, setIsHovered] = useState(false);
 
-  const cardStyles = {
-    exploration: { bg: "#F5F2FB", darkBg: "#2A2040", border: "#4A3278" },
-    curiosity: { bg: "#FAF8F3", darkBg: "#2A2218", border: "#C9A84C" },
-    authenticity: { bg: "#EEE8FA", darkBg: "#1E1A30", border: "#7357B5" },
+  const cardColorMap = {
+    exploration: {
+      bg: "#3D2875",
+      border: "#7357B5",
+      titleColor: "#EDE8FF",
+      descColor: "#C5BDDF",
+      arrowColor: "#9B7FD4",
+    },
+    curiosity: {
+      bg: "#3D3210",
+      border: "#C9A84C",
+      titleColor: "#FFF8E1",
+      descColor: "#E8D5A3",
+      arrowColor: "#C9A84C",
+    },
+    authenticity: {
+      bg: "#2D1F5E",
+      border: "#9B7FD4",
+      titleColor: "#EDE8FF",
+      descColor: "#C5BDDF",
+      arrowColor: "#B8A0E8",
+    },
   };
 
-  const style = cardStyles[themeKey];
+  const colors = cardColorMap[themeKey];
+  const baseStyle = {
+    backgroundColor: colors.bg,
+    borderLeft: `4px solid ${colors.border}`,
+    boxShadow: isHovered ? "0 6px 20px rgba(0, 0, 0, 0.25)" : "0 0 0 0 rgba(0, 0, 0, 0.15)",
+    transform: isHovered ? "translateY(-2px)" : "translateY(0)",
+    transition: "all 0.2s ease",
+  };
 
   return (
     <Link href={config.path}>
       <div
-        className="rounded-r-2xl p-6 cursor-pointer transition-all duration-200 hover:-translate-y-0.5"
-        style={{
-          backgroundColor: style.bg,
-          borderLeft: `4px solid ${style.border}`,
-          boxShadow: "0 0 0 0 rgba(0, 0, 0, 0.15)",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.15)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.boxShadow = "0 0 0 0 rgba(0, 0, 0, 0.15)";
-        }}
+        className="rounded-r-2xl p-6 cursor-pointer"
+        style={baseStyle}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        <h3 className="font-display font-bold text-lg mb-2" style={{ color: style.border }}>
+        <h3 className="font-display font-bold text-lg mb-2" style={{ color: colors.titleColor }}>
           {config.label}
         </h3>
-        <p className="text-sm mb-4" style={{ color: "#68607E" }}>
+        <p className="text-sm mb-4" style={{ color: colors.descColor }}>
           {config.description}
         </p>
-        <div style={{ color: style.border }}>→</div>
+        <div style={{ color: colors.arrowColor }}>→</div>
       </div>
     </Link>
   );
