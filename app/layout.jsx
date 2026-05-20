@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import SpotlightBackground from "../components/SpotlightBackground";
+import ThemeToggleFloat from "../components/ThemeToggleFloat";
 
 export const metadata = {
   title: "Iva Dhooria | Portfolio",
