@@ -70,7 +70,7 @@ export default function HeroContent() {
         animate={{ scaleX: 1, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.3, ease }}
         className="relative mt-7 w-24 h-px z-10 origin-center"
-        style={{ background: 'linear-gradient(90deg, #A07830, #C49A45, #A07830)' }}
+        style={{ background: 'linear-gradient(90deg, #C9A84C, #D4B86A, #C9A84C)' }}
       />
 
       {/* ── Subtext ── */}
