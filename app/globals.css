@@ -119,6 +119,11 @@ body, main, section, nav,
 [data-theme="light"] [class*="text-husky-gold"] { color: #A07830 !important; }
 
 /* Hero overrides — keep hero text white since hero has dark bg */
+[data-theme="light"] #hero * {
+  color: inherit !important;
+}
+[data-theme="light"] #hero h1 { color: #FFFFFF !important; }
+[data-theme="light"] #hero p { color: rgba(255,255,255,0.85) !important; }
 [data-theme="light"] #hero [class~="text-white/60"] { color: rgba(255,255,255,0.85) !important; }
 [data-theme="light"] #hero [class~="text-white/55"] { color: rgba(255,255,255,0.85) !important; }
 [data-theme="light"] #hero [class*="border-husky-gold"] { border-color: rgba(255,255,255,0.5) !important; }
