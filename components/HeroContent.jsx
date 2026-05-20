@@ -57,7 +57,7 @@ export default function HeroContent() {
         </span>
         <span className="block mt-2">
           Designing{" "}
-          <span className="font-serif italic font-normal bg-gradient-to-r from-[#C49A45] to-[#A07830] bg-clip-text text-transparent">
+          <span className="font-serif italic font-normal bg-gradient-to-r from-[#D4B86A] to-[#C9A84C] bg-clip-text text-transparent">
             Futures
           </span>
           .
