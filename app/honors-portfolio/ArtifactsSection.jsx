@@ -134,7 +134,7 @@ function ArtifactTile({ artifact, onSelect }) {
   );
 }
 
-function ArtifactsByTheme({ artifacts, expandedId, onToggle }) {
+function ArtifactsByTheme({ artifacts, onSelectArtifact }) {
   const themes = ["exploration", "curiosity", "authenticity"];
 
   return (
@@ -179,8 +179,7 @@ function ArtifactsByTheme({ artifacts, expandedId, onToggle }) {
                 <ArtifactTile
                   key={artifact.id}
                   artifact={artifact}
-                  expanded={expandedId === artifact.id}
-                  onToggle={() => onToggle(artifact.id)}
+                  onSelect={onSelectArtifact}
                 />
               ))}
             </div>
