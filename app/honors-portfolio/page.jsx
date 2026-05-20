@@ -163,7 +163,7 @@ const artifacts = [
     themeKey: "curiosity",
     year: 2025,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/open-endings.jpg",
   },
   {
     id: "being-a-ta",
