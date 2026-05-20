@@ -230,7 +230,7 @@ const artifacts = [
     themeKey: "authenticity",
     year: 2025,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/lakeside-speaker.jpg",
   },
   {
     id: "first-solo-trip",
