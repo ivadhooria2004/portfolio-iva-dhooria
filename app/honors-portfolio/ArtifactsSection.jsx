@@ -35,34 +35,16 @@ const themeConfig = {
   },
 };
 
-function ArtifactTile({ artifact, expanded, onToggle }) {
+function ArtifactTile({ artifact, onSelect }) {
   const config = themeConfig[artifact.themeKey];
-
-  const getDarkModeColors = () => {
-    switch (artifact.themeKey) {
-      case "exploration":
-        return { badge: "#4A3278", badgeText: "#FFFFFF" };
-      case "curiosity":
-        return { badge: "#C9A84C", badgeText: "#17142A" };
-      case "authenticity":
-        return { badge: "#7357B5", badgeText: "#FFFFFF" };
-      default:
-        return { badge: config.color, badgeText: "#FFFFFF" };
-    }
-  };
-
-  const darkColors = getDarkModeColors();
 
   return (
     <div
-      className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
+      onClick={() => onSelect(artifact)}
+      className="rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200 hover:scale-[1.02] cursor-pointer"
       style={{
         borderTop: `3px solid ${config.color}`,
         backgroundColor: "white",
-        "--dark-bg": "#2A2448",
-        "--dark-title": "#EDE8FF",
-        "--dark-date": "#9890B5",
-        "--dark-shadow": "0 2px 8px rgba(0,0,0,0.4)",
       }}
     >
       {/* Photo area */}
@@ -118,8 +100,8 @@ function ArtifactTile({ artifact, expanded, onToggle }) {
         <span
           className={`text-[10px] uppercase tracking-[0.08em] font-display text-white rounded-full px-2.5 py-1 inline-block mb-3 artifact-badge-${artifact.themeKey}`}
           style={{
-            backgroundColor: config.color,
-            color: darkColors.badgeText,
+            backgroundColor: config.badgeColor,
+            color: config.badgeText,
           }}
         >
           {config.label.split(" ").slice(0, 2).join(" ")}
@@ -143,47 +125,11 @@ function ArtifactTile({ artifact, expanded, onToggle }) {
           {artifact.date}
         </p>
 
-        {/* Reflection link or placeholder */}
-        {!expanded && (
-          <button
-            onClick={onToggle}
-            className="text-sm font-display mt-4 transition-colors duration-200"
-            style={{ color: config.accent }}
-          >
-            Read reflection →
-          </button>
-        )}
-      </div>
-
-      {/* Expanded content */}
-      {expanded && (
-        <div
-          className="border-t px-6 py-6"
-          style={{
-            backgroundColor: "#F5F2FB",
-            borderColor: "#E0DAF0",
-          }}
-        >
-          {/* Reflection placeholder */}
-          <p
-            className="text-sm italic mb-6"
-            style={{
-              color: "#9890B5",
-            }}
-          >
-            Reflection coming soon — check back soon.
-          </p>
-
-          {/* Close button */}
-          <button
-            onClick={onToggle}
-            className="text-sm font-display transition-colors duration-200"
-            style={{ color: config.accent }}
-          >
-            Close ↑
-          </button>
+        {/* Visual cue */}
+        <div className="text-sm font-display mt-4" style={{ color: config.accent }}>
+          View details →
         </div>
-      )}
+      </div>
     </div>
   );
 }
