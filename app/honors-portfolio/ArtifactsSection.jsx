@@ -194,7 +194,7 @@ function ArtifactsByTheme({ artifacts, expandedId, onToggle }) {
               style={{
                 fontSize: "120px",
                 fontWeight: "bold",
-                opacity: 0.05,
+                opacity: 0.06,
                 color: config.color,
                 lineHeight: 0.8,
                 height: "80px",
