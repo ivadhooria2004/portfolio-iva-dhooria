@@ -9,6 +9,8 @@ const themeConfig = {
     lightBg: "#F5F2FB",
     darkBg: "#221D38",
     accent: "#7357B5",
+    badgeColor: "#4A3278",
+    badgeText: "#FFFFFF",
     number: "01",
   },
   curiosity: {
@@ -17,6 +19,8 @@ const themeConfig = {
     lightBg: "#FAF8F3",
     darkBg: "#2A2218",
     accent: "#D4B86A",
+    badgeColor: "#C9A84C",
+    badgeText: "#17142A",
     number: "02",
   },
   authenticity: {
@@ -25,6 +29,8 @@ const themeConfig = {
     lightBg: "#EEE8FA",
     darkBg: "#1E1A30",
     accent: "#9B7FD4",
+    badgeColor: "#7357B5",
+    badgeText: "#FFFFFF",
     number: "03",
   },
 };
