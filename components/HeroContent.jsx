@@ -97,7 +97,7 @@ export default function HeroContent() {
         <Link
           href="/work"
           className="group flex items-center gap-2 px-7 py-3.5 rounded-xl font-display text-sm transition-all duration-200"
-          style={{ backgroundColor: '#4A3278', color: '#FFFFFF', fontWeight: 600 }}
+          style={{ backgroundColor: '#4A3278', color: '#FFFFFF', fontWeight: 700 }}
         >
           View my work
           <ArrowRight
