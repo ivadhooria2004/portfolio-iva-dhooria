@@ -51,19 +51,19 @@ export default function ThemeToggle() {
         gap: "8px",
         padding: "6px 12px",
         borderRadius: "20px",
-        border: theme === "dark" ? "1.5px solid #D4B86A" : "1.5px solid #4A3278",
-        background: theme === "dark" ? "rgba(201,168,76,0.25)" : "rgba(74,50,120,0.1)",
-        color: theme === "dark" ? "#FFE8A3" : "#4A3278",
+        border: theme === "dark" ? "1.5px solid white" : "1.5px solid #4A3278",
+        background: theme === "dark" ? "rgba(255,255,255,0.15)" : "rgba(74,50,120,0.1)",
+        color: theme === "dark" ? "#FFFFFF" : "#4A3278",
         cursor: "pointer",
         transition: "all 200ms ease",
         fontSize: "12px",
         fontWeight: 600,
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.background = theme === "dark" ? "rgba(201,168,76,0.35)" : "rgba(74,50,120,0.15)";
+        e.currentTarget.style.background = theme === "dark" ? "rgba(255,255,255,0.25)" : "rgba(74,50,120,0.15)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.background = theme === "dark" ? "rgba(201,168,76,0.25)" : "rgba(74,50,120,0.1)";
+        e.currentTarget.style.background = theme === "dark" ? "rgba(255,255,255,0.15)" : "rgba(74,50,120,0.1)";
       }}
     >
       {theme === "dark" ? <MoonIcon /> : <SunIcon />}
