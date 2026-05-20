@@ -78,7 +78,7 @@ export default function Navbar() {
             aria-label="Toggle theme"
             className={`ml-3 px-3 py-2 rounded-lg text-sm font-display transition-all duration-200 border ${
               theme === 'dark'
-                ? 'border-white/20 hover:border-white/40 text-white/70 hover:text-white'
+                ? 'border-white/40 hover:border-white/70 text-white hover:text-[#C9A84C]'
                 : 'border-[#4A3278]/30 hover:border-[#4A3278]/60 text-[#4A3278]/70 hover:text-[#4A3278]'
             }`}
           >
