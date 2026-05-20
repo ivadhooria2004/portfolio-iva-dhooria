@@ -68,9 +68,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile: theme toggle + hamburger */}
-        <div className="md:hidden flex items-center gap-1">
-          <ThemeToggle />
+        {/* Mobile: hamburger only */}
+        <div className="md:hidden flex items-center">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="relative text-white p-1"
