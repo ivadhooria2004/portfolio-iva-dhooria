@@ -107,7 +107,7 @@ const artifacts = [
     themeKey: "exploration",
     year: 2024,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/bmcc.jpg",
   },
   {
     id: "first-c2-event",
