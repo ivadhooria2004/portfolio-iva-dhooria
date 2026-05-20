@@ -79,7 +79,7 @@ export default function HeroContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease }}
         className="relative mt-5 max-w-2xl text-base sm:text-lg leading-relaxed font-light z-10"
-        style={{ color: 'rgba(255,255,255,0.85)', textShadow: '0 2px 30px rgba(0,0,0,0.3)' }}
+        style={{ color: 'rgba(255,255,255,0.85)', textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
       >
         <p>UW Foster School of Business &amp; Interdisciplinary Honors</p>
         <p className="mt-1">Majors &mdash; Finance and Information Systems</p>
