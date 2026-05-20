@@ -303,8 +303,8 @@ function ArtifactPanel({ artifact, onClose }) {
 
           {/* Title */}
           <h2
-            className="font-display font-bold text-2xl mb-2 leading-tight"
-            style={{ color: config.color }}
+            className="font-display font-bold mb-2 leading-tight"
+            style={{ fontSize: "24px", color: config.color }}
           >
             {artifact.title}
           </h2>
