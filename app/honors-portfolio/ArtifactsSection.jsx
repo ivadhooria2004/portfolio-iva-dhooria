@@ -91,6 +91,7 @@ function ArtifactTile({ artifact, expanded, onToggle }) {
             style={{
               backgroundColor: "#F5F2FB",
               borderColor: "#D4D2DF",
+              height: '180px',
             }}
           >
             <span
