@@ -197,7 +197,7 @@ function ArtifactsByYear({ artifacts, onSelectArtifact }) {
   const sortedArtifacts = [...artifacts].sort((a, b) => a.year - b.year);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{ alignItems: "stretch" }}>
       {sortedArtifacts.map((artifact) => {
         const config = themeConfig[artifact.themeKey];
         return (
