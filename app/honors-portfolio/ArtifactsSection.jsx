@@ -287,7 +287,7 @@ function ArtifactPanel({ artifact, onClose }) {
         </button>
 
         {/* Panel content */}
-        <div style={{ padding: "2rem", paddingRight: "3rem", paddingBottom: "2.5rem" }}>
+        <div style={{ padding: "2rem", paddingBottom: "2.5rem" }}>
           {/* Theme badge */}
           <div className="mb-6">
             <span
