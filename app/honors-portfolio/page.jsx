@@ -85,7 +85,7 @@ const artifacts = [
     themeKey: "exploration",
     year: 2023,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/first-job.jpg",
   },
   {
     id: "startup-world",
