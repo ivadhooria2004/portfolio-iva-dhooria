@@ -43,8 +43,21 @@ export default function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-      className="inline-flex items-center justify-center text-white/50 hover:text-husky-gold-light transition-colors duration-200"
-      style={{ flexShrink: 0, background: "none", border: "none", padding: 0 }}
+      style={{
+        flexShrink: 0,
+        background: "none",
+        border: "none",
+        padding: 0,
+        color: theme === "dark" ? "rgba(255,255,255,0.5)" : "rgba(74,50,120,0.7)",
+        cursor: "pointer",
+        transition: "color 200ms ease",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.color = theme === "dark" ? "#D4B86A" : "#4A3278";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.color = theme === "dark" ? "rgba(255,255,255,0.5)" : "rgba(74,50,120,0.7)";
+      }}
     >
       {theme === "dark" ? <MoonIcon /> : <SunIcon />}
     </button>
