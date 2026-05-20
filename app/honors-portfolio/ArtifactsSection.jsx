@@ -79,14 +79,10 @@ function ArtifactTile({ artifact, expanded, onToggle }) {
           />
         ) : (
           <div
-            className="w-full h-full flex items-center justify-center border-b-2 border-dashed"
+            className="artifact-photo-placeholder w-full h-full flex items-center justify-center border-b-2 border-dashed"
             style={{
               backgroundColor: "#F5F2FB",
               borderColor: "#D4D2DF",
-            }}
-            data-theme-dark={{
-              backgroundColor: "#1E1A30",
-              borderColor: "#3A3250",
             }}
           >
             <span
