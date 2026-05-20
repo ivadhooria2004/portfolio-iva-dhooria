@@ -155,21 +155,19 @@ body, main, section, nav,
 [data-theme="dark"] body { background-color: #17142A; }
 [data-theme="dark"] main { background-color: #17142A !important; }
 
-/* Sections — alternate subtly, DO NOT flatten everything */
-[data-theme="dark"] section[style*="background-color: '#FFFFFF'"],
-[data-theme="dark"] section[style*="backgroundColor: '#FFFFFF'"] {
+/* Sections — dark mode alternating backgrounds */
+[data-theme="dark"] section {
   background-color: #17142A !important;
 }
-[data-theme="dark"] section[style*="background-color: '#F5F2FB'"],
-[data-theme="dark"] section[style*="backgroundColor: '#F5F2FB'"],
-[data-theme="dark"] section[style*="background-color: '#F2EEF9'"],
-[data-theme="dark"] section[style*="backgroundColor: '#F2EEF9'"] {
+[data-theme="dark"] section:nth-child(even) {
   background-color: #1D1932 !important;
 }
-[data-theme="dark"] section[style*="background-color: '#FAF8F3'"],
-[data-theme="dark"] section[style*="backgroundColor: '#FAF8F3'"],
-[data-theme="dark"] section[style*="background-color: '#FAF6ED'"],
-[data-theme="dark"] section[style*="backgroundColor: '#FAF6ED'"] {
+
+/* Override specific named section classes if used */
+[data-theme="dark"] .section-alt {
+  background-color: #1D1932 !important;
+}
+[data-theme="dark"] .section-cream {
   background-color: #1F1C2E !important;
 }
 
