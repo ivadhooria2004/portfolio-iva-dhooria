@@ -51,13 +51,13 @@ export default function ThemeToggle() {
         gap: "8px",
         padding: "6px 12px",
         borderRadius: "20px",
-        border: theme === "dark" ? "1px solid rgba(212,184,106,0.4)" : "1px solid rgba(74,50,120,0.2)",
-        background: theme === "dark" ? "rgba(212,184,106,0.1)" : "rgba(74,50,120,0.05)",
-        color: theme === "dark" ? "#D4B86A" : "#4A3278",
+        border: theme === "dark" ? "1.5px solid #D4B86A" : "1.5px solid #4A3278",
+        background: theme === "dark" ? "rgba(201,168,76,0.25)" : "rgba(74,50,120,0.1)",
+        color: theme === "dark" ? "#FFE8A3" : "#4A3278",
         cursor: "pointer",
         transition: "all 200ms ease",
         fontSize: "12px",
-        fontWeight: 500,
+        fontWeight: 600,
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.background = theme === "dark" ? "rgba(212,184,106,0.15)" : "rgba(74,50,120,0.1)";
