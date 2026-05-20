@@ -216,7 +216,7 @@ body, main, section, nav,
 
 /* Ad-hoc card */
 [data-theme="dark"] .adhoc-honors-card {
-  background-color: #221D38 !important;
+  background-color: #2A2448 !important;
   border-color: #C9A84C !important;
 }
 [data-theme="dark"] .adhoc-honors-card h3 { color: #EDE8FF !important; }
