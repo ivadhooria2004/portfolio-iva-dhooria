@@ -101,7 +101,7 @@ function ArtifactTile({ artifact, expanded, onToggle }) {
       <div className="p-6">
         {/* Theme badge */}
         <span
-          className="text-[10px] uppercase tracking-[0.08em] font-display text-white rounded-full px-2.5 py-1 inline-block mb-3"
+          className={`text-[10px] uppercase tracking-[0.08em] font-display text-white rounded-full px-2.5 py-1 inline-block mb-3 artifact-badge-${artifact.themeKey}`}
           style={{
             backgroundColor: config.color,
             color: darkColors.badgeText,
