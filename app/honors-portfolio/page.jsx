@@ -197,7 +197,7 @@ const artifacts = [
     themeKey: "authenticity",
     year: 2023,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/lifes-philosophy.jpg",
   },
   {
     id: "shrm",
