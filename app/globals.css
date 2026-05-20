@@ -251,3 +251,22 @@ body, main, section, nav,
 [data-theme="dark"] .group.block.rounded-2xl.bg-white {
   background-color: #221D38 !important;
 }
+
+/* ── ROUNDED CARDS IN DARK MODE ────────────────────────────── */
+
+[data-theme="dark"] .rounded-2xl {
+  background-color: #2A2448;
+}
+[data-theme="dark"] .rounded-2xl.bg-white,
+[data-theme="dark"] .rounded-2xl[class*="bg-white"] {
+  background-color: #2A2448 !important;
+  color: #EDE8FF !important;
+}
+[data-theme="dark"] .rounded-2xl h3 { color: #EDE8FF !important; }
+[data-theme="dark"] .rounded-2xl p { color: #C5BDDF !important; }
+
+/* Fix artifact card watermark in dark mode */
+[data-theme="dark"] .rounded-2xl .text-\[\#F2EEF9\] {
+  color: #9890B5 !important;
+  opacity: 0.12 !important;
+}
