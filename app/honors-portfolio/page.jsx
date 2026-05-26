@@ -194,6 +194,38 @@ export default function HonorsJourneyPage() {
         </div>
       </section>
 
+      {/* ── Section 1.5: CaseIT Video ── */}
+      <section className="mb-20 py-12 px-6" style={{ backgroundColor: '#F5F2FB' }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-[11px] uppercase tracking-[0.12em] text-[#C9A84C] font-display mb-4">
+            A Pivotal Moment
+          </div>
+          <h2 className="font-display text-2xl sm:text-3xl tracking-tight text-[#4A3278] leading-[1.1] mb-3" style={{ fontWeight: 600 }}>
+            CaseIT 2024
+          </h2>
+          <p className="text-sm text-[#68607E] font-display mb-8 max-w-2xl">
+            Representing UW internationally at Simon Fraser University — 2nd place of 15 global teams.
+          </p>
+          <div style={{
+            borderRadius: '1rem',
+            overflow: 'hidden',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+            backgroundColor: '#000',
+            aspectRatio: '16/9',
+            width: '100%'
+          }}>
+            <video
+              controls
+              style={{ width: '100%', height: '100%', display: 'block' }}
+              poster=""
+            >
+              <source src="/videos/Case IT video for portfolio.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* ── Section 2: HON Courses ── */}
       <section className="mb-20 py-12 px-6" style={{ backgroundColor: '#F5F2FB' }}>
         <div className="max-w-5xl mx-auto">
