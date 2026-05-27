@@ -49,13 +49,16 @@ export default function AboutPage() {
         <div>
           <div className="text-white/60 text-[16px] leading-[1.75]">
             <p className="mb-5">
-              Placeholder bio &mdash; a short introduction will live here. A
-              few sentences about who I am, what I care about, and how I think
-              about the work I do.
+              I'm a senior at the UW Foster School of Business, finishing a degree in Finance and Information Systems with minors in Data Science and Informatics. This fall, I'm heading to UBC for a Master of Data Science.
+            </p>
+            <p className="mb-5">
+              I'm drawn to problems that sit at the intersection of data and strategy, where analytical thinking and business judgment both have a seat at the table. My time at UW has been about deliberately collecting tools for that kind of work: finance and information systems for the analytical foundation, case competitions for the pressure-tested problem solving, and an interdisciplinary honors curriculum that pushed me to think across literature, history, philosophy, and public health alongside my business coursework.
+            </p>
+            <p className="mb-5">
+              Outside the classroom, I co-founded UW's Case Club, represented UW internationally at case competitions in Canada and Mexico, spent two months interning and studying in Kobe, Japan on a JASSO government scholarship, and worked as a TA for two years. I speak English, Punjabi, Hindi, and French.
             </p>
             <p>
-              Additional context about studying at UW Foster, the Honors
-              Program, and how the pieces of this portfolio fit together.
+              I care about doing work that is rigorous, cross-functional, and grounded in real decisions. After UBC, I'm targeting roles at the intersection of data and strategy, where the analysis doesn't stop at the output, but carries through to the so what.
             </p>
           </div>
 
