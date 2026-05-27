@@ -9,7 +9,6 @@ import { motion, AnimatePresence } from "motion/react";
 const navLinks = [
   { label: "Work", path: "/work" },
   { label: "Projects", path: "/research" },
-  { label: "Case Competitions", path: "/case-competitions" },
   { label: "Honors Journey", path: "/honors-portfolio" },
   { label: "About", path: "/about" },
 ];
