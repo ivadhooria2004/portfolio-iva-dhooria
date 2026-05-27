@@ -41,7 +41,7 @@ export const artifacts = [
     theme: "Intentional Exploration",
     themeKey: "exploration",
     year: 2025,
-    reflection: null,
+    reflection: "Sitting in my dorm building lobby during the Spring quarter of sophomore year, three of my friends who also happened to be my case teammates got into a long, late-night discussion about resources and succeeding in the case competition space. This was a reflective conversation because we were the team that had slowly built up our familiarity with case competitions in a trial-and-error manner. We talked about how it would be incredible to have a student organization that could teach students how to approach case competitions, what they entail, and the skills needed to succeed. From a late-night dorm conversation to various brainstorming and planning sessions over the summer and fall, our team was able to finally register and start this organization, the UW Case Club, which was a rough idea a few months ago. From administrative tasks to marketing materials to skill resources, we deliberated the logistics of the club for hours. We did not just want to create a club that taught skills in a peer-to-peer learning environment, but rather we wanted this to be a space where students could find friends and teammates. We ran our first event to explain the basics of case competitions and the vision of our club. Seeing the room our team booked for the event full, I felt assured and grateful that we were taking strides in the right direction. This moment was also special because it marked my transition from being just a competitor to a mentor for a skill that I had acquired over my time at UW, and this made it even more heartwarming.",
     photo: "/images/artifacts/first-c2-event.jpg",
   },
   {
