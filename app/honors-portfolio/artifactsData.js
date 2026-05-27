@@ -97,7 +97,7 @@ export const artifacts = [
     theme: "Consistent Curiosity",
     themeKey: "curiosity",
     year: 2025,
-    reflection: null,
+    reflection: "With my curiosity for acquiring new skills, I was thrilled when my friend, who was graduating, asked me to step into her role as a TA for MKTG 305. First, it was heartwarming to know that an upperclassman I looked up to considered me worthy of being able to follow in her footsteps. Second, I was delighted at the opportunity of being able to see the teaching side of a college course. Third, I was going to work for a professor whom I had built up a reputation with, starting in my freshman year, and I really admired her work ethic. In my first quarter on the job, I was nervous because I wanted to be an adequate bridge between the students and the professor. Learning skills like clarifying topics for students, setting up the Canvas page, and writing and grading assignments, I feel very satisfied with the new experiences and questions I encounter in this role. By understanding the teaching team's mentality when writing and grading exams and learning from the lecture content myself, I think this experience has helped me become a better student and learner. Conducting office hours and helping resolve other students' queries has helped me unlearn the habit of not asking for help myself. This has been a welcome change because it has allowed me to improve my productivity and time-management skills.",
     photo: "/images/artifacts/being-a-ta.jpg",
   },
   {
