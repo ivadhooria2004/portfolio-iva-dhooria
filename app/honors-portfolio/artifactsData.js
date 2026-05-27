@@ -176,6 +176,6 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2026,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/husky-100.jpg",
   },
 ];
