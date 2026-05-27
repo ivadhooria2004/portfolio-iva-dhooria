@@ -69,14 +69,6 @@ export default function EquitableFuturesArtifactPage() {
                 &rarr; Research & Writing
               </Link>
             </li>
-            <li>
-              <Link
-                href="/case-competitions"
-                className="text-husky-gold-light hover:text-white transition-colors"
-              >
-                &rarr; Case Competitions
-              </Link>
-            </li>
           </ul>
         </Section>
       </div>
