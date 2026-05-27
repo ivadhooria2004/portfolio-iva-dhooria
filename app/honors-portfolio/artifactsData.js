@@ -109,7 +109,7 @@ export const artifacts = [
     themeKey: "curiosity",
     year: 2026,
     reflection: null,
-    photo: null,
+    photo: "/images/artifacts/passion-in-project.jpg",
   },
   // THEME 3: Relearning Authenticity
   {
