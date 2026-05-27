@@ -131,7 +131,7 @@ export const artifacts = [
     theme: "Relearning Authenticity",
     themeKey: "authenticity",
     year: 2023,
-    reflection: null,
+    reflection: "In the spring quarter of my freshman year, a classmate from my freshman direct seminar reached out to me, asking whether I would be willing to participate in a business case competition. Due to limited exposure to the concept, he explained it to me as a problem-solving activity in a group setting with the opportunity of presenting to a panel of corporate judges. Hearing this explanation, I was immediately interested and committed 2 hours on a Friday for this competition. The version of me that went into the competition clueless yet open to learning new things was not the same version that came out of the competition. This experience was the beginning of something that became a key theme throughout my undergraduate experience at UW. The adrenaline of coming up with a solution under time pressure, presenting it to a group of judges, and being able to defend it without having evidentiary support really helped me reconnect with the part of my personality that thrives in challenges. What started as a fun problem-solving experience on a random Friday in freshman year built itself into a passion where I took on the roles of an International competitor, mentor, leader, and case writer in my time at UW.",
     photo: "/images/artifacts/shrm.jpg",
   },
   {
