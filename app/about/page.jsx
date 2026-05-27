@@ -1,7 +1,6 @@
 import PageShell, { PageHeader } from "../../components/PageShell";
 import PhotoSlot from "../../components/PhotoSlot";
 import LinkedInIcon from "../../components/LinkedInIcon";
-import { Download } from "lucide-react";
 
 export const metadata = { title: "About | Iva Dhooria" };
 
