@@ -64,14 +64,6 @@ export default function InfoResearchArtifactPage() {
           <ul className="list-none space-y-2">
             <li>
               <Link
-                href="/case-competitions"
-                className="text-husky-gold-light hover:text-white transition-colors"
-              >
-                &rarr; Case Competitions
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/research"
                 className="text-husky-gold-light hover:text-white transition-colors"
               >
