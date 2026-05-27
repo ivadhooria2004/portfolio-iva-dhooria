@@ -8,7 +8,7 @@ export const artifacts = [
     theme: "Intentional Exploration",
     themeKey: "exploration",
     year: 2023,
-    reflection: null,
+    reflection: "Being somebody who has always craved new opportunities, experiences, and connections, I was super excited when I discovered the UW HFS student job website. The idea of having a little extra money every month to spend on sidequests sounded like an incredibly lucrative offer. So, I took a leap of faith and put together a very simple resume. This resume was truly reflective of everything I had been up to in freshman year, and it almost seemed like a moment of true adulting to me at that moment in time. After building my resume, I perused the student job website to apply for positions that I'd be eligible for. In this list, I came across the job of HR Student Assistant. This was a desk job that sort of related to my business degree, and I was excited about the possibility of learning more about how recruiting works. Mustering up courage, I hit apply, and a few weeks and an interview later, I had secured myself a job starting in my sophomore fall. When my first paycheck hit my bank account, I was elated. My happiness came not from knowing that I could buy more things for myself, but from the idea that I could buy my parents a gift with money I earned myself. This was an impactful moment in my life because it taught me the importance of earning and managing money. Working my first job in an office environment also gave me a new sense of independence that I had not experienced before, and an early peek into corporate culture.",
     photo: "/images/artifacts/first-job.jpg",
   },
   {
