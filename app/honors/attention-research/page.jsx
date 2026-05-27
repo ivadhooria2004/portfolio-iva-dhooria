@@ -60,6 +60,22 @@ export default function AttentionResearchPage() {
           <p>The key educational goals of this course lie around the discussion of research, its purpose, methods, and how it can be linked to theory, practice, and technological innovation. I think the additional work that I have picked for myself in this project helps me apply the skills learned in this course to my project in real-time. This research project will give me an opportunity to test a few of the research methods that I will discover through this course. Additionally, I picked a research paper as the medium for my project because I would like to sharpen my writing skills in a research academic setting. This is where I see my professor's expertise play a big role in my choice of medium as well as area of research. Dr. Bristol has a PhD in cognitive science, and an MA in linguistics which allows me to take advantage of her rich background to get incredibly meaningful feedback on my research and writing. Furthermore, I see myself as being able to pursue this research beyond this ad-hoc project under Dr. Bristol's guidance.</p>
         </section>
       </article>
+
+      {/* PDF Viewer for Research Paper */}
+      <div style={{
+        marginTop: '4rem',
+        borderRadius: '1rem',
+        border: '1px solid rgba(255, 255, 255, 0.08)',
+        overflow: 'hidden',
+        maxWidth: '3xl'
+      }}>
+        <iframe
+          src="/documents/INFO_300_Honors_Research_Paper.pdf"
+          width="100%"
+          height="600px"
+          style={{ border: 'none' }}
+        />
+      </div>
     </PageShell>
   );
 }
