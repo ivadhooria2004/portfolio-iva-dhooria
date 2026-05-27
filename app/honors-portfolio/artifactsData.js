@@ -164,7 +164,7 @@ export const artifacts = [
     theme: "Relearning Authenticity",
     themeKey: "authenticity",
     year: 2025,
-    reflection: null,
+    reflection: "During the summer before my senior year, I had the opportunity to take my first solo trip. I planned this trip to Japan because I had completed an internship and language exchange in Kobe, Japan, the previous year, and I had fallen in love with the country. My trip was primarily centered around attending the EXPO 2025 taking place in Osaka, Japan. This was a time when I was looking for motivation and new ideas, and I think traveling helps me discover more about the world and myself. While my intent for this trip was to discover sides of Japan that I wasn't able to experience during my study abroad experience, it ended up being a lesson in independence and in refreshing my perspective towards life. From booking flights and hotels to navigating the subway, I found a new side to myself in the process of exploring. While I have always been fond of traveling and experiencing new things, I never thought that I had the self-drive to be able to explore two cities from a non-traditional lens. I think my attempt to explore was also reflective of my quest to add new knowledge to my train of thought. This trip helped me meet a very independent and self-assured version of myself, and I can't wait to go on more solo trips!",
     photo: "/images/artifacts/first-solo-trip.jpg",
   },
   {
