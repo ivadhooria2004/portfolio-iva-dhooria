@@ -52,7 +52,7 @@ export const artifacts = [
     theme: "Intentional Exploration",
     themeKey: "exploration",
     year: 2025,
-    reflection: null,
+    reflection: "My journey of involvement at the Foster School of Business has been a full circle because I have embodied the role of a student, mentor, leader, and TA all over the course of these four beautiful years. Another role to this list was added when I was offered the opportunity to write a diversity-focused case for a case competition hosted by the Undergraduate Women in Business club. This opportunity was both exciting and scary for me. It was exciting because I would get to explore casing from across the table, and scary because this was uncharted territory for me. At first, when I was offered the opportunity, I went into an overthinking spiral on how I was not qualified enough to write a case that other students would use to compete. However, my co-case writer and friend helped me overcome this dilemma and take it on as a challenge. From countless research sessions to re-reading each section for diction choice, I realized that there is a lot more to the skills acquired through case competitions than just being able to produce a clear and implementable solution to a problem. The way a case is written, framed, and presented has a meaningful impact on the way it is perceived by the competitor. Going through this writing experience helped me become a better competitor as well because I was able to decode the implicit asks of a case much better.",
     photo: "/images/artifacts/lifes-philosophy.jpg",
   },
   // THEME 2: Consistent Curiosity
