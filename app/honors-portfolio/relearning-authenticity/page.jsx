@@ -156,6 +156,23 @@ export default function RelearningAuthenticityPage() {
               </p>
             )}
 
+            {/* PDF Viewer for Writing My Life's Philosophy at 18 */}
+            {artifact.id === "lifes-philosophy" && (
+              <div style={{
+                borderRadius: '1rem',
+                border: '1px solid #E0DAF0',
+                marginTop: '2rem',
+                overflow: 'hidden'
+              }}>
+                <iframe
+                  src="/documents/HON_211A_Final_Paper.pdf"
+                  width="100%"
+                  height="600px"
+                  style={{ border: 'none' }}
+                />
+              </div>
+            )}
+
             {/* Divider */}
             {idx !== themeArtifacts.length - 1 && (
               <div style={{ height: "1px", backgroundColor: "#E0DAF0", marginTop: "3rem" }} />
