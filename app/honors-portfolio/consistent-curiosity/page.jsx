@@ -156,6 +156,23 @@ export default function ConsistentCuriosityPage() {
               </p>
             )}
 
+            {/* PDF Viewer for Passion in Project */}
+            {artifact.id === "passion-in-project" && (
+              <div style={{
+                borderRadius: '1rem',
+                border: '1px solid #E0DAF0',
+                marginTop: '2rem',
+                overflow: 'hidden'
+              }}>
+                <iframe
+                  src="/documents/IS451_Presentation.pdf"
+                  width="100%"
+                  height="600px"
+                  style={{ border: 'none' }}
+                />
+              </div>
+            )}
+
             {/* Divider */}
             {idx !== themeArtifacts.length - 1 && (
               <div style={{ height: "1px", backgroundColor: "#E0DAF0", marginTop: "3rem" }} />
