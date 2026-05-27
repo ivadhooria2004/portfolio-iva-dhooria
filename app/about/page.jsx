@@ -64,14 +64,6 @@ export default function AboutPage() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-husky-gold text-dark font-display text-[13px] hover:bg-husky-gold-light transition-colors duration-200"
-              style={{ fontWeight: 500 }}
-            >
-              <Download size={14} />
-              Download r&eacute;sum&eacute;
-            </a>
-            <a
               href="https://www.linkedin.com/in/iva-dhooria/"
               target="_blank"
               rel="noopener noreferrer"
