@@ -6,7 +6,7 @@ import { Download } from "lucide-react";
 export const metadata = { title: "About | Iva Dhooria" };
 
 const languages = ["English", "Punjabi", "Hindi", "French (AP)"];
-const technical = ["MS PowerPoint", "MS Excel", "R (RStudio)", "Python"];
+const technical = ["MS PowerPoint", "MS Excel", "R (RStudio)", "Python", "SQL"];
 const honors = [
   "JASSO Government Scholarship 2024",
   "Annual Dean's List",
