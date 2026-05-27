@@ -153,7 +153,7 @@ export const artifacts = [
     theme: "Relearning Authenticity",
     themeKey: "authenticity",
     year: 2025,
-    reflection: null,
+    reflection: "During the summer before my senior year, I saw an unexpected email pop up in my inbox. It was from the alumni coordinator of my high school, inviting me to be a speaker on a college-ready panel for current students at my high school. I distinctly remember feeling very moved by this, and I immediately said yes to joining the panel. On the day of the actual panel, I felt a sense of comfort in returning to my school as an alumnus who had meaningful experiences and stories to share with current students. I only spent two years studying at my high school, and during those two years, I was so focused on my academics and making the move to a different country worth my while that I lost a part of who I was in the process. However, returning to the school as a speaker with a newfound sense of self and a confidence that I didn't previously show was very empowering. It was comforting to find belonging at my high school after I had already graduated from there. This experience, in a way, helped me undo the regret of not completely expressing myself when I attended high school.",
     photo: "/images/artifacts/lakeside-speaker.jpg",
   },
   {
