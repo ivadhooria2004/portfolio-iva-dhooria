@@ -93,24 +93,6 @@ function CaseWriterCard({ item }) {
   );
 }
 
-function InProgressCard() {
-  return (
-    <article className="rounded-2xl border border-dashed border-white/15 bg-transparent p-6">
-      <div className="flex items-center gap-3 mb-2">
-        <span className="text-[11px] uppercase tracking-[0.15em] text-husky-gold-light/60 font-display border border-husky-gold/25 rounded-full px-2.5 py-1">
-          In progress
-        </span>
-      </div>
-      <h3 className="font-display font-medium text-white/80 text-lg mt-3">
-        Current writing project
-      </h3>
-      <p className="text-sm text-white/40 leading-[1.75] mt-2">
-        Placeholder &mdash; an in-progress research and writing project. Details
-        will appear here once the draft is ready to share.
-      </p>
-    </article>
-  );
-}
 
 export default function ResearchPage() {
   return (
