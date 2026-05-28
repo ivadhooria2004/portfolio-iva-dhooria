@@ -102,7 +102,13 @@ export default function RelearningAuthenticityPage() {
             >
               {artifact.photo ? (
                 <Image
-                  src={artifact.photo}
+                  src={
+                    artifact.id === "lifes-philosophy"
+                      ? "/images/artifacts/lifes-philosophy-detail.jpg"
+                      : artifact.id === "first-solo-trip"
+                      ? "/images/artifacts/first-solo-trip-detail.jpg"
+                      : artifact.photo
+                  }
                   alt={artifact.title}
                   fill
                   style={{
