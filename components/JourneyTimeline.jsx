@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import PhotoSlot from "./PhotoSlot";
+import Link from "next/link";
 import journeyEntries from "../lib/journeyData";
 
 /**
@@ -63,12 +63,10 @@ function filterLabel(key) {
 
 function TimelineCard({ entry, side }) {
   const style = categoryStyles[entry.category];
-  return (
-    <div
-      className={`relative rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-5 hover:bg-white/[0.05] transition-colors duration-200 ${
-        side === "left" ? "md:text-right" : "md:text-left"
-      }`}
-    >
+  const [imageError, setImageError] = useState(false);
+
+  const CardContent = () => (
+    <>
       <div className="text-[12px] text-white/35 font-display mb-1">
         {entry.date}
       </div>
@@ -84,8 +82,19 @@ function TimelineCard({ entry, side }) {
       >
         {entry.description}
       </p>
-      <div className="mt-4">
-        <PhotoSlot aspectRatio="16/9" />
+      <div className="mt-4 rounded-lg overflow-hidden bg-white/[0.05] aspect-video flex items-center justify-center border border-white/[0.08]">
+        {entry.image && !imageError ? (
+          <img
+            src={entry.image}
+            alt={entry.title}
+            className="w-full h-full object-cover"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="text-white/25 text-[13px] font-display text-center px-4">
+            [Image]
+          </div>
+        )}
       </div>
       <div
         className={`mt-4 flex flex-wrap gap-2 ${
@@ -98,6 +107,30 @@ function TimelineCard({ entry, side }) {
           {style.label}
         </span>
       </div>
+    </>
+  );
+
+  if (entry.link) {
+    return (
+      <Link href={entry.link}>
+        <div
+          className={`relative rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-5 hover:bg-white/[0.05] transition-colors duration-200 cursor-pointer ${
+            side === "left" ? "md:text-right" : "md:text-left"
+          }`}
+        >
+          <CardContent />
+        </div>
+      </Link>
+    );
+  }
+
+  return (
+    <div
+      className={`relative rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-5 hover:bg-white/[0.05] transition-colors duration-200 ${
+        side === "left" ? "md:text-right" : "md:text-left"
+      }`}
+    >
+      <CardContent />
     </div>
   );
 }
