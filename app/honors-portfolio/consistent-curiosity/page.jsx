@@ -163,14 +163,10 @@ export default function ConsistentCuriosityPage() {
                 borderRadius: '1rem',
                 border: '1px solid #E0DAF0',
                 marginTop: '2rem',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                backgroundColor: 'rgba(0, 0, 0, 0.1)'
               }}>
-                <iframe
-                  src="/documents/IS451_Presentation.pdf"
-                  width="100%"
-                  height="600px"
-                  style={{ border: 'none' }}
-                />
+                <PdfViewer src="/documents/IS451_Presentation.pdf" height="800px" />
               </div>
             )}
 
