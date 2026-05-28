@@ -88,7 +88,7 @@ function WorkCard({ entry }) {
         <ul className="space-y-2 text-sm text-white/40">
           {entry.bullets.map((bullet, idx) => (
             <li key={idx} className="flex gap-3">
-              <span className="text-husky-gold-light flex-shrink-0">\u2022</span>
+              <span className="text-husky-gold-light flex-shrink-0">•</span>
               <span className="leading-[1.6]">{bullet}</span>
             </li>
           ))}
