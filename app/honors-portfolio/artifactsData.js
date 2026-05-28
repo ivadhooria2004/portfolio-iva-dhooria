@@ -9,7 +9,7 @@ export const artifacts = [
     themeKey: "exploration",
     year: 2023,
     reflection: "Being somebody who has always craved new opportunities, experiences, and connections, I was super excited when I discovered the UW HFS student job website. The idea of having a little extra money every month to spend on sidequests sounded like an incredibly lucrative offer. So, I took a leap of faith and put together a very simple resume. This resume was truly reflective of everything I had been up to in freshman year, and it almost seemed like a moment of true adulting to me at that moment in time. After building my resume, I perused the student job website to apply for positions that I'd be eligible for. In this list, I came across the job of HR Student Assistant. This was a desk job that sort of related to my business degree, and I was excited about the possibility of learning more about how recruiting works. Mustering up courage, I hit apply, and a few weeks and an interview later, I had secured myself a job starting in my sophomore fall. When my first paycheck hit my bank account, I was elated. My happiness came not from knowing that I could buy more things for myself, but from the idea that I could buy my parents a gift with money I earned myself. This was an impactful moment in my life because it taught me the importance of earning and managing money. Working my first job in an office environment also gave me a new sense of independence that I had not experienced before, and an early peek into corporate culture.",
-    photo: "/images/artifacts/first-job.jpg",
+    photo: "/images/artifacts/first-job.webp",
   },
   {
     id: "startup-world",
@@ -20,7 +20,7 @@ export const artifacts = [
     themeKey: "exploration",
     year: 2024,
     reflection: "In my sophomore year, I applied to the Lavin Entrepreneurship program to explore my interest in the field. Spending my first year in the program, I learned a lot about startups, building connections, meeting a lot of cool people, and exploring a startup idea concept in a classroom setting. This first-year experience was enough to motivate me to apply for a leadership position with the program. Amongst the various positions available on the team, spanning from administrative to marketing, I interviewed for the director of outreach role. My desire to pursue this role stemmed from my priority of developing a network of connections in the Seattle startup community. From organizing speaker events to cold emailing startup founders, this role pushed me to intentionally seek out connection opportunities that would not come naturally. During my time in this role, I faced quite a few challenges, including differences of opinion with the other leaders, time management, and communicating task distribution. While I initially struggled to fit in with the leadership team due to creative differences and leadership style, I eventually found a way to communicate and understand the requirements of the tasks at hand effectively. This role taught me that leadership necessitates not just active listening but also emotional agility. The best part of this experience for me was getting to meet the founders who came from similar backgrounds and shared my passion for unstructured problem-solving. This role became a source of continuous inspiration for me due to the people I crossed paths with on a regular basis.",
-    photo: "/images/artifacts/startup-world.jpg",
+    photo: "/images/artifacts/startup-world.webp",
   },
   {
     id: "bmcc",
@@ -31,7 +31,7 @@ export const artifacts = [
     themeKey: "exploration",
     year: 2024,
     reflection: "Business case competitions have been a very constant part of my academic journey at UW. These are experiences that I have purposefully undertaken to feed my curiosity and collect more skills to enhance my problem-solving mindset. Countless practices, all-nighters, slide decks, and research sessions led me to be selected for my second international case competition at the Universidad Panamericana, Guadalajara. While I was incredibly excited and grateful to have the opportunity to represent UW again at the international stage, I was also concerned about having to build a team dynamic with three new teammates whom I had previously never worked with. Through practice cases, group dinners, and fun team bonding activities over the three-month preparation period, I was able to establish a foundation of trust among the team. However, this foundation could not be tested until we were under the pressure of the 24-hour case challenge at the actual competition. Working through the nerves, beating groupthink, and maximizing our problem-solving set, my team and I came up with a solution that we were proud to present. This was a solution that reflected a holistic team perspective, and it was culturally resonant. While this solution did not lead us to becoming the winning team, it was a testament to our bonding as a team and our ability to come up with a feasible and implementable solution under time constraints. I found incredible satisfaction in returning from Mexico, not with a win but with a lot of beautiful experiences, a refreshed perspective, and teammates who are now my close friends.",
-    photo: "/images/artifacts/bmcc.jpg",
+    photo: "/images/artifacts/bmcc.webp",
   },
   {
     id: "first-c2-event",
@@ -42,7 +42,7 @@ export const artifacts = [
     themeKey: "exploration",
     year: 2025,
     reflection: "Sitting in my dorm building lobby during the Spring quarter of sophomore year, three of my friends who also happened to be my case teammates got into a long, late-night discussion about resources and succeeding in the case competition space. This was a reflective conversation because we were the team that had slowly built up our familiarity with case competitions in a trial-and-error manner. We talked about how it would be incredible to have a student organization that could teach students how to approach case competitions, what they entail, and the skills needed to succeed. From a late-night dorm conversation to various brainstorming and planning sessions over the summer and fall, our team was able to finally register and start this organization, the UW Case Club, which was a rough idea a few months ago. From administrative tasks to marketing materials to skill resources, we deliberated the logistics of the club for hours. We did not just want to create a club that taught skills in a peer-to-peer learning environment, but rather we wanted this to be a space where students could find friends and teammates. We ran our first event to explain the basics of case competitions and the vision of our club. Seeing the room our team booked for the event full, I felt assured and grateful that we were taking strides in the right direction. This moment was also special because it marked my transition from being just a competitor to a mentor for a skill that I had acquired over my time at UW, and this made it even more heartwarming.",
-    photo: "/images/artifacts/first-c2-event.jpg",
+    photo: "/images/artifacts/first-c2-event.webp",
   },
   {
     id: "writing-not-competing",
@@ -53,7 +53,7 @@ export const artifacts = [
     themeKey: "exploration",
     year: 2025,
     reflection: "My journey of involvement at the Foster School of Business has been a full circle because I have embodied the role of a student, mentor, leader, and TA all over the course of these four beautiful years. Another role to this list was added when I was offered the opportunity to write a diversity-focused case for a case competition hosted by the Undergraduate Women in Business club. This opportunity was both exciting and scary for me. It was exciting because I would get to explore casing from across the table, and scary because this was uncharted territory for me. At first, when I was offered the opportunity, I went into an overthinking spiral on how I was not qualified enough to write a case that other students would use to compete. However, my co-case writer and friend helped me overcome this dilemma and take it on as a challenge. From countless research sessions to re-reading each section for diction choice, I realized that there is a lot more to the skills acquired through case competitions than just being able to produce a clear and implementable solution to a problem. The way a case is written, framed, and presented has a meaningful impact on the way it is perceived by the competitor. Going through this writing experience helped me become a better competitor as well because I was able to decode the implicit asks of a case much better.",
-    photo: "/images/artifacts/writing-not-competing.jpg",
+    photo: "/images/artifacts/writing-not-competing.webp",
   },
   // THEME 2: Consistent Curiosity
   {
