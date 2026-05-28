@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageShell, { PageHeader } from "../../../components/PageShell";
+import PdfViewer from "../../../components/PdfViewer";
 import { artifacts } from "../artifactsData";
 
 export const metadata = { title: "Relearning Authenticity | Iva Dhooria" };
