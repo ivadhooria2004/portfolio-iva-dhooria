@@ -92,23 +92,16 @@ export default function RelearningAuthenticityPage() {
               style={{
                 position: "relative",
                 width: "100%",
-                maxHeight: "400px",
+                maxHeight: "500px",
                 borderRadius: "1rem",
                 overflow: "hidden",
                 backgroundColor: "#EEE8FA",
                 marginBottom: "2rem",
-                minHeight: "300px",
               }}
             >
               {artifact.photo ? (
                 <Image
-                  src={
-                    artifact.id === "lifes-philosophy"
-                      ? "/images/artifacts/lifes-philosophy-detail.webp"
-                      : artifact.id === "first-solo-trip"
-                      ? "/images/artifacts/first-solo-trip-detail.webp"
-                      : artifact.photo
-                  }
+                  src={artifact.photo}
                   alt={artifact.title}
                   fill
                   unoptimized={artifact.id === "lifes-philosophy" || artifact.id === "first-solo-trip"}
@@ -116,8 +109,6 @@ export default function RelearningAuthenticityPage() {
                     objectFit: "contain",
                     objectPosition: "center",
                     padding: "12px",
-                    transform: (artifact.id === "lifes-philosophy" || artifact.id === "first-solo-trip") ? "rotate(90deg)" : "none",
-                    transformOrigin: "center center",
                   }}
                   sizes="(max-width: 768px) 100vw, 800px"
                 />
