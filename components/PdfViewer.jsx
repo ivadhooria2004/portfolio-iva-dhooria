@@ -10,24 +10,14 @@ import "@react-pdf-viewer/full-screen/lib/styles/index.css";
 export default function PdfViewer({ src, height = "600px" }) {
   const zoomPluginInstance = zoomPlugin();
   const fullScreenPluginInstance = fullScreenPlugin();
-  const defaultLayoutPluginInstance = defaultLayoutPlugin({
-    sidebarTabs: [],
-    toolbarPlugin: {
-      fullScreenPlugin: fullScreenPluginInstance,
-      zoomPlugin: zoomPluginInstance,
-    },
-  });
 
   return (
     <div style={{ height }}>
       <Worker workerUrl="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js">
         <Viewer
           fileUrl={src}
-          plugins={[
-            defaultLayoutPluginInstance,
-            zoomPluginInstance,
-            fullScreenPluginInstance,
-          ]}
+          initialPage={0}
+          plugins={[zoomPluginInstance, fullScreenPluginInstance]}
         />
       </Worker>
     </div>
