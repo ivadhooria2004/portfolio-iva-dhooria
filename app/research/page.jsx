@@ -133,12 +133,22 @@ export default function ResearchPage() {
           "Independent research, case writing, and written work \u2014 the intellectual layer beneath the r\u00E9sum\u00E9."
         }
       />
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2 mb-20">
         {completed.map((item) => (
           <CompletedCard key={item.title} item={item} />
         ))}
-        <InProgressCard />
       </div>
+
+      <div className="mb-12">
+        <h2 className="font-display text-2xl font-medium text-white mb-6">Case Writing</h2>
+        <div className="grid gap-5">
+          {caseWriting.map((item) => (
+            <CaseWriterCard key={item.title} item={item} />
+          ))}
+        </div>
+      </div>
+
+      <InProgressCard />
     </PageShell>
   );
 }
