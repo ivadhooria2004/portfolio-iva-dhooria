@@ -84,28 +84,27 @@ export default function IntentionalExplorationPage() {
             {/* Photo area */}
             <div
               style={{
+                position: "relative",
                 width: "100%",
                 maxHeight: "400px",
                 borderRadius: "1rem",
                 overflow: "hidden",
                 backgroundColor: "#F5F2FB",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 marginBottom: "2rem",
+                minHeight: "300px",
               }}
             >
               {artifact.photo ? (
-                <img
+                <Image
                   src={artifact.photo}
                   alt={artifact.title}
+                  fill
                   style={{
-                    width: "100%",
-                    height: "100%",
                     objectFit: "contain",
                     objectPosition: "center",
                     padding: "12px",
                   }}
+                  sizes="(max-width: 768px) 100vw, 800px"
                 />
               ) : (
                 <div
