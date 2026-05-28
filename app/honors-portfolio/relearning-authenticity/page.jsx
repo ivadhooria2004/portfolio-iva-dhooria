@@ -92,11 +92,12 @@ export default function RelearningAuthenticityPage() {
               style={{
                 position: "relative",
                 width: "100%",
-                maxHeight: "500px",
+                maxHeight: "400px",
                 borderRadius: "1rem",
                 overflow: "hidden",
                 backgroundColor: "#EEE8FA",
                 marginBottom: "2rem",
+                minHeight: "300px",
               }}
             >
               {artifact.photo ? (
