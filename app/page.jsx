@@ -15,16 +15,22 @@ export default function Home() {
   return (
     <>
       <section style={{ position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
-        {/* Background video layer */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
-        >
-          <source src="https://cdn.pixabay.com/video/2020/10/28/53812-475059916_large.mp4" type="video/mp4" />
-        </video>
+        {/* Background video layer - desktop only */}
+        <div className="hidden md:block" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23050505' width='1920' height='1080'/%3E%3C/svg%3E"
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+          >
+            <source src="https://cdn.pixabay.com/video/2020/10/28/53812-475059916_large.mp4" type="video/mp4" />
+          </video>
+        </div>
+        {/* Mobile poster background */}
+        <div className="md:hidden" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(107, 79, 160, 0.4)', zIndex: 0 }} />
 
         {/* Purple overlay for readability */}
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(107, 79, 160, 0.35)', zIndex: 1 }} />
