@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import PageShell, { PageHeader } from "../../../components/PageShell";
-import PdfViewer from "../../../components/PdfViewer";
 import { artifacts } from "../artifactsData";
+
+const PdfViewer = dynamic(() => import("../../../components/PdfViewer"), {
+  ssr: true,
+  loading: () => <div className="bg-white/[0.03] rounded-lg p-8 text-white/50">Loading PDF...</div>,
+});
 
 export const metadata = { title: "Consistent Curiosity | Iva Dhooria" };
 
