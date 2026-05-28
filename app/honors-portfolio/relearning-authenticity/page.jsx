@@ -109,6 +109,8 @@ export default function RelearningAuthenticityPage() {
                     objectFit: "contain",
                     objectPosition: "center",
                     padding: "12px",
+                    transform: (artifact.id === "lifes-philosophy" || artifact.id === "first-solo-trip") ? "rotate(90deg)" : "none",
+                    transformOrigin: "center center",
                   }}
                   sizes="(max-width: 768px) 100vw, 800px"
                 />
