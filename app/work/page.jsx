@@ -103,7 +103,7 @@ export default function WorkPage() {
     <PageShell>
       <PageHeader
         title="Work"
-        subtitle="Selected professional experience \u2014 each entry is a short case study of the problem, the approach, and the outcome."
+        subtitle="A dive into my professional experience"
       />
       <div className="grid gap-5 md:grid-cols-2">
         {workEntries.map((entry) => (
