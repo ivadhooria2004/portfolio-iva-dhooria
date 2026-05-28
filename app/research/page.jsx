@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageShell, { PageHeader } from "../../components/PageShell";
 
 export const metadata = { title: "Projects | Iva Dhooria" };
@@ -8,12 +9,37 @@ const completed = [
     date: "Winter 2025",
     blurb: "Independent honors research project.",
     note: "Unique idea, and it surprisingly came together. An independent research project on sustained attention in time-pressured settings.",
+    href: "/honors/attention-research",
   },
   {
     title: "Equitable Futures Case",
     date: "Winter 2025",
     blurb: "Case writing on equitable access to public transit.",
     note: "Had a lot of fun organizing and writing. Loved being interviewed. Writing the King County Metro case for UWIB, and learning to frame problems instead of solve them.",
+  },
+];
+
+const caseWriting = [
+  {
+    title: "Equitable Futures Case Competition",
+    date: "Winter 2025",
+    role: "Co-Case Writer",
+    description: "Live case on King County Metro, framing leadership challenges through sustainability and equity lenses to enhance service delivery for marginalized populations.",
+    pdf: "/documents/EFCC_Case_2025.pdf",
+  },
+  {
+    title: "MOSAIC Case Competition",
+    date: "Spring 2026",
+    role: "Co-Case Writer",
+    description: "Case on Stanley 1913, examining global expansion strategy, product diversification, and brand relevance in an evolving consumer market.",
+    pdf: "/documents/MOSAIC_Case_2026.pdf",
+  },
+  {
+    title: "BEA Case Competition",
+    date: "Spring 2026",
+    role: "Co-Case Writer",
+    description: "Case titled \"Double Dilemma\" exploring a merger decision between Bios.ai, a MedTech startup, and ASID Pharmaceuticals, weighing synergies against value misalignment and public relations risk.",
+    pdf: "/documents/BEA_Case_2026_.pdf",
   },
 ];
 
