@@ -44,7 +44,7 @@ const caseWriting = [
 ];
 
 function CompletedCard({ item }) {
-  return (
+  const content = (
     <article className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6 hover:bg-white/[0.05] transition-colors duration-200">
       <div className="flex items-baseline justify-between mb-2 gap-3">
         <h3 className="font-display font-medium text-white text-lg">
@@ -61,6 +61,47 @@ function CompletedCard({ item }) {
         </p>
       </div>
     </article>
+  );
+
+  if (item.href) {
+    return <Link href={item.href}>{content}</Link>;
+  }
+  return content;
+}
+
+function CaseWriterCard({ item }) {
+  return (
+    <div>
+      <article className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6 hover:bg-white/[0.05] transition-colors duration-200 mb-4">
+        <div className="flex items-baseline justify-between mb-2 gap-3">
+          <h3 className="font-display font-medium text-white text-lg">
+            {item.title}
+          </h3>
+          <span className="text-[12px] text-white/35 font-display whitespace-nowrap">
+            {item.date}
+          </span>
+        </div>
+        <div className="mb-3">
+          <span className="inline-block text-[11px] uppercase tracking-[0.08em] text-husky-gold-light font-display">
+            {item.role}
+          </span>
+        </div>
+        <p className="text-sm text-white/45 leading-[1.75]">{item.description}</p>
+      </article>
+      <div style={{
+        borderRadius: '1rem',
+        border: '1px solid rgba(255, 255, 255, 0.08)',
+        overflow: 'hidden',
+        marginBottom: '2rem'
+      }}>
+        <iframe
+          src={item.pdf}
+          width="100%"
+          height="600px"
+          style={{ border: 'none' }}
+        />
+      </div>
+    </div>
   );
 }
 
