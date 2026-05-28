@@ -121,7 +121,7 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2023,
     reflection: "During my first year at UW in the peak winter quarter, I did not expect to be hit with a final assignment that would leave me stunned. I was stunned not because of how difficult the assignment was, but because it required scratching beyond the surface and reflecting on who I really was. As an 18-year-old in my first honors class at UW, I wasn't really expecting to learn the philosophies of Kant and Plato in a class titled \"Disenchantment of the West.\" Throughout this course, I went into lectures with a certain perception of the world and walked out having unlocked another dimension. This was because I was being exposed to ideologies that I had only heard of, but in this course, I was questioning them and wrapping my head around concepts that stuck with me. The culmination of a 5000-word paper on the philosophy of my life was daunting. Never before in my life had I felt nearly threatened by an assignment, and I think this came from the unknowns of what I will end up with as the final product. In the process of writing this paper, I think I subconsciously and consciously examined all of my lived experiences, and deciphered which ones left the most lasting impact on my being. Furthermore, I think I have introspected a lot on my principles and moral compass in the process of writing. My big takeaway from writing this paper was that I owed a lot of my moral compass to a combination of my upbringing and religion. This gave me a lot of clarity in understanding the decisions that I make and why I make them.",
-    photo: "/images/artifacts/lifes-philosophy.jpg",
+    photo: "/images/artifacts/lifes-philosophy.webp",
   },
   {
     id: "shrm",
@@ -132,7 +132,7 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2023,
     reflection: "In the spring quarter of my freshman year, a classmate from my freshman direct seminar reached out to me, asking whether I would be willing to participate in a business case competition. Due to limited exposure to the concept, he explained it to me as a problem-solving activity in a group setting with the opportunity of presenting to a panel of corporate judges. Hearing this explanation, I was immediately interested and committed two hours on a Friday for this competition. The version of me that went into the competition clueless yet open to learning new things was not the same version that came out of the competition. This experience was the beginning of something that became a key theme throughout my undergraduate experience at UW. The adrenaline of coming up with a solution under time pressure, presenting it to a group of judges, and being able to defend it without having evidentiary support really helped me reconnect with the part of my personality that thrives in challenges. What started as a fun problem-solving experience on a random Friday in freshman year built itself into a passion where I took on the roles of an International competitor, mentor, leader, and case writer in my time at UW.",
-    photo: "/images/artifacts/shrm.jpg",
+    photo: "/images/artifacts/shrm.webp",
   },
   {
     id: "caseit-2024",
@@ -143,7 +143,7 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2024,
     reflection: "At my first ever international case competition, our team's host said to our team, \"An underdog is a hungry dog and a hungry dog runs the fastest.\" This statement especially ran true when, at the end of a week-long competition, we stood tall as second-place winners among fifteen global teams. Having the opportunity to represent UW as a sophomore at Simon Fraser University was truly a moment of pride for me. Being a super competitive person, I have always strived for excellence in every endeavour I undertake. However, going into this competition, I felt a little inferiority complex. Our team comprised some of the youngest competitors, and our experience with information systems was limited, which made me feel inadequate in our ability to devise a practical solution. I think it was this pressure of having limited experience, coupled with my high ambition, that pushed us to devise a solution that we stress-tested in multiple scenarios and backed up with excessive research. It was the motivation from the slight pressure to do UW proud that led us to maximize our potential as a team to produce a solution that was complimented by the judges as \"freakishly good.\" The moment we collected our trophy as a team, I recall that as one of the highlights of my UW journey.",
-    photo: "/images/artifacts/caseit-2024.jpg",
+    photo: "/images/artifacts/caseit-2024.webp",
   },
   {
     id: "lakeside-speaker",
@@ -154,7 +154,7 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2025,
     reflection: "During the summer before my senior year, I saw an unexpected email pop up in my inbox. It was from the alumni coordinator of my high school, inviting me to be a speaker on a college-ready panel for current students at my high school. I distinctly remember feeling very moved by this, and I immediately said yes to joining the panel. On the day of the actual panel, I felt a sense of comfort in returning to my school as an alumnus who had meaningful experiences and stories to share with current students. I only spent two years studying at my high school, and during those two years, I was so focused on my academics and making the move to a different country worth my while that I lost a part of who I was in the process. However, returning to the school as a speaker with a newfound sense of self and a confidence that I didn't previously show was very empowering. It was comforting to find belonging at my high school after I had already graduated from there. This experience, in a way, helped me undo the regret of not completely expressing myself when I attended high school.",
-    photo: "/images/artifacts/lakeside-speaker.jpg",
+    photo: "/images/artifacts/lakeside-speaker.webp",
   },
   {
     id: "first-solo-trip",
@@ -165,7 +165,7 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2025,
     reflection: "During the summer before my senior year, I had the opportunity to take my first solo trip. I planned this trip to Japan because I had completed an internship and language exchange in Kobe, Japan, the previous year, and I had fallen in love with the country. My trip was primarily centered around attending the EXPO 2025 taking place in Osaka, Japan. This was a time when I was looking for motivation and new ideas, and I think traveling helps me discover more about the world and myself. While my intent for this trip was to discover sides of Japan that I wasn't able to experience during my study abroad experience, it ended up being a lesson in independence and in refreshing my perspective towards life. From booking flights and hotels to navigating the subway, I found a new side to myself in the process of exploring. While I have always been fond of traveling and experiencing new things, I never thought that I had the self-drive to be able to explore two cities from a non-traditional lens. I think my attempt to explore was also reflective of my quest to add new knowledge to my train of thought. This trip helped me meet a very independent and self-assured version of myself, and I can't wait to go on more solo trips!",
-    photo: "/images/artifacts/first-solo-trip.jpg",
+    photo: "/images/artifacts/first-solo-trip.webp",
   },
   {
     id: "husky-100",
@@ -176,6 +176,6 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2026,
     reflection: "This past winter quarter, I applied for the Husky 100 award. My motivation to apply came from my desire to look back at all the things I had accomplished in my UW journey and to see whether it aligned with what I had envisioned it would be like. For my application, I picked the video medium to share my stories, and I framed my experience in the form of critical moments that have shaped my time here. While I did not get picked for the award, this process made me realize all the things I had been a part of, all the leadership roles that I took on, and all the experiences that make my time here incredibly meaningful. Working through the Husky 100 application made me realize that I had earned amazing connections and experiences at UW that I will cherish forever, and it is these experiences that have changed my life for the better.",
-    photo: "/images/artifacts/husky-100.jpg",
+    photo: "/images/artifacts/husky-100.webp",
   },
 ];
