@@ -81,14 +81,10 @@ function CaseWriterCard({ item }) {
         borderRadius: '1rem',
         border: '1px solid rgba(255, 255, 255, 0.08)',
         overflow: 'hidden',
-        marginBottom: '2rem'
+        marginBottom: '2rem',
+        backgroundColor: 'rgba(0, 0, 0, 0.2)'
       }}>
-        <iframe
-          src={item.pdf}
-          width="100%"
-          height="600px"
-          style={{ border: 'none' }}
-        />
+        <PdfViewer src={item.pdf} height="800px" />
       </div>
     </div>
   );
