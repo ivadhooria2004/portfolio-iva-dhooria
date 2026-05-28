@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import PageShell, { PageHeader } from "../../../components/PageShell";
 import { artifacts } from "../artifactsData";
 
