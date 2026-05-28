@@ -10,7 +10,7 @@ export const metadata = { title: "Kobe University Exchange | Iva Dhooria" };
 function getJapanPhotos() {
   const photosDir = join(process.cwd(), "public/images/japan");
   const files = readdirSync(photosDir)
-    .filter((file) => /\.(jpg|jpeg|JPG|JPEG)$/i.test(file))
+    .filter((file) => /\.(jpg|jpeg|JPG|JPEG|webp|webp)$/i.test(file))
     .sort();
   return files.map((file) => `/images/japan/${file}`);
 }
