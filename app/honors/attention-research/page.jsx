@@ -1,7 +1,12 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowLeft } from "lucide-react";
 import PageShell, { PageHeader } from "../../../components/PageShell";
-import PdfViewer from "../../../components/PdfViewer";
+
+const PdfViewer = dynamic(() => import("../../../components/PdfViewer"), {
+  ssr: true,
+  loading: () => <div className="bg-white/[0.03] rounded-lg p-8 text-white/50">Loading PDF...</div>,
+});
 
 export const metadata = { title: "Deep Dive Into Attention Span | Iva Dhooria" };
 
