@@ -83,16 +83,19 @@ function TimelineCard({ entry, side }) {
       >
         {entry.description}
       </p>
-      <div className={`mt-4 rounded-lg overflow-hidden bg-white/[0.05] flex items-center justify-center border border-white/[0.08] ${
+      <div className={`mt-4 rounded-lg overflow-hidden bg-white/[0.05] flex items-center justify-center border border-white/[0.08] relative ${
         entry.id === 5 ? "" : "aspect-video"
       }`} style={entry.id === 5 ? { height: "300px" } : {}}>
         {entry.image && !imageError ? (
-          <img
+          <Image
             src={entry.image}
             alt={entry.title}
+            fill
             className="w-full object-cover"
-            style={entry.id === 5 ? { height: "300px", objectPosition: "center" } : { height: "100%" }}
+            style={{ objectPosition: entry.id === 5 ? "center" : "center" }}
             onError={() => setImageError(true)}
+            loading={entry.id <= 2 ? "eager" : "lazy"}
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         ) : (
           <div className="text-white/25 text-[13px] font-display text-center px-4">
