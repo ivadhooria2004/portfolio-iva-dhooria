@@ -143,7 +143,7 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2024,
     reflection: "At my first ever international case competition, our team's host said to our team, \"An underdog is a hungry dog and a hungry dog runs the fastest.\" This statement especially ran true when, at the end of a week-long competition, we stood tall as second-place winners among fifteen global teams. Having the opportunity to represent UW as a sophomore at Simon Fraser University was truly a moment of pride for me. Being a super competitive person, I have always strived for excellence in every endeavour I undertake. However, going into this competition, I felt a little inferiority complex. Our team comprised some of the youngest competitors, and our experience with information systems was limited, which made me feel inadequate in our ability to devise a practical solution. I think it was this pressure of having limited experience, coupled with my high ambition, that pushed us to devise a solution that we stress-tested in multiple scenarios and backed up with excessive research. It was the motivation from the slight pressure to do UW proud that led us to maximize our potential as a team to produce a solution that was complimented by the judges as \"freakishly good.\" The moment we collected our trophy as a team, I recall that as one of the highlights of my UW journey.",
-    photo: "/images/artifacts/caseit-2024.webp",
+    photo: "/images/artifacts/caseit-2024.jpg",
   },
   {
     id: "lakeside-speaker",
