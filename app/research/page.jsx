@@ -3,19 +3,12 @@ import PageShell, { PageHeader } from "../../components/PageShell";
 
 export const metadata = { title: "Projects | Iva Dhooria" };
 
-const completed = [
+const research = [
   {
     title: "INFO 300 Research Paper",
     date: "Winter 2025",
-    blurb: "Independent honors research project.",
-    note: "Unique idea, and it surprisingly came together. An independent research project on sustained attention in time-pressured settings.",
+    description: "Independent honors research project on sustained attention in time-pressured settings. Unique idea, and it surprisingly came together.",
     href: "/honors/attention-research",
-  },
-  {
-    title: "Equitable Futures Case",
-    date: "Winter 2025",
-    blurb: "Case writing on equitable access to public transit.",
-    note: "Had a lot of fun organizing and writing. Loved being interviewed. Writing the King County Metro case for UWIB, and learning to frame problems instead of solve them.",
   },
 ];
 
