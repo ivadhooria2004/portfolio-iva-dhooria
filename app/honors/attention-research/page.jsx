@@ -68,14 +68,10 @@ export default function AttentionResearchPage() {
         borderRadius: '1rem',
         border: '1px solid rgba(255, 255, 255, 0.08)',
         overflow: 'hidden',
-        maxWidth: '3xl'
+        maxWidth: '3xl',
+        backgroundColor: 'rgba(0, 0, 0, 0.2)'
       }}>
-        <iframe
-          src="/documents/INFO_300_Honors_Research_Paper.pdf"
-          width="100%"
-          height="600px"
-          style={{ border: 'none' }}
-        />
+        <PdfViewer src="/documents/INFO_300_Honors_Research_Paper.pdf" height="800px" />
       </div>
     </PageShell>
   );
