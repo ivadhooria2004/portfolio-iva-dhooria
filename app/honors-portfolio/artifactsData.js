@@ -65,7 +65,7 @@ export const artifacts = [
     themeKey: "curiosity",
     year: 2023,
     reflection: "Dancing has always been one of my favorite hobbies. Ever since I was four years old, I was in some kind of dance class or learning a new choreography tutorial on YouTube. I find dancing to be an incredible stress buster, and it helps me feel grounded in the moment. So, I was elated when I discovered that there was a salsa club event for Dawg Daze during my first week at UW. Warm people and a new dance form were all I needed to find my community and comfort zone at UW. My chance attendance of this Dawg Daze event led me to discovering one of my favorite communities on campus, where I felt seen, heard, and supported. From becoming a club officer in my freshman year to the co-president in my sophomore year, the salsa club was a place where I went to feel the joy of dancing and also share it with others. Being involved in the club taught me how to be a good leader because I really looked up to the president of the club during my first year. She had this distinct aura about her that really brightened up the practice room when she walked, and I, too, wanted to be someone who would put a smile on other people's faces. Throughout my tenure as the club's president, I tried to encourage people to try new moves, make friends, and just feel very connected to the community. In the process of learning the dance and leading the club, I was able to organically learn more about the Latino culture and immerse myself through the creative outlet of dance and music.",
-    photo: "/images/artifacts/always-loved-dancing.jpg",
+    photo: "/images/artifacts/always-loved-dancing.webp",
   },
   {
     id: "deep-conversations",
@@ -76,7 +76,7 @@ export const artifacts = [
     themeKey: "curiosity",
     year: 2023,
     reflection: "After being admitted to the Lavin Entrepreneurship Program, I was enthusiastic to get to know my cohort and engage in intellectually stimulating conversations with like-minded peers. This opportunity came to me in the form of the Lavin retreat. Making my way to the Pack Forest with the cohort, I was curious to see how my interests align and intersect with the people in the program. Even though I was excited, I thought we would be scratching the surface and barely introducing ourselves. However, I was pleasantly surprised when introductions turned into a six-hour-long conversation about our ideas, motivations, and ideologies. Never before had I felt so comfortable sharing my train of thought with individuals I had just met, and to observe that we shared so many lived experiences was heartwarming. To me, a conversation works well when I am being intentional about listening but also participating in the conversation by prompting with guiding questions, and this was one such scenario. I was really touched by how reciprocal each member of the conversation was, and how genuinely interested they were in getting to know each other. A big part of entrepreneurship is being able to find the right people to build a team with who share your passion and vision. This retreat reassured me that my interest in entrepreneurship is unwavering and there is a bright possibility that I might find my co-founders from within this community. While I did not leave this trip with a new startup idea, I did gain a lot of knowledge about my peers and how their perspectives have been shaped by their lived experiences.",
-    photo: "/images/artifacts/deep-conversations.jpg",
+    photo: "/images/artifacts/deep-conversations.webp",
   },
   {
     id: "open-endings",
@@ -87,7 +87,7 @@ export const artifacts = [
     themeKey: "curiosity",
     year: 2025,
     reflection: "Global Business Case Competition (GBCC) is the UW-hosted International case competition that hosts teams from around the world for a week of casing, exploring, and making connections. When I learned that the applications for the leadership team opened, I immediately started working on it. To me, this was the perfect opportunity to meet fellow competitors from around the world, but also to work in a managerial role to help them have an unforgettable experience. I applied for the role of Ambassador Co-Manager. This role entailed interviewing, recruiting, and training a team of 24 ambassadors that will then become liaisons for the 12 international teams. A big part of my job was to help create an environment where the competitors feel supported and welcome. As a competitor myself, I tried to bring in my personal experience to ensure that we created a magical experience for the teams. The best part of the experience for me included the 6 months of planning leading up to the competition week, and seeing all the planning come to fruition in the form of compliments from competitors and seeing budding connections across the room. Being in this role, I learned a lot because I was going through a huge family emergency right before the kick-off of the competition week. I had to make a decision between being at home and supporting my family, and being at school to support the week of competition. While immensely difficult, I first dealt with my family emergency and then made it back in time to execute my duties over the full competition week. This was one of the most difficult things I had to do during my time at UW, but I am glad I was able to balance my responsibilities and be a part of this incredible experience.",
-    photo: "/images/artifacts/open-endings.jpg",
+    photo: "/images/artifacts/open-endings.webp",
   },
   {
     id: "being-a-ta",
@@ -98,7 +98,7 @@ export const artifacts = [
     themeKey: "curiosity",
     year: 2025,
     reflection: "With my curiosity for acquiring new skills, I was thrilled when my friend, who was graduating, asked me to step into her role as a TA for MKTG 305. First, it was heartwarming to know that an upperclassman I looked up to considered me worthy of being able to follow in her footsteps. Second, I was delighted at the opportunity of being able to see the teaching side of a college course. Third, I was going to work for a professor whom I had built up a reputation with, starting in my freshman year, and I really admired her work ethic. In my first quarter on the job, I was nervous because I wanted to be an adequate bridge between the students and the professor. Learning skills like clarifying topics for students, setting up the Canvas page, and writing and grading assignments, I feel very satisfied with the new experiences and questions I encounter in this role. By understanding the teaching team's mentality when writing and grading exams and learning from the lecture content myself, I think this experience has helped me become a better student and learner. Conducting office hours and helping resolve other students' queries has helped me unlearn the habit of not asking for help myself. This has been a welcome change because it has allowed me to improve my productivity and time management skills.",
-    photo: "/images/artifacts/being-a-ta.jpg",
+    photo: "/images/artifacts/being-a-ta.webp",
   },
   {
     id: "passion-in-project",
@@ -109,7 +109,7 @@ export const artifacts = [
     themeKey: "curiosity",
     year: 2026,
     reflection: "My college journey has been a lot about wants and shoulds, and realizing the need to strike the right balance between the two. So, when I see the potential of bringing the two together, I am intrigued. In my IS 451 class on business analytics, I discovered that the culminating group project class involves performing data analysis on any topic and being able to answer a key question. The thought of data analytics immediately led me to think about Formula One. Formula One is a racing sport that incorporates a lot of data analysis, specifically related to the car and driver performance. This is a sport that I am passionate about, and the thought of completing a data analysis project on a Formula 1 dataset had my train of thought running around all the different things I can do with this project. From picking the perfect dataset to custom designing a template of the slides, I was super involved every step of the way. Having a topic that I am passionate about, becoming a project was a highly rewarding experience. I was able to see a new side of the sport and develop an appreciation for the level of detail and precision that goes into analyzing driver performance from every team. On the other hand, I was also able to marvel at the ability of data science to spot and explain so many patterns in raw data that would otherwise not be obvious in its original form. The intersection of education and passion is what made this project so special to me, and it has inspired me to take on more passion projects such as this.",
-    photo: "/images/artifacts/passion-in-project.jpg",
+    photo: "/images/artifacts/passion-in-project.webp",
   },
   // THEME 3: Relearning Authenticity
   {
