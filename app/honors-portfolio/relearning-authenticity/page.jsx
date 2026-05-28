@@ -104,13 +104,14 @@ export default function RelearningAuthenticityPage() {
                 <Image
                   src={
                     artifact.id === "lifes-philosophy"
-                      ? "/images/artifacts/lifes-philosophy-detail.jpg"
+                      ? "/images/artifacts/lifes-philosophy-detail.webp"
                       : artifact.id === "first-solo-trip"
-                      ? "/images/artifacts/first-solo-trip-detail.jpg"
+                      ? "/images/artifacts/first-solo-trip-detail.webp"
                       : artifact.photo
                   }
                   alt={artifact.title}
                   fill
+                  unoptimized={artifact.id === "lifes-philosophy" || artifact.id === "first-solo-trip"}
                   style={{
                     objectFit: "contain",
                     objectPosition: "center",
