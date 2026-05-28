@@ -121,7 +121,7 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2023,
     reflection: "During my first year at UW in the peak winter quarter, I did not expect to be hit with a final assignment that would leave me stunned. I was stunned not because of how difficult the assignment was, but because it required scratching beyond the surface and reflecting on who I really was. As an 18-year-old in my first honors class at UW, I wasn't really expecting to learn the philosophies of Kant and Plato in a class titled \"Disenchantment of the West.\" Throughout this course, I went into lectures with a certain perception of the world and walked out having unlocked another dimension. This was because I was being exposed to ideologies that I had only heard of, but in this course, I was questioning them and wrapping my head around concepts that stuck with me. The culmination of a 5000-word paper on the philosophy of my life was daunting. Never before in my life had I felt nearly threatened by an assignment, and I think this came from the unknowns of what I will end up with as the final product. In the process of writing this paper, I think I subconsciously and consciously examined all of my lived experiences, and deciphered which ones left the most lasting impact on my being. Furthermore, I think I have introspected a lot on my principles and moral compass in the process of writing. My big takeaway from writing this paper was that I owed a lot of my moral compass to a combination of my upbringing and religion. This gave me a lot of clarity in understanding the decisions that I make and why I make them.",
-    photo: "/images/artifacts/lifes-philosophy.webp",
+    photo: "/images/artifacts/lifes-philosophy.jpg",
   },
   {
     id: "shrm",
