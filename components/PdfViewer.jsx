@@ -1,11 +1,9 @@
 "use client";
 
 import { Viewer, Worker } from "@react-pdf-viewer/core";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import { zoomPlugin } from "@react-pdf-viewer/zoom";
 import { fullScreenPlugin } from "@react-pdf-viewer/full-screen";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import "@react-pdf-viewer/zoom/lib/styles/index.css";
 import "@react-pdf-viewer/full-screen/lib/styles/index.css";
 
