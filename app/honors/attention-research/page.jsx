@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import PageShell, { PageHeader } from "../../../components/PageShell";
+import PdfViewer from "../../../components/PdfViewer";
 
 export const metadata = { title: "Deep Dive Into Attention Span | Iva Dhooria" };
 
