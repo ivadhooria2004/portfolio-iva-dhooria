@@ -176,6 +176,6 @@ export const artifacts = [
     themeKey: "authenticity",
     year: 2026,
     reflection: "This past winter quarter, I applied for the Husky 100 award. My motivation to apply came from my desire to look back at all the things I had accomplished in my UW journey and to see whether it aligned with what I had envisioned it would be like. For my application, I picked the video medium to share my stories, and I framed my experience in the form of critical moments that have shaped my time here. While I did not get picked for the award, this process made me realize all the things I had been a part of, all the leadership roles that I took on, and all the experiences that make my time here incredibly meaningful. Working through the Husky 100 application made me realize that I had earned amazing connections and experiences at UW that I will cherish forever, and it is these experiences that have changed my life for the better.",
-    photo: "/images/artifacts/husky-100.webp",
+    photo: "/images/artifacts/husky-100.jpg",
   },
 ];
