@@ -90,7 +90,7 @@ function TimelineCard({ entry, side }) {
             src={entry.image}
             alt={entry.title}
             className="w-full object-cover"
-            style={entry.id === 5 ? { height: "300px", objectPosition: "center top" } : { height: "100%" }}
+            style={entry.id === 5 ? { height: "300px", objectPosition: "center" } : { height: "100%" }}
             onError={() => setImageError(true)}
           />
         ) : (
