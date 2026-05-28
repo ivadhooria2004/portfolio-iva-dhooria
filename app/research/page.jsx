@@ -36,7 +36,7 @@ const caseWriting = [
   },
 ];
 
-function CompletedCard({ item }) {
+function ResearchCard({ item }) {
   const content = (
     <article className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6 hover:bg-white/[0.05] transition-colors duration-200">
       <div className="flex items-baseline justify-between mb-2 gap-3">
@@ -47,12 +47,7 @@ function CompletedCard({ item }) {
           {item.date}
         </span>
       </div>
-      <p className="text-sm text-white/45 leading-[1.75]">{item.blurb}</p>
-      <div className="mt-5 pt-5 border-t border-white/[0.06]">
-        <p className="text-sm text-white/40 leading-[1.75]">
-          {item.note || "A detailed case study coming soon."}
-        </p>
-      </div>
+      <p className="text-sm text-white/45 leading-[1.75]">{item.description}</p>
     </article>
   );
 
